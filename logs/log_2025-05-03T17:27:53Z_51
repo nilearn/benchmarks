@@ -1,0 +1,1787 @@
+Couldn't load asv.plugins._mamba_helpers because
+No module named 'libmambapy'
+· Running '/usr/bin/git config init.defaultBranch'
+· Running '/usr/bin/git config --global init.defaultBranch'
+· Running '/usr/bin/git config --system init.defaultBranch'
+· Running '/usr/bin/git rev-parse main^{commit}'
+  OUTPUT -------->
+  2293344d39913ff879a5cb843dd54da1a0345480
+· Creating environments
+·· Creating conda environment for conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+·· Running '/usr/bin/conda --version'
+   OUTPUT -------->
+   conda 25.1.1
+·· conda version: conda 25.1.1
+   
+
+·· Running '/usr/bin/conda env create -f /tmp/tmppsgcqxei.yml -p /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e --yes'
+   OUTPUT -------->
+   Channels:
+    - conda-forge
+    - defaults
+   Platform: linux-64
+   Collecting package metadata (repodata.json): ...working... done
+
+   Solving environment: ...working... done
+   
+   ==> WARNING: A newer version of conda exists. <==
+       current version: 25.1.1
+       latest version: 25.3.1
+   
+   Please update conda by running
+   
+       $ conda update -n base -c defaults conda
+   
+   
+   
+
+   Downloading and Extracting Packages: ...working...scipy-1.8.0          | 25.4 MB   |            |   0% 
+   python-3.9.22        | 22.5 MB   |            |   0% [A
+   
+   pandas-2.2.0         | 12.3 MB   |            |   0% [A[A
+
+   
+   
+   scikit-learn-1.4.0   | 8.7 MB    |            |   0% [A[A[A
+
+   
+   
+   
+   numpy-1.22.4         | 6.8 MB    |            |   0% [A[A[A[A
+
+   
+   
+   
+   
+   libopenblas-0.3.25   | 5.3 MB    |            |   0% [A[A[A[A[A
+
+   
+   
+   
+   
+   
+   libstdcxx-14.2.0     | 3.7 MB    |            |   0% [A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   tk-8.6.13            | 3.2 MB    |            |   0% [A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   openssl-3.5.0        | 3.0 MB    |            |   0% [A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   nibabel-5.2.0        | 2.6 MB    |            |   0% [A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgfortran5-14.2.0  | 1.4 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   pip-25.1.1           | 1.2 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libsqlite-3.49.1     | 897 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ncurses-6.5          | 871 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgcc-14.2.0        | 828 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   setuptools-80.1.0    | 760 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ld_impl_linux-64-2.4 | 656 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgomp-14.2.0       | 449 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   readline-8.2         | 276 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[Ascipy-1.8.0          | 25.4 MB   | 5          |   5% 
+
+   
+   pandas-2.2.0         | 12.3 MB   | 2          |   3% [A[A
+
+   python-3.9.22        | 22.5 MB   |            |   0% [A
+   
+   
+   scikit-learn-1.4.0   | 8.7 MB    |            |   0% [A[A[A
+
+   
+   
+   
+   numpy-1.22.4         | 6.8 MB    | #1         |  12% [A[A[A[Ascipy-1.8.0          | 25.4 MB   | #8         |  18% 
+
+   
+   pandas-2.2.0         | 12.3 MB   | ###1       |  32% [A[A
+
+   python-3.9.22        | 22.5 MB   | #3         |  14% [A
+   
+   
+   scikit-learn-1.4.0   | 8.7 MB    | ###8       |  39% [A[A[A
+
+   
+   
+   
+   numpy-1.22.4         | 6.8 MB    | ######7    |  67% [A[A[A[Ascipy-1.8.0          | 25.4 MB   | ###4       |  35% 
+
+   
+   pandas-2.2.0         | 12.3 MB   | ######7    |  68% [A[A
+
+   python-3.9.22        | 22.5 MB   | ###2       |  32% [A
+   
+   
+   scikit-learn-1.4.0   | 8.7 MB    | ########3  |  83% [A[A[A
+
+   
+   
+   
+   numpy-1.22.4         | 6.8 MB    | ########## | 100% [A[A[A[Ascipy-1.8.0          | 25.4 MB   | #####2     |  53% 
+
+   python-3.9.22        | 22.5 MB   | #####3     |  53% [A
+   
+   
+   
+   
+   libopenblas-0.3.25   | 5.3 MB    |            |   0% [A[A[A[A[A
+
+   
+   
+   scikit-learn-1.4.0   | 8.7 MB    | ########## | 100% [A[A[Ascipy-1.8.0          | 25.4 MB   | ######8    |  68% 
+
+   python-3.9.22        | 22.5 MB   | #######    |  71% [A
+   
+   
+   
+   
+   libopenblas-0.3.25   | 5.3 MB    | ######7    |  68% [A[A[A[A[A
+
+   
+   
+   
+   
+   
+   libstdcxx-14.2.0     | 3.7 MB    |            |   0% [A[A[A[A[A[A
+
+   python-3.9.22        | 22.5 MB   | ########7  |  88% [Ascipy-1.8.0          | 25.4 MB   | ########3  |  84% 
+   
+   
+   
+   
+   
+   libstdcxx-14.2.0     | 3.7 MB    | ########5  |  86% [A[A[A[A[A[A
+
+   
+   pandas-2.2.0         | 12.3 MB   | ########## | 100% [A[A
+
+   
+   pandas-2.2.0         | 12.3 MB   | ########## | 100% [A[A
+
+   
+   
+   
+   
+   
+   
+   tk-8.6.13            | 3.2 MB    |            |   0% [A[A[A[A[A[A[Ascipy-1.8.0          | 25.4 MB   | #########8 |  98% 
+
+   
+   
+   
+   
+   libopenblas-0.3.25   | 5.3 MB    | ########## | 100% [A[A[A[A[A
+
+   
+   
+   
+   
+   
+   libstdcxx-14.2.0     | 3.7 MB    | ########## | 100% [A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   nibabel-5.2.0        | 2.6 MB    |            |   1% [A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   openssl-3.5.0        | 3.0 MB    |            |   1% [A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   tk-8.6.13            | 3.2 MB    | ########## | 100% [A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   tk-8.6.13            | 3.2 MB    | ########## | 100% [A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgfortran5-14.2.0  | 1.4 MB    | 1          |   1% [A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   nibabel-5.2.0        | 2.6 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   nibabel-5.2.0        | 2.6 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   openssl-3.5.0        | 3.0 MB    | ########## | 100% [A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   openssl-3.5.0        | 3.0 MB    | ########## | 100% [A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   pip-25.1.1           | 1.2 MB    | 1          |   1% [A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgfortran5-14.2.0  | 1.4 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libsqlite-3.49.1     | 897 KB    | 1          |   2% [A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ncurses-6.5          | 871 KB    | 1          |   2% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   pip-25.1.1           | 1.2 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libsqlite-3.49.1     | 897 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgcc-14.2.0        | 828 KB    | 1          |   2% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ncurses-6.5          | 871 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgcc-14.2.0        | 828 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   setuptools-80.1.0    | 760 KB    | 2          |   2% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ld_impl_linux-64-2.4 | 656 KB    | 2          |   2% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   setuptools-80.1.0    | 760 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgomp-14.2.0       | 449 KB    | 3          |   4% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgomp-14.2.0       | 449 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ld_impl_linux-64-2.4 | 656 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   python-3.9.22        | 22.5 MB   | ########## | 100% [A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   readline-8.2         | 276 KB    | 5          |   6% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   readline-8.2         | 276 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[Ascipy-1.8.0          | 25.4 MB   | ########## | 100% 
+
+   
+   
+   scikit-learn-1.4.0   | 8.7 MB    | ########## | 100% [A[A[A
+
+   
+   
+   
+   
+   libopenblas-0.3.25   | 5.3 MB    | ########## | 100% [A[A[A[A[A
+
+   
+   
+   
+   
+   
+   libstdcxx-14.2.0     | 3.7 MB    | ########## | 100% [A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   tk-8.6.13            | 3.2 MB    | ########## | 100% [A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   nibabel-5.2.0        | 2.6 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+   
+   pandas-2.2.0         | 12.3 MB   | ########## | 100% [A[A
+
+   
+   
+   
+   numpy-1.22.4         | 6.8 MB    | ########## | 100% [A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgfortran5-14.2.0  | 1.4 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgfortran5-14.2.0  | 1.4 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libsqlite-3.49.1     | 897 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libsqlite-3.49.1     | 897 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   openssl-3.5.0        | 3.0 MB    | ########## | 100% [A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgcc-14.2.0        | 828 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgcc-14.2.0        | 828 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   pip-25.1.1           | 1.2 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   pip-25.1.1           | 1.2 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgomp-14.2.0       | 449 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgomp-14.2.0       | 449 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ld_impl_linux-64-2.4 | 656 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ld_impl_linux-64-2.4 | 656 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   setuptools-80.1.0    | 760 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   setuptools-80.1.0    | 760 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   readline-8.2         | 276 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   readline-8.2         | 276 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ncurses-6.5          | 871 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ncurses-6.5          | 871 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   python-3.9.22        | 22.5 MB   | ########## | 100% [Ascipy-1.8.0          | 25.4 MB   | ########## | 100% 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                         [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A                                                     
+
+                                                        [A
+   
+                                                        [A[A
+   
+   
+                                                        [A[A[A
+   
+   
+   
+                                                        [A[A[A[A
+   
+   
+   
+   
+                                                        [A[A[A[A[A
+
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   [A
+   
+   [A[A
+
+   
+   
+   [A[A[A
+   
+   
+   
+   [A[A[A[A
+   
+   
+   
+   
+   [A[A[A[A[A
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   [A
+   
+   [A[A
+   
+   
+   [A[A[A
+   
+   
+   
+   [A[A[A[A
+   
+   
+   
+   
+   [A[A[A[A[A
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A done
+   Preparing transaction: - \ | done
+
+   Verifying transaction: - \ | / - \ | / - \ | / done
+   Executing transaction: \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+   #
+   # To activate this environment, use
+   #
+   #     $ conda activate /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e
+   #
+   # To deactivate an active environment, use
+   #
+   #     $ conda deactivate
+   
+
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python -mpip install -v --upgrade build'
+   OUTPUT -------->
+   Using pip 25.1.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/pip (python 3.9)
+   Collecting build
+     Obtaining dependency information for build from https://files.pythonhosted.org/packages/84/c2/80633736cd183ee4a62107413def345f7e6e3c01563dbca1417363cf957e/build-1.2.2.post1-py3-none-any.whl.metadata
+     Using cached build-1.2.2.post1-py3-none-any.whl.metadata (6.5 kB)
+   Requirement already satisfied: packaging>=19.1 in ./env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from build) (25.0)
+   Collecting pyproject_hooks (from build)
+     Obtaining dependency information for pyproject_hooks from https://files.pythonhosted.org/packages/bd/24/12818598c362d7f300f18e74db45963dbcb85150324092410c8b49405e42/pyproject_hooks-1.2.0-py3-none-any.whl.metadata
+     Using cached pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
+   Collecting importlib-metadata>=4.6 (from build)
+     Obtaining dependency information for importlib-metadata>=4.6 from https://files.pythonhosted.org/packages/20/b0/36bd937216ec521246249be3bf9855081de4c5e06a0c9b4219dbeda50373/importlib_metadata-8.7.0-py3-none-any.whl.metadata
+     Using cached importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+   Collecting tomli>=1.1.0 (from build)
+     Obtaining dependency information for tomli>=1.1.0 from https://files.pythonhosted.org/packages/6e/c2/61d3e0f47e2b74ef40a68b9e6ad5984f6241a942f7cd3bbfbdbd03861ea9/tomli-2.2.1-py3-none-any.whl.metadata
+     Using cached tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
+   Requirement already satisfied: zipp>=3.20 in ./env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from importlib-metadata>=4.6->build) (3.21.0)
+   Using cached build-1.2.2.post1-py3-none-any.whl (22 kB)
+   Using cached importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+   Using cached tomli-2.2.1-py3-none-any.whl (14 kB)
+   Using cached pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
+   Installing collected packages: tomli, pyproject_hooks, importlib-metadata, build
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/pyproject-build to 755
+   Successfully installed build-1.2.2.post1 importlib-metadata-8.7.0 pyproject_hooks-1.2.0 tomli-2.2.1
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python -mpip install -v --upgrade asv_runner'
+   OUTPUT -------->
+   Using pip 25.1.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/pip (python 3.9)
+   Collecting asv_runner
+     Obtaining dependency information for asv_runner from https://files.pythonhosted.org/packages/54/9a/6872af94fc8e8072723946651e65f66e16a0ca0efec7806bce8c2e2483d1/asv_runner-0.2.1-py3-none-any.whl.metadata
+     Using cached asv_runner-0.2.1-py3-none-any.whl.metadata (2.8 kB)
+   Requirement already satisfied: importlib-metadata in ./env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from asv_runner) (8.7.0)
+   Requirement already satisfied: zipp>=3.20 in ./env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from importlib-metadata->asv_runner) (3.21.0)
+   Using cached asv_runner-0.2.1-py3-none-any.whl (47 kB)
+   Installing collected packages: asv_runner
+   Successfully installed asv_runner-0.2.1
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python -mpip install -v --upgrade pympler'
+   OUTPUT -------->
+   Using pip 25.1.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/pip (python 3.9)
+   Collecting pympler
+     Obtaining dependency information for pympler from https://files.pythonhosted.org/packages/79/4f/a6a2e2b202d7fd97eadfe90979845b8706676b41cbd3b42ba75adf329d1f/Pympler-1.1-py3-none-any.whl.metadata
+     Using cached Pympler-1.1-py3-none-any.whl.metadata (3.6 kB)
+   Using cached Pympler-1.1-py3-none-any.whl (165 kB)
+   Installing collected packages: pympler
+   Successfully installed pympler-1.1
+· Discovering benchmarks
+·· Running '/usr/bin/git rev-parse main^{commit}'
+   OUTPUT -------->
+   2293344d39913ff879a5cb843dd54da1a0345480
+·· Running '/usr/bin/git clone --shared --recursive /home/runner/work/nilearn/nilearn /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/project'
+   OUTPUT -------->
+   Cloning into '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/project'...
+   done.
+·· Running '/usr/bin/git -c protocol.file.allow=always submodule deinit -f .'
+·· Running '/usr/bin/git checkout -f 2293344d39913ff879a5cb843dd54da1a0345480'
+   OUTPUT -------->
+   Note: switching to '2293344d39913ff879a5cb843dd54da1a0345480'.
+   
+   You are in 'detached HEAD' state. You can look around, make experimental
+   changes and commit them, and you can discard any commits you make in this
+   state without impacting any branches by switching back to a branch.
+   
+   If you want to create a new branch to retain commits you create, you may
+   do so (now or later) by using -c with the switch command. Example:
+   
+     git switch -c <new-branch-name>
+   
+   Or undo this operation with:
+   
+     git switch -
+   
+   Turn off this advice by setting config variable advice.detachedHead to false
+   
+   HEAD is now at 2293344d3 [MAINT] Bump to Brainsprite 0.15.0 (#5363)
+
+·· Running '/usr/bin/git clean -fdx'
+·· Running '/usr/bin/git -c protocol.file.allow=always submodule update --init --recursive'
+·· Uninstalling from conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python -m pip uninstall -y nilearn'
+   OUTPUT -------->
+   WARNING: Skipping nilearn as it is not installed.
+·· Running '/usr/bin/git name-rev --name-only --exclude=remotes/* --no-undefined 2293344d39913ff879a5cb843dd54da1a0345480'
+   OUTPUT -------->
+   main
+·· Building 2293344d <main> for conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python -m build --wheel -o /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/asv-build-cache/2293344d39913ff879a5cb843dd54da1a0345480 /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/project'
+   OUTPUT -------->
+   * Creating isolated environment: venv+pip...
+   * Installing packages in isolated environment:
+     - hatch-vcs
+     - hatchling
+   * Getting build dependencies for wheel...
+   * Building wheel...
+
+   Successfully built nilearn-0.11.2.dev296+g2293344d3-py3-none-any.whl
+·· Running '/usr/bin/git name-rev --name-only --exclude=remotes/* --no-undefined 2293344d39913ff879a5cb843dd54da1a0345480'
+   OUTPUT -------->
+   main
+·· Installing 2293344d <main> into conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python -m pip install /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/asv-build-cache/2293344d39913ff879a5cb843dd54da1a0345480/nilearn-0.11.2.dev296+g2293344d3-py3-none-any.whl'
+   OUTPUT -------->
+   Processing /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/asv-build-cache/2293344d39913ff879a5cb843dd54da1a0345480/nilearn-0.11.2.dev296+g2293344d3-py3-none-any.whl
+   Requirement already satisfied: joblib>=1.2.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.11.2.dev296+g2293344d3) (1.2.0)
+   Collecting lxml (from nilearn==0.11.2.dev296+g2293344d3)
+     Downloading lxml-5.4.0-cp39-cp39-manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+   Requirement already satisfied: nibabel>=5.2.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.11.2.dev296+g2293344d3) (5.2.0)
+   Requirement already satisfied: numpy>=1.22.4 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.11.2.dev296+g2293344d3) (1.22.4)
+   Requirement already satisfied: packaging in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.11.2.dev296+g2293344d3) (25.0)
+   Requirement already satisfied: pandas>=2.2.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.11.2.dev296+g2293344d3) (2.2.0)
+   Collecting requests>=2.25.0 (from nilearn==0.11.2.dev296+g2293344d3)
+     Downloading requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+   Requirement already satisfied: scikit-learn>=1.4.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.11.2.dev296+g2293344d3) (1.4.0)
+   Requirement already satisfied: scipy>=1.8.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.11.2.dev296+g2293344d3) (1.8.0)
+   Requirement already satisfied: python-dateutil>=2.8.2 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from pandas>=2.2.0->nilearn==0.11.2.dev296+g2293344d3) (2.9.0.post0)
+   Requirement already satisfied: pytz>=2020.1 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from pandas>=2.2.0->nilearn==0.11.2.dev296+g2293344d3) (2025.2)
+   Requirement already satisfied: tzdata>=2022.7 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from pandas>=2.2.0->nilearn==0.11.2.dev296+g2293344d3) (2025.2)
+   Requirement already satisfied: six>=1.5 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from python-dateutil>=2.8.2->pandas>=2.2.0->nilearn==0.11.2.dev296+g2293344d3) (1.17.0)
+   Collecting charset-normalizer<4,>=2 (from requests>=2.25.0->nilearn==0.11.2.dev296+g2293344d3)
+     Downloading charset_normalizer-3.4.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (35 kB)
+   Collecting idna<4,>=2.5 (from requests>=2.25.0->nilearn==0.11.2.dev296+g2293344d3)
+     Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+   Collecting urllib3<3,>=1.21.1 (from requests>=2.25.0->nilearn==0.11.2.dev296+g2293344d3)
+     Downloading urllib3-2.4.0-py3-none-any.whl.metadata (6.5 kB)
+   Collecting certifi>=2017.4.17 (from requests>=2.25.0->nilearn==0.11.2.dev296+g2293344d3)
+     Downloading certifi-2025.4.26-py3-none-any.whl.metadata (2.5 kB)
+   Requirement already satisfied: threadpoolctl>=2.0.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from scikit-learn>=1.4.0->nilearn==0.11.2.dev296+g2293344d3) (3.6.0)
+   Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+   Downloading charset_normalizer-3.4.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (149 kB)
+   Downloading idna-3.10-py3-none-any.whl (70 kB)
+   Downloading urllib3-2.4.0-py3-none-any.whl (128 kB)
+   Downloading certifi-2025.4.26-py3-none-any.whl (159 kB)
+   Downloading lxml-5.4.0-cp39-cp39-manylinux_2_28_x86_64.whl (5.1 MB)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 112.1 MB/s eta 0:00:00
+   Installing collected packages: urllib3, lxml, idna, charset-normalizer, certifi, requests, nilearn
+   Successfully installed certifi-2025.4.26 charset-normalizer-3.4.2 idna-3.10 lxml-5.4.0 nilearn-0.11.2.dev296+g2293344d3 requests-2.32.3 urllib3-2.4.0
+·· Running '/opt/hostedtoolcache/Python/3.9.22/x64/lib/python3.9/site-packages/asv/benchmark.py discover /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks /tmp/tmpygz9f13w/result.json' in conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python /opt/hostedtoolcache/Python/3.9.22/x64/lib/python3.9/site-packages/asv/benchmark.py discover /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks /tmp/tmpygz9f13w/result.json'
+· Running 14 total benchmarks (1 commits * 1 environments * 14 benchmarks)
+[ 0.00%] · Running '/usr/bin/git name-rev --name-only --exclude=remotes/* --no-undefined 2293344d39913ff879a5cb843dd54da1a0345480'
+           OUTPUT -------->
+           main
+[ 0.00%] · For nilearn commit 2293344d <main>:
+[ 0.00%] ·· Running '/usr/bin/git rev-list -n 1 --format=%at 2293344d39913ff879a5cb843dd54da1a0345480'
+            OUTPUT -------->
+            commit 2293344d39913ff879a5cb843dd54da1a0345480
+            1746178098
+[ 0.00%] ·· Benchmarking conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+[ 0.00%] ··· Running '/opt/hostedtoolcache/Python/3.9.22/x64/lib/python3.9/site-packages/asv/benchmark.py run_server /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks /tmp/asv-forkserver-21_dn3jx/socket' in conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+[ 0.00%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python /opt/hostedtoolcache/Python/3.9.22/x64/lib/python3.9/site-packages/asv/benchmark.py run_server /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks /tmp/asv-forkserver-21_dn3jx/socket'
+[ 7.14%] ··· Setting up common:14
+[ 7.14%] ··· Running '/opt/hostedtoolcache/Python/3.9.22/x64/lib/python3.9/site-packages/asv/benchmark.py setup_cache /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks comparisons.image.CompareLoad.time_compare_load {"cpu_affinity": null}' in conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+[ 7.14%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python /opt/hostedtoolcache/Python/3.9.22/x64/lib/python3.9/site-packages/asv/benchmark.py setup_cache /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks comparisons.image.CompareLoad.time_compare_load {"cpu_affinity": null}'                                        failed
+[ 7.14%] ···· asv: setup_cache failed (exit status -256)
+[ 7.14%] ··· comparisons.image.CompareLoad.time_compare_load skipped (setup_cache failed)
+[14.29%] ··· comparisons.image.CompareMean.time_compare_mean skipped (setup_cache failed)
+[21.43%] ··· comparisons.image.CompareSlice.time_compare_slice skipped (setup_cache failed)
+[28.57%] ··· comparisons.maskers.CompareMask.time_compare_mask skipped (setup_cache failed)
+[35.71%] ··· tracking.image.LoadImgBenchmark.time_load_img skipped (setup_cache failed)
+[42.86%] ··· tracking.image.MeanImgBenchmark.time_mean_img skipped (setup_cache failed)
+[50.00%] ··· tracking.maskers.NiftiMaskerBenchmark.time_nifti_masker skipped (setup_cache failed)
+[53.57%] ··· comparisons.image.CompareLoad.peakmem_compare_load skipped (setup_cache failed)
+[57.14%] ··· comparisons.image.CompareLoad.time_compare_load             failed
+[57.14%] ··· =============== ========
+                  loader             
+             --------------- --------
+                 nilearn      failed 
+              nibabel (ref)   failed 
+             =============== ========
+             asv: setup_cache failed
+             
+             asv: setup_cache failed (exit status -256)
+
+[57.14%] ···· asv: setup_cache failed
+              
+              asv: setup_cache failed (exit status -256)
+              asv: benchmark failed (exit status 1)
+
+[60.71%] ··· comparisons.image.CompareMean.peakmem_compare_mean skipped (setup_cache failed)
+[64.29%] ··· comparisons.image.CompareMean.time_compare_mean             failed
+[64.29%] ··· =============== ========
+                  loader             
+             --------------- --------
+                 nilearn      failed 
+              nibabel (ref)   failed 
+             =============== ========
+             asv: setup_cache failed
+             
+             asv: setup_cache failed (exit status -256)
+
+[64.29%] ···· asv: setup_cache failed
+              
+              asv: setup_cache failed (exit status -256)
+              asv: benchmark failed (exit status 1)
+
+[67.86%] ··· comparisons.image.CompareSlice.peakmem_compare_slice skipped (setup_cache failed)
+[71.43%] ··· ...risons.image.CompareSlice.time_compare_slice             failed
+[71.43%] ··· =============== ========
+                  loader             
+             --------------- --------
+                 nilearn      failed 
+              nibabel (ref)   failed 
+             =============== ========
+             asv: setup_cache failed
+             
+             asv: setup_cache failed (exit status -256)
+
+[71.43%] ···· asv: setup_cache failed
+              
+              asv: setup_cache failed (exit status -256)
+              asv: benchmark failed (exit status 1)
+
+[75.00%] ··· comparisons.maskers.CompareMask.peakmem_compare_mask skipped (setup_cache failed)
+[78.57%] ··· ...risons.maskers.CompareMask.time_compare_mask             failed
+[78.57%] ··· ================ ========= ===============
+             --                         loader         
+             ---------------- -------------------------
+              implementation   nilearn   nibabel (ref) 
+             ================ ========= ===============
+                 nilearn        failed       failed    
+               numpy (ref)      failed       failed    
+             ================ ========= ===============
+             asv: setup_cache failed
+             
+             asv: setup_cache failed (exit status -256)
+
+[78.57%] ···· asv: setup_cache failed
+              
+              asv: setup_cache failed (exit status -256)
+              asv: benchmark failed (exit status 1)
+
+[82.14%] ··· tracking.image.LoadImgBenchmark.peakmem_load_img skipped (setup_cache failed)
+[85.71%] ··· tracking.image.LoadImgBenchmark.time_load_img               failed
+[85.71%] ···· asv: setup_cache failed
+              
+              asv: setup_cache failed (exit status -256)
+              asv: benchmark failed (exit status 1)
+
+[89.29%] ··· tracking.image.MeanImgBenchmark.peakmem_mean_img skipped (setup_cache failed)
+[92.86%] ··· tracking.image.MeanImgBenchmark.time_mean_img               failed
+[92.86%] ···· asv: setup_cache failed
+              
+              asv: setup_cache failed (exit status -256)
+              asv: benchmark failed (exit status 1)
+
+[96.43%] ··· tracking.maskers.NiftiMaskerBenchmark.peakmem_nifti_masker skipped (setup_cache failed)
+[100.00%] ··· ...skers.NiftiMaskerBenchmark.time_nifti_masker             failed
+[100.00%] ··· ================ ======== ========
+              --                    detrend     
+              ---------------- -----------------
+               smoothing_fwhm   False     True  
+              ================ ======== ========
+                    None        failed   failed 
+                     6          failed   failed 
+              ================ ======== ========
+              asv: setup_cache failed
+              
+              asv: setup_cache failed (exit status -256)
+
+[100.00%] ···· asv: setup_cache failed
+               
+               asv: setup_cache failed (exit status -256)
+               asv: benchmark failed (exit status 1)
+

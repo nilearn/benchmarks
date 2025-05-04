@@ -3,7 +3,7 @@
     "cpu": "AMD EPYC 7763 64-Core Processor",
     "machine": "fv-az1113-357",
     "num_cpu": "4",
-    "os": "Linux 6.8.0-1026-azure",
-    "ram": "16373784",
+    "os": "Linux 6.8.0-1027-azure",
+    "ram": "16373756",
     "version": 1
 }
