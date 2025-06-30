@@ -4,6 +4,6 @@
     "machine": "fv-az1113-357",
     "num_cpu": "4",
     "os": "Linux 6.8.0-1029-azure",
-    "ram": "16379884",
+    "ram": "16379880",
     "version": 1
 }
