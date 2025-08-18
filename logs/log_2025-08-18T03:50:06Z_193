@@ -1,0 +1,2424 @@
+Couldn't load asv.plugins._mamba_helpers because
+No module named 'libmambapy'
+· Running '/usr/bin/git config init.defaultBranch'
+· Running '/usr/bin/git config --global init.defaultBranch'
+· Running '/usr/bin/git config --system init.defaultBranch'
+· Running '/usr/bin/git rev-parse main^{commit}'
+  OUTPUT -------->
+  35ab6c6eb2722a053fda839349c28188e6b3cb72
+· Creating environments
+·· Creating conda environment for conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+·· Running '/usr/bin/conda --version'
+   OUTPUT -------->
+   conda 25.5.1
+·· conda version: conda 25.5.1
+   
+
+·· Running '/usr/bin/conda env create -f /tmp/tmpf5mt5_0g.yml -p /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e --yes'
+   OUTPUT -------->
+   CI detected...
+   By accessing https://repo.anaconda.com/pkgs/main via CI for this repository you 
+   acknowledge and agree to the Terms of Service:
+   ANACONDA TERMS OF SERVICE
+   Effective Date: July 15, 2025
+   
+   See https://anaconda.com/legal/terms/terms-of-service
+   By accessing https://repo.anaconda.com/pkgs/r via CI for this repository you 
+
+   acknowledge and agree to the Terms of Service:
+   ANACONDA TERMS OF SERVICE
+   Effective Date: July 15, 2025
+   
+   See https://anaconda.com/legal/terms/terms-of-service
+   2 channel Terms of Service accepted
+
+   Channels:
+    - conda-forge
+    - defaults
+   Platform: linux-64
+   Collecting package metadata (repodata.json): - \ | / - \ | / - \ | / - \ | / - \ | / - done
+
+   Solving environment: | / done
+   
+   ==> WARNING: A newer version of conda exists. <==
+       current version: 25.5.1
+       latest version: 25.7.0
+   
+   Please update conda by running
+   
+       $ conda update -n base -c defaults conda
+   
+   
+   
+
+   Downloading and Extracting Packages: ...working...scipy-1.8.0          | 25.4 MB   |            |   0% 
+   python-3.9.23        | 22.6 MB   |            |   0% [A
+   
+   pandas-2.2.0         | 12.3 MB   |            |   0% [A[A
+
+   
+   
+   scikit-learn-1.4.0   | 8.7 MB    |            |   0% [A[A[A
+
+   
+   
+   
+   numpy-1.22.4         | 6.8 MB    |            |   0% [A[A[A[A
+
+   
+   
+   
+   
+   libopenblas-0.3.25   | 5.3 MB    |            |   0% [A[A[A[A[A
+
+   
+   
+   
+   
+   
+   libstdcxx-15.1.0     | 3.7 MB    |            |   0% [A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   tk-8.6.13            | 3.1 MB    |            |   0% [A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   openssl-3.5.2        | 3.0 MB    |            |   0% [A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   nibabel-5.2.0        | 2.6 MB    |            |   0% [A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgfortran5-15.1.0  | 1.5 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   pip-25.2             | 1.1 MB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libsqlite-3.50.4     | 911 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ncurses-6.5          | 871 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgcc-15.1.0        | 805 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   setuptools-80.9.0    | 731 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ld_impl_linux-64-2.4 | 660 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgomp-15.1.0       | 437 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   readline-8.2         | 276 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   python-3.9.23        | 22.6 MB   | #1         |  11% [Ascipy-1.8.0          | 25.4 MB   | 7          |   7% 
+   
+   
+   scikit-learn-1.4.0   | 8.7 MB    | #3         |  14% [A[A[A
+
+   
+   
+   
+   numpy-1.22.4         | 6.8 MB    | 7          |   8% [A[A[A[A
+
+   python-3.9.23        | 22.6 MB   | ###1       |  32% [Ascipy-1.8.0          | 25.4 MB   | ##5        |  26% 
+   
+   
+   scikit-learn-1.4.0   | 8.7 MB    | ######8    |  69% [A[A[A
+
+   
+   
+   
+   numpy-1.22.4         | 6.8 MB    | #######8   |  78% [A[A[A[A
+
+   
+   pandas-2.2.0         | 12.3 MB   |            |   0% [A[A
+
+   python-3.9.23        | 22.6 MB   | #####      |  51% [Ascipy-1.8.0          | 25.4 MB   | ####2      |  43% 
+   
+   pandas-2.2.0         | 12.3 MB   | ###        |  31% [A[A
+
+   
+   
+   
+   numpy-1.22.4         | 6.8 MB    | ########## | 100% [A[A[A[A
+
+   
+   
+   
+   
+   libopenblas-0.3.25   | 5.3 MB    |            |   0% [A[A[A[A[A
+
+   python-3.9.23        | 22.6 MB   | #######    |  70% [Ascipy-1.8.0          | 25.4 MB   | #####8     |  59% 
+   
+   
+   scikit-learn-1.4.0   | 8.7 MB    | ########## | 100% [A[A[A
+
+   
+   pandas-2.2.0         | 12.3 MB   | ######5    |  66% [A[A
+
+   
+   
+   
+   
+   
+   libstdcxx-15.1.0     | 3.7 MB    |            |   0% [A[A[A[A[A[A
+
+   
+   
+   
+   
+   libopenblas-0.3.25   | 5.3 MB    | ######2    |  62% [A[A[A[A[A
+
+   
+   pandas-2.2.0         | 12.3 MB   | #########1 |  91% [A[Ascipy-1.8.0          | 25.4 MB   | #######4   |  74% 
+
+   python-3.9.23        | 22.6 MB   | ########8  |  88% [A
+   
+   
+   
+   
+   
+   libstdcxx-15.1.0     | 3.7 MB    | #######3   |  73% [A[A[A[A[A[Ascipy-1.8.0          | 25.4 MB   | ########8  |  88% 
+
+   
+   
+   
+   
+   
+   libstdcxx-15.1.0     | 3.7 MB    | ########## | 100% [A[A[A[A[A[A
+
+   
+   
+   
+   
+   libopenblas-0.3.25   | 5.3 MB    | ########## | 100% [A[A[A[A[A
+
+   
+   
+   
+   
+   libopenblas-0.3.25   | 5.3 MB    | ########## | 100% [A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   openssl-3.5.2        | 3.0 MB    |            |   1% [A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   tk-8.6.13            | 3.1 MB    |            |   0% [A[A[A[A[A[A[A
+
+   
+   pandas-2.2.0         | 12.3 MB   | ########## | 100% [A[A
+
+   
+   
+   
+   
+   
+   
+   
+   openssl-3.5.2        | 3.0 MB    | ########## | 100% [A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   openssl-3.5.2        | 3.0 MB    | ########## | 100% [A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   tk-8.6.13            | 3.1 MB    | ########## | 100% [A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   tk-8.6.13            | 3.1 MB    | ########## | 100% [A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgfortran5-15.1.0  | 1.5 MB    | 1          |   1% [A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   nibabel-5.2.0        | 2.6 MB    |            |   1% [A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   pip-25.2             | 1.1 MB    | 1          |   1% [A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   pip-25.2             | 1.1 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgfortran5-15.1.0  | 1.5 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   nibabel-5.2.0        | 2.6 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   nibabel-5.2.0        | 2.6 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libsqlite-3.50.4     | 911 KB    | 1          |   2% [A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ncurses-6.5          | 871 KB    | 1          |   2% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   python-3.9.23        | 22.6 MB   | ########## | 100% [A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libsqlite-3.50.4     | 911 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgcc-15.1.0        | 805 KB    | 1          |   2% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ncurses-6.5          | 871 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   setuptools-80.9.0    | 731 KB    | 2          |   2% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgcc-15.1.0        | 805 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgomp-15.1.0       | 437 KB    | 3          |   4% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ld_impl_linux-64-2.4 | 660 KB    | 2          |   2% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   setuptools-80.9.0    | 731 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   libstdcxx-15.1.0     | 3.7 MB    | ########## | 100% [A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgomp-15.1.0       | 437 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ld_impl_linux-64-2.4 | 660 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   readline-8.2         | 276 KB    | 5          |   6% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   readline-8.2         | 276 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[Ascipy-1.8.0          | 25.4 MB   | ########## | 100% 
+
+   
+   
+   
+   
+   libopenblas-0.3.25   | 5.3 MB    | ########## | 100% [A[A[A[A[A
+
+   
+   
+   scikit-learn-1.4.0   | 8.7 MB    | ########## | 100% [A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   openssl-3.5.2        | 3.0 MB    | ########## | 100% [A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   tk-8.6.13            | 3.1 MB    | ########## | 100% [A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   pip-25.2             | 1.1 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   pip-25.2             | 1.1 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgfortran5-15.1.0  | 1.5 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgfortran5-15.1.0  | 1.5 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   nibabel-5.2.0        | 2.6 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   numpy-1.22.4         | 6.8 MB    | ########## | 100% [A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libsqlite-3.50.4     | 911 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libsqlite-3.50.4     | 911 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   pandas-2.2.0         | 12.3 MB   | ########## | 100% [A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgcc-15.1.0        | 805 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgcc-15.1.0        | 805 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   setuptools-80.9.0    | 731 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   setuptools-80.9.0    | 731 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgomp-15.1.0       | 437 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   libgomp-15.1.0       | 437 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ld_impl_linux-64-2.4 | 660 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ld_impl_linux-64-2.4 | 660 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   readline-8.2         | 276 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   readline-8.2         | 276 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ncurses-6.5          | 871 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ncurses-6.5          | 871 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+   python-3.9.23        | 22.6 MB   | ########## | 100% [Ascipy-1.8.0          | 25.4 MB   | ########## | 100% 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                         [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A                                                     
+
+                                                        [A
+   
+                                                        [A[A
+   
+   
+                                                        [A[A[A
+   
+   
+   
+                                                        [A[A[A[A
+   
+   
+   
+   
+                                                        [A[A[A[A[A
+
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+                                                        [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   [A
+   
+   [A[A
+
+   
+   
+   [A[A[A
+   
+   
+   
+   [A[A[A[A
+   
+   
+   
+   
+   [A[A[A[A[A
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+   [A
+   
+   [A[A
+   
+   
+   [A[A[A
+   
+   
+   
+   [A[A[A[A
+   
+   
+   
+   
+   [A[A[A[A[A
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   [A[A[A[A[A[A[A[A[A[A done
+
+   Preparing transaction: \ | / done
+   Verifying transaction: \ | / - \ | / - \ | / - \ done
+   Executing transaction: / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - done
+   #
+   # To activate this environment, use
+   #
+   #     $ conda activate /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e
+   #
+   # To deactivate an active environment, use
+   #
+   #     $ conda deactivate
+   
+
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python -mpip install -v --upgrade build'
+   OUTPUT -------->
+   Using pip 25.2 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/pip (python 3.9)
+   Collecting build
+     Obtaining dependency information for build from https://files.pythonhosted.org/packages/cb/8c/2b30c12155ad8de0cf641d76a8b396a16d2c36bc6d50b621a62b7c4567c1/build-1.3.0-py3-none-any.whl.metadata
+     Using cached build-1.3.0-py3-none-any.whl.metadata (5.6 kB)
+   Requirement already satisfied: packaging>=19.1 in ./env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from build) (25.0)
+   Collecting pyproject_hooks (from build)
+     Obtaining dependency information for pyproject_hooks from https://files.pythonhosted.org/packages/bd/24/12818598c362d7f300f18e74db45963dbcb85150324092410c8b49405e42/pyproject_hooks-1.2.0-py3-none-any.whl.metadata
+     Using cached pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
+   Collecting importlib-metadata>=4.6 (from build)
+     Obtaining dependency information for importlib-metadata>=4.6 from https://files.pythonhosted.org/packages/20/b0/36bd937216ec521246249be3bf9855081de4c5e06a0c9b4219dbeda50373/importlib_metadata-8.7.0-py3-none-any.whl.metadata
+     Using cached importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+   Collecting tomli>=1.1.0 (from build)
+     Obtaining dependency information for tomli>=1.1.0 from https://files.pythonhosted.org/packages/6e/c2/61d3e0f47e2b74ef40a68b9e6ad5984f6241a942f7cd3bbfbdbd03861ea9/tomli-2.2.1-py3-none-any.whl.metadata
+     Using cached tomli-2.2.1-py3-none-any.whl.metadata (10 kB)
+   Requirement already satisfied: zipp>=3.20 in ./env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from importlib-metadata>=4.6->build) (3.23.0)
+   Using cached build-1.3.0-py3-none-any.whl (23 kB)
+   Using cached importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+   Using cached tomli-2.2.1-py3-none-any.whl (14 kB)
+   Using cached pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
+   Installing collected packages: tomli, pyproject_hooks, importlib-metadata, build
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/pyproject-build to 755
+   Successfully installed build-1.3.0 importlib-metadata-8.7.0 pyproject_hooks-1.2.0 tomli-2.2.1
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python -mpip install -v --upgrade asv_runner'
+   OUTPUT -------->
+   Using pip 25.2 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/pip (python 3.9)
+   Collecting asv_runner
+     Obtaining dependency information for asv_runner from https://files.pythonhosted.org/packages/54/9a/6872af94fc8e8072723946651e65f66e16a0ca0efec7806bce8c2e2483d1/asv_runner-0.2.1-py3-none-any.whl.metadata
+     Using cached asv_runner-0.2.1-py3-none-any.whl.metadata (2.8 kB)
+   Requirement already satisfied: importlib-metadata in ./env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from asv_runner) (8.7.0)
+   Requirement already satisfied: zipp>=3.20 in ./env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from importlib-metadata->asv_runner) (3.23.0)
+   Using cached asv_runner-0.2.1-py3-none-any.whl (47 kB)
+   Installing collected packages: asv_runner
+   Successfully installed asv_runner-0.2.1
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python -mpip install -v --upgrade pympler'
+   OUTPUT -------->
+   Using pip 25.2 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/pip (python 3.9)
+   Collecting pympler
+     Obtaining dependency information for pympler from https://files.pythonhosted.org/packages/79/4f/a6a2e2b202d7fd97eadfe90979845b8706676b41cbd3b42ba75adf329d1f/Pympler-1.1-py3-none-any.whl.metadata
+     Using cached Pympler-1.1-py3-none-any.whl.metadata (3.6 kB)
+   Using cached Pympler-1.1-py3-none-any.whl (165 kB)
+   Installing collected packages: pympler
+   Successfully installed pympler-1.1
+· Discovering benchmarks
+·· Running '/usr/bin/git rev-parse main^{commit}'
+   OUTPUT -------->
+   35ab6c6eb2722a053fda839349c28188e6b3cb72
+·· Running '/usr/bin/git clone --shared --recursive /home/runner/work/nilearn/nilearn /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/project'
+   OUTPUT -------->
+   Cloning into '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/project'...
+   done.
+·· Running '/usr/bin/git -c protocol.file.allow=always submodule deinit -f .'
+·· Running '/usr/bin/git checkout -f 35ab6c6eb2722a053fda839349c28188e6b3cb72'
+   OUTPUT -------->
+   Note: switching to '35ab6c6eb2722a053fda839349c28188e6b3cb72'.
+   
+   You are in 'detached HEAD' state. You can look around, make experimental
+   changes and commit them, and you can discard any commits you make in this
+   state without impacting any branches by switching back to a branch.
+   
+   If you want to create a new branch to retain commits you create, you may
+   do so (now or later) by using -c with the switch command. Example:
+   
+     git switch -c <new-branch-name>
+   
+   Or undo this operation with:
+   
+     git switch -
+   
+   Turn off this advice by setting config variable advice.detachedHead to false
+   
+   HEAD is now at 35ab6c6eb [DOC] improve doc and test around screening percentile adjustments (#5556)
+
+·· Running '/usr/bin/git clean -fdx'
+·· Running '/usr/bin/git -c protocol.file.allow=always submodule update --init --recursive'
+·· Uninstalling from conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python -m pip uninstall -y nilearn'
+   OUTPUT -------->
+   WARNING: Skipping nilearn as it is not installed.
+·· Running '/usr/bin/git name-rev --name-only --exclude=remotes/* --no-undefined 35ab6c6eb2722a053fda839349c28188e6b3cb72'
+   OUTPUT -------->
+   main
+·· Building 35ab6c6e <main> for conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python -m build --wheel -o /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/asv-build-cache/35ab6c6eb2722a053fda839349c28188e6b3cb72 /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/project'
+   OUTPUT -------->
+   * Creating isolated environment: venv+pip...
+   * Installing packages in isolated environment:
+     - hatch-vcs
+     - hatchling
+     - setuptools-scm!=9.0.0
+   * Getting build dependencies for wheel...
+   * Building wheel...
+
+   Successfully built nilearn-0.12.1.dev49+g35ab6c6eb-py3-none-any.whl
+·· Running '/usr/bin/git name-rev --name-only --exclude=remotes/* --no-undefined 35ab6c6eb2722a053fda839349c28188e6b3cb72'
+   OUTPUT -------->
+   main
+·· Installing 35ab6c6e <main> into conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python -m pip install /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/asv-build-cache/35ab6c6eb2722a053fda839349c28188e6b3cb72/nilearn-0.12.1.dev49+g35ab6c6eb-py3-none-any.whl'
+   OUTPUT -------->
+   Processing /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/asv-build-cache/35ab6c6eb2722a053fda839349c28188e6b3cb72/nilearn-0.12.1.dev49+g35ab6c6eb-py3-none-any.whl
+   Requirement already satisfied: joblib>=1.2.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.12.1.dev49+g35ab6c6eb) (1.2.0)
+   Collecting lxml (from nilearn==0.12.1.dev49+g35ab6c6eb)
+     Downloading lxml-6.0.0-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+   Requirement already satisfied: nibabel>=5.2.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.12.1.dev49+g35ab6c6eb) (5.2.0)
+   Requirement already satisfied: numpy>=1.22.4 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.12.1.dev49+g35ab6c6eb) (1.22.4)
+   Requirement already satisfied: packaging in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.12.1.dev49+g35ab6c6eb) (25.0)
+   Requirement already satisfied: pandas>=2.2.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.12.1.dev49+g35ab6c6eb) (2.2.0)
+   Collecting requests>=2.25.0 (from nilearn==0.12.1.dev49+g35ab6c6eb)
+     Downloading requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
+   Requirement already satisfied: scikit-learn>=1.4.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.12.1.dev49+g35ab6c6eb) (1.4.0)
+   Requirement already satisfied: scipy>=1.8.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from nilearn==0.12.1.dev49+g35ab6c6eb) (1.8.0)
+   Requirement already satisfied: python-dateutil>=2.8.2 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from pandas>=2.2.0->nilearn==0.12.1.dev49+g35ab6c6eb) (2.9.0.post0)
+   Requirement already satisfied: pytz>=2020.1 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from pandas>=2.2.0->nilearn==0.12.1.dev49+g35ab6c6eb) (2025.2)
+   Requirement already satisfied: tzdata>=2022.7 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from pandas>=2.2.0->nilearn==0.12.1.dev49+g35ab6c6eb) (2025.2)
+   Requirement already satisfied: six>=1.5 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from python-dateutil>=2.8.2->pandas>=2.2.0->nilearn==0.12.1.dev49+g35ab6c6eb) (1.17.0)
+   Collecting charset_normalizer<4,>=2 (from requests>=2.25.0->nilearn==0.12.1.dev49+g35ab6c6eb)
+     Downloading charset_normalizer-3.4.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+   Collecting idna<4,>=2.5 (from requests>=2.25.0->nilearn==0.12.1.dev49+g35ab6c6eb)
+     Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+   Collecting urllib3<3,>=1.21.1 (from requests>=2.25.0->nilearn==0.12.1.dev49+g35ab6c6eb)
+     Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+   Collecting certifi>=2017.4.17 (from requests>=2.25.0->nilearn==0.12.1.dev49+g35ab6c6eb)
+     Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+   Requirement already satisfied: threadpoolctl>=2.0.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages (from scikit-learn>=1.4.0->nilearn==0.12.1.dev49+g35ab6c6eb) (3.6.0)
+   Downloading requests-2.32.4-py3-none-any.whl (64 kB)
+   Downloading charset_normalizer-3.4.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (152 kB)
+   Downloading idna-3.10-py3-none-any.whl (70 kB)
+   Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+   Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+   Downloading lxml-6.0.0-cp39-cp39-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 139.5 MB/s  0:00:00
+   Installing collected packages: urllib3, lxml, idna, charset_normalizer, certifi, requests, nilearn
+   Successfully installed certifi-2025.8.3 charset_normalizer-3.4.3 idna-3.10 lxml-6.0.0 nilearn-0.12.1.dev49+g35ab6c6eb requests-2.32.4 urllib3-2.5.0
+·· Running '/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py discover /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks /tmp/tmpo74onu93/result.json' in conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python /opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py discover /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks /tmp/tmpo74onu93/result.json'
+· Running 14 total benchmarks (1 commits * 1 environments * 14 benchmarks)
+[ 0.00%] · Running '/usr/bin/git name-rev --name-only --exclude=remotes/* --no-undefined 35ab6c6eb2722a053fda839349c28188e6b3cb72'
+           OUTPUT -------->
+           main
+[ 0.00%] · For nilearn commit 35ab6c6e <main>:
+[ 0.00%] ·· Running '/usr/bin/git rev-list -n 1 --format=%at 35ab6c6eb2722a053fda839349c28188e6b3cb72'
+            OUTPUT -------->
+            commit 35ab6c6eb2722a053fda839349c28188e6b3cb72
+            1755235733
+[ 0.00%] ·· Benchmarking conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+[ 0.00%] ··· Running '/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py run_server /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks /tmp/asv-forkserver-jm9lf65q/socket' in conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+[ 0.00%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python /opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py run_server /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks /tmp/asv-forkserver-jm9lf65q/socket'
+[ 7.14%] ··· Setting up common:14
+[ 7.14%] ··· Running '/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py setup_cache /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks comparisons.image.CompareLoad.time_compare_load {"cpu_affinity": null}' in conda-py3.9-joblib1.2.0-nibabel5.2.0-numpy1.22.4-pandas2.2.0-scikit-learn1.4.0-scipy1.8.0
+[ 7.14%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/bin/python /opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py setup_cache /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks comparisons.image.CompareLoad.time_compare_load {"cpu_affinity": null}'
+             OUTPUT -------->
+             [fetch_adhd] Added README.md to /home/runner/nilearn_data
+             [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+             [fetch_adhd]  ...done. (10 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+             [fetch_adhd] .. done.
+             
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+             [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+             [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+             [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+             [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+             [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+             [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+             [fetch_adhd]  ...done. (20 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+             [fetch_adhd] .. done.
+             
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+             [fetch_adhd]  ...done. (16 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+             [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+             Traceback (most recent call last):
+               File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                 main()
+
+               File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+               commands[mode](args)
+             File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+               cache = benchmark.do_setup_cache()
+             File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+               return self._setup_cache()
+             File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+               fmri_data = fetch_adhd(n_subjects=n_subjects)
+             File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+               functionals = fetch_files(
+             File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+               return fetch_files(
+             File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+               raise OSError(f"Fetching aborted: {abort}")
+
+             OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz                                        failed
+[ 7.14%] ···· [fetch_adhd] Added README.md to /home/runner/nilearn_data
+              [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+              [fetch_adhd]  ...done. (10 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+              [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+              [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+              [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+              [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+              [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+              [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+              [fetch_adhd]  ...done. (20 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+              [fetch_adhd]  ...done. (16 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+              [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              Traceback (most recent call last):
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                  main()
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                  commands[mode](args)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                  cache = benchmark.do_setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                  return self._setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                  fmri_data = fetch_adhd(n_subjects=n_subjects)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                  functionals = fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                  return fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                  raise OSError(f"Fetching aborted: {abort}")
+              OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              
+              asv: setup_cache failed (exit status 1)
+
+[ 7.14%] ··· comparisons.image.CompareLoad.time_compare_load skipped (setup_cache failed)
+[14.29%] ··· comparisons.image.CompareMean.time_compare_mean skipped (setup_cache failed)
+[21.43%] ··· comparisons.image.CompareSlice.time_compare_slice skipped (setup_cache failed)
+[28.57%] ··· comparisons.maskers.CompareMask.time_compare_mask skipped (setup_cache failed)
+[35.71%] ··· tracking.image.LoadImgBenchmark.time_load_img skipped (setup_cache failed)
+[42.86%] ··· tracking.image.MeanImgBenchmark.time_mean_img skipped (setup_cache failed)
+[50.00%] ··· tracking.maskers.NiftiMaskerBenchmark.time_nifti_masker skipped (setup_cache failed)
+[53.57%] ··· comparisons.image.CompareLoad.peakmem_compare_load skipped (setup_cache failed)
+[57.14%] ··· comparisons.image.CompareLoad.time_compare_load             failed
+[57.14%] ··· =============== ========
+                  loader             
+             --------------- --------
+                 nilearn      failed 
+              nibabel (ref)   failed 
+             =============== ========
+             asv: setup_cache failed
+             
+             [fetch_adhd] Added README.md to /home/runner/nilearn_data
+             [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+             [fetch_adhd]  ...done. (10 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+             [fetch_adhd] .. done.
+             
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+             [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+             [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+             [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+             [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+             [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+             [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+             [fetch_adhd]  ...done. (20 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+             [fetch_adhd] .. done.
+             
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+             [fetch_adhd]  ...done. (16 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+             [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+             Traceback (most recent call last):
+               File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                 main()
+               File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                 commands[mode](args)
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                 cache = benchmark.do_setup_cache()
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                 return self._setup_cache()
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                 fmri_data = fetch_adhd(n_subjects=n_subjects)
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                 functionals = fetch_files(
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                 return fetch_files(
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                 raise OSError(f"Fetching aborted: {abort}")
+             OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+             
+             asv: setup_cache failed (exit status 1)
+
+[57.14%] ···· asv: setup_cache failed
+              
+              [fetch_adhd] Added README.md to /home/runner/nilearn_data
+              [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+              [fetch_adhd]  ...done. (10 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+              [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+              [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+              [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+              [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+              [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+              [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+              [fetch_adhd]  ...done. (20 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+              [fetch_adhd]  ...done. (16 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+              [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              Traceback (most recent call last):
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                  main()
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                  commands[mode](args)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                  cache = benchmark.do_setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                  return self._setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                  fmri_data = fetch_adhd(n_subjects=n_subjects)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                  functionals = fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                  return fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                  raise OSError(f"Fetching aborted: {abort}")
+              OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              
+              asv: setup_cache failed (exit status 1)
+              asv: benchmark failed (exit status 1)
+
+[60.71%] ··· comparisons.image.CompareMean.peakmem_compare_mean skipped (setup_cache failed)
+[64.29%] ··· comparisons.image.CompareMean.time_compare_mean             failed
+[64.29%] ··· =============== ========
+                  loader             
+             --------------- --------
+                 nilearn      failed 
+              nibabel (ref)   failed 
+             =============== ========
+             asv: setup_cache failed
+             
+             [fetch_adhd] Added README.md to /home/runner/nilearn_data
+             [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+             [fetch_adhd]  ...done. (10 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+             [fetch_adhd] .. done.
+             
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+             [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+             [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+             [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+             [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+             [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+             [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+             [fetch_adhd]  ...done. (20 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+             [fetch_adhd] .. done.
+             
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+             [fetch_adhd]  ...done. (16 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+             [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+             Traceback (most recent call last):
+               File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                 main()
+               File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                 commands[mode](args)
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                 cache = benchmark.do_setup_cache()
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                 return self._setup_cache()
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                 fmri_data = fetch_adhd(n_subjects=n_subjects)
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                 functionals = fetch_files(
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                 return fetch_files(
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                 raise OSError(f"Fetching aborted: {abort}")
+             OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+             
+             asv: setup_cache failed (exit status 1)
+
+[64.29%] ···· asv: setup_cache failed
+              
+              [fetch_adhd] Added README.md to /home/runner/nilearn_data
+              [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+              [fetch_adhd]  ...done. (10 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+              [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+              [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+              [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+              [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+              [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+              [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+              [fetch_adhd]  ...done. (20 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+              [fetch_adhd]  ...done. (16 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+              [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              Traceback (most recent call last):
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                  main()
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                  commands[mode](args)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                  cache = benchmark.do_setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                  return self._setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                  fmri_data = fetch_adhd(n_subjects=n_subjects)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                  functionals = fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                  return fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                  raise OSError(f"Fetching aborted: {abort}")
+              OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              
+              asv: setup_cache failed (exit status 1)
+              asv: benchmark failed (exit status 1)
+
+[67.86%] ··· comparisons.image.CompareSlice.peakmem_compare_slice skipped (setup_cache failed)
+[71.43%] ··· ...risons.image.CompareSlice.time_compare_slice             failed
+[71.43%] ··· =============== ========
+                  loader             
+             --------------- --------
+                 nilearn      failed 
+              nibabel (ref)   failed 
+             =============== ========
+             asv: setup_cache failed
+             
+             [fetch_adhd] Added README.md to /home/runner/nilearn_data
+             [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+             [fetch_adhd]  ...done. (10 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+             [fetch_adhd] .. done.
+             
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+             [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+             [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+             [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+             [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+             [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+             [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+             [fetch_adhd]  ...done. (20 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+             [fetch_adhd] .. done.
+             
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+             [fetch_adhd]  ...done. (16 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+             [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+             Traceback (most recent call last):
+               File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                 main()
+               File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                 commands[mode](args)
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                 cache = benchmark.do_setup_cache()
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                 return self._setup_cache()
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                 fmri_data = fetch_adhd(n_subjects=n_subjects)
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                 functionals = fetch_files(
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                 return fetch_files(
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                 raise OSError(f"Fetching aborted: {abort}")
+             OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+             
+             asv: setup_cache failed (exit status 1)
+
+[71.43%] ···· asv: setup_cache failed
+              
+              [fetch_adhd] Added README.md to /home/runner/nilearn_data
+              [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+              [fetch_adhd]  ...done. (10 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+              [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+              [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+              [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+              [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+              [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+              [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+              [fetch_adhd]  ...done. (20 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+              [fetch_adhd]  ...done. (16 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+              [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              Traceback (most recent call last):
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                  main()
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                  commands[mode](args)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                  cache = benchmark.do_setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                  return self._setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                  fmri_data = fetch_adhd(n_subjects=n_subjects)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                  functionals = fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                  return fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                  raise OSError(f"Fetching aborted: {abort}")
+              OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              
+              asv: setup_cache failed (exit status 1)
+              asv: benchmark failed (exit status 1)
+
+[75.00%] ··· comparisons.maskers.CompareMask.peakmem_compare_mask skipped (setup_cache failed)
+[78.57%] ··· ...risons.maskers.CompareMask.time_compare_mask             failed
+[78.57%] ··· ================ ========= ===============
+             --                         loader         
+             ---------------- -------------------------
+              implementation   nilearn   nibabel (ref) 
+             ================ ========= ===============
+                 nilearn        failed       failed    
+               numpy (ref)      failed       failed    
+             ================ ========= ===============
+             asv: setup_cache failed
+             
+             [fetch_adhd] Added README.md to /home/runner/nilearn_data
+             [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+             [fetch_adhd]  ...done. (10 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+             [fetch_adhd] .. done.
+             
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+             [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+             [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+             [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+             [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+             [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+             [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+             [fetch_adhd]  ...done. (20 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+             [fetch_adhd] .. done.
+             
+             [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+             [fetch_adhd]  ...done. (16 seconds, 0 min)
+             
+             [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+             [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+             Traceback (most recent call last):
+               File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                 main()
+               File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                 commands[mode](args)
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                 cache = benchmark.do_setup_cache()
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                 return self._setup_cache()
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                 fmri_data = fetch_adhd(n_subjects=n_subjects)
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                 functionals = fetch_files(
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                 return fetch_files(
+               File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                 raise OSError(f"Fetching aborted: {abort}")
+             OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+             
+             asv: setup_cache failed (exit status 1)
+
+[78.57%] ···· asv: setup_cache failed
+              
+              [fetch_adhd] Added README.md to /home/runner/nilearn_data
+              [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+              [fetch_adhd]  ...done. (10 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+              [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+              [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+              [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+              [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+              [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+              [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+              [fetch_adhd]  ...done. (20 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+              [fetch_adhd]  ...done. (16 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+              [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              Traceback (most recent call last):
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                  main()
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                  commands[mode](args)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                  cache = benchmark.do_setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                  return self._setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                  fmri_data = fetch_adhd(n_subjects=n_subjects)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                  functionals = fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                  return fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                  raise OSError(f"Fetching aborted: {abort}")
+              OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              
+              asv: setup_cache failed (exit status 1)
+              asv: benchmark failed (exit status 1)
+
+[82.14%] ··· tracking.image.LoadImgBenchmark.peakmem_load_img skipped (setup_cache failed)
+[85.71%] ··· tracking.image.LoadImgBenchmark.time_load_img               failed
+[85.71%] ···· asv: setup_cache failed
+              
+              [fetch_adhd] Added README.md to /home/runner/nilearn_data
+              [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+              [fetch_adhd]  ...done. (10 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+              [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+              [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+              [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+              [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+              [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+              [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+              [fetch_adhd]  ...done. (20 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+              [fetch_adhd]  ...done. (16 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+              [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              Traceback (most recent call last):
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                  main()
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                  commands[mode](args)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                  cache = benchmark.do_setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                  return self._setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                  fmri_data = fetch_adhd(n_subjects=n_subjects)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                  functionals = fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                  return fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                  raise OSError(f"Fetching aborted: {abort}")
+              OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              
+              asv: setup_cache failed (exit status 1)
+              asv: benchmark failed (exit status 1)
+
+[89.29%] ··· tracking.image.MeanImgBenchmark.peakmem_mean_img skipped (setup_cache failed)
+[92.86%] ··· tracking.image.MeanImgBenchmark.time_mean_img               failed
+[92.86%] ···· asv: setup_cache failed
+              
+              [fetch_adhd] Added README.md to /home/runner/nilearn_data
+              [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+              [fetch_adhd]  ...done. (10 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+              [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+              [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+              [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+              [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+              [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+              [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+              [fetch_adhd]  ...done. (20 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+              [fetch_adhd]  ...done. (16 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+              [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              Traceback (most recent call last):
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                  main()
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                  commands[mode](args)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                  cache = benchmark.do_setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                  return self._setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                  fmri_data = fetch_adhd(n_subjects=n_subjects)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                  functionals = fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                  return fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                  raise OSError(f"Fetching aborted: {abort}")
+              OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              
+              asv: setup_cache failed (exit status 1)
+              asv: benchmark failed (exit status 1)
+
+[96.43%] ··· tracking.maskers.NiftiMaskerBenchmark.peakmem_nifti_masker skipped (setup_cache failed)
+[100.00%] ··· ...skers.NiftiMaskerBenchmark.time_nifti_masker             failed
+[100.00%] ··· ================ ======== ========
+              --                    detrend     
+              ---------------- -----------------
+               smoothing_fwhm   False     True  
+              ================ ======== ========
+                    None        failed   failed 
+                     6          failed   failed 
+              ================ ======== ========
+              asv: setup_cache failed
+              
+              [fetch_adhd] Added README.md to /home/runner/nilearn_data
+              [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+              [fetch_adhd]  ...done. (10 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+              [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+              [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+              [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+              [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+              [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+              [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+              [fetch_adhd]  ...done. (20 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+              [fetch_adhd] .. done.
+              
+              [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+              [fetch_adhd]  ...done. (16 seconds, 0 min)
+              
+              [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+              [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              Traceback (most recent call last):
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                  main()
+                File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                  commands[mode](args)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                  cache = benchmark.do_setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                  return self._setup_cache()
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                  fmri_data = fetch_adhd(n_subjects=n_subjects)
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                  functionals = fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                  return fetch_files(
+                File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                  raise OSError(f"Fetching aborted: {abort}")
+              OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+              
+              asv: setup_cache failed (exit status 1)
+
+[100.00%] ···· asv: setup_cache failed
+               
+               [fetch_adhd] Added README.md to /home/runner/nilearn_data
+               [fetch_adhd] Dataset created in /home/runner/nilearn_data/adhd
+               [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7781/adhd40_metadata.tgz ...
+               [fetch_adhd]  ...done. (10 seconds, 0 min)
+               
+               [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/fbef5baff0b388a8c913a08e1d84e059/adhd40_metadata.tgz...
+               [fetch_adhd] .. done.
+               
+               [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7782/adhd40_0010042.tgz ...
+               [fetch_adhd] Downloaded 9601024 of 44414948 bytes (21.6%%,    3.6s remaining)
+               [fetch_adhd] Downloaded 13344768 of 44414948 bytes (30.0%%,    4.7s remaining)
+               [fetch_adhd] Downloaded 18456576 of 44414948 bytes (41.6%%,    4.4s remaining)
+               [fetch_adhd] Downloaded 23887872 of 44414948 bytes (53.8%%,    3.5s remaining)
+               [fetch_adhd] Downloaded 31039488 of 44414948 bytes (69.9%%,    2.2s remaining)
+               [fetch_adhd] Downloaded 39092224 of 44414948 bytes (88.0%%,    0.9s remaining)
+               [fetch_adhd]  ...done. (20 seconds, 0 min)
+               
+               [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010042.tgz...
+               [fetch_adhd] .. done.
+               
+               [fetch_adhd] Downloading data from https://www.nitrc.org/frs/download.php/7783/adhd40_0010064.tgz ...
+               [fetch_adhd]  ...done. (16 seconds, 0 min)
+               
+               [fetch_adhd] Extracting data from /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz...
+               [fetch_adhd] Error uncompressing file: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+               Traceback (most recent call last):
+                 File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 80, in <module>
+                   main()
+                 File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/asv/benchmark.py", line 72, in main
+                   commands[mode](args)
+                 File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/setup_cache.py", line 41, in _setup_cache
+                   cache = benchmark.do_setup_cache()
+                 File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/asv_runner/benchmarks/_base.py", line 655, in do_setup_cache
+                   return self._setup_cache()
+                 File "/home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/common.py", line 32, in setup_cache
+                   fmri_data = fetch_adhd(n_subjects=n_subjects)
+                 File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/func.py", line 359, in fetch_adhd
+                   functionals = fetch_files(
+                 File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 774, in fetch_files
+                   return fetch_files(
+                 File "/home/runner/work/nilearn/nilearn/asv_benchmarks/env/ebd2be1ced023b9c0b17976f8850c45e/lib/python3.9/site-packages/nilearn/datasets/_utils.py", line 870, in fetch_files
+                   raise OSError(f"Fetching aborted: {abort}")
+               OSError: Fetching aborted: [Uncompress] unknown archive file format: /home/runner/nilearn_data/adhd/f45a50254e86444511e546e90a094454/adhd40_0010064.tgz
+               
+               asv: setup_cache failed (exit status 1)
+               asv: benchmark failed (exit status 1)
+
