@@ -11,7 +11,8 @@
                 "'nibabel (ref)'"
             ]
         ],
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
         "version": "3f89cbe3d9c775e5b20d06180afbf53555d5a22f9590a1fcddc464073107c4f3"
@@ -33,7 +34,8 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "time",
         "unit": "seconds",
         "version": "2f85e8c185a9ff81322a22fe39eb74f1192724f580fe4ac6f78357a8d6ca4aae",
@@ -51,7 +53,8 @@
                 "'nibabel (ref)'"
             ]
         ],
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
         "version": "cc4cb7cde29dafdbe3232664a9f404c035e9b03f3b49bb3f8439d69e2d51de52"
@@ -73,7 +76,8 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "time",
         "unit": "seconds",
         "version": "7697260a27e99fbeba0acb77f1154b8e8bb86216c1e15618ab2f5edc28145725",
@@ -91,7 +95,8 @@
                 "'nibabel (ref)'"
             ]
         ],
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
         "version": "cdfdd55d5412f3c85959f38518d2f21d2bb1ca004c85172eaa074a892c17c837"
@@ -113,7 +118,8 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "time",
         "unit": "seconds",
         "version": "fdcec1b47aeea9f9bb0397966b4dbc163633ab8946ddc90eef671213ad30c7ff",
@@ -136,7 +142,8 @@
                 "'nibabel (ref)'"
             ]
         ],
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
         "version": "e7305c859371e0aef4c9eb57e986692c17e750c24d631fafdb879d1569bd61e8"
@@ -163,10 +170,39 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "time",
         "unit": "seconds",
         "version": "8be288366e8bb86cd2429cb85d056459fbb7ceaf2fb6c442055f4202e5f61211",
+        "warmup_time": -1
+    },
+    "tracking.image.IndexImgBenchmark.peakmem_index_img": {
+        "code": "class IndexImgBenchmark:\n    def peakmem_index_img(self):\n        \"\"\"Peak memory of loading the image followed by indexing a voxel.\"\"\"\n        index_img(\"fmri_100.nii.gz\", slice(1, 90, 2))\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, optional, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, optional, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "name": "tracking.image.IndexImgBenchmark.peakmem_index_img",
+        "param_names": [],
+        "params": [],
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
+        "type": "peakmemory",
+        "unit": "bytes",
+        "version": "69330d3efe9397e77a17d3db00e828dd006929598fab6e0cd3c0b26c569caf56"
+    },
+    "tracking.image.IndexImgBenchmark.time_index_img": {
+        "code": "class IndexImgBenchmark:\n    def time_index_img(self):\n        \"\"\"Time the loading the image followed by indexing a voxel.\"\"\"\n        index_img(\"fmri_100.nii.gz\", slice(1, 90, 2))\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, optional, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, optional, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "min_run_count": 2,
+        "name": "tracking.image.IndexImgBenchmark.time_index_img",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
+        "type": "time",
+        "unit": "seconds",
+        "version": "da3e01bf8384e30ccc8cc8f848a4ee05886db5da0ac5fc80f711fe60b2484160",
         "warmup_time": -1
     },
     "tracking.image.LoadImgBenchmark.peakmem_load_img": {
@@ -174,7 +210,8 @@
         "name": "tracking.image.LoadImgBenchmark.peakmem_load_img",
         "param_names": [],
         "params": [],
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
         "version": "c5592e8a986ede1095dd9ac71cfe2b42d29202d9c351278e67932d146b8ddde2"
@@ -189,7 +226,8 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "time",
         "unit": "seconds",
         "version": "74671232d1efbb8b6d3cfa9bd1d85386c187be8c3d38f12bdf251208bebf4dcc",
@@ -200,7 +238,8 @@
         "name": "tracking.image.MeanImgBenchmark.peakmem_mean_img",
         "param_names": [],
         "params": [],
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
         "version": "e66aec73d31ee1e8c0e9766c9d002ee21a540b927d909b63dfb79e4beefe9d00"
@@ -215,7 +254,8 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "time",
         "unit": "seconds",
         "version": "c1bf7b11995e212cdc61c4d4561aa2097f6ccf01b6c75d07ca5b04613ee2d093",
@@ -238,7 +278,8 @@
                 "True"
             ]
         ],
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
         "version": "78493b23fbd3bac7022ec87c6a65d4ca43a90c7ed77c2ea8f486147373cb2080"
@@ -265,7 +306,8 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "common:14",
+        "setup_cache_key": "common:16",
+        "timeout": 2400,
         "type": "time",
         "unit": "seconds",
         "version": "a4e74e9c0f9d00ded8d3c191abb9ff46c0b73a56ccf5c1b326c73c097f8219b1",
