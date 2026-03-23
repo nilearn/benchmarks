@@ -1,7 +1,147 @@
 {
-    "comparisons.image.CompareLoad.peakmem_compare_load": {
-        "code": "class CompareLoad:\n    def peakmem_compare_load(self, loader):\n        \"\"\"Peak memory of loading images.\"\"\"\n        load(loader)\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
-        "name": "comparisons.image.CompareLoad.peakmem_compare_load",
+    "glm.glm.BenchMarkFirstLevelModel.peakmem_glm_fit": {
+        "code": "class BenchMarkFirstLevelModel:\n    def peakmem_glm_fit(self, n_timepoints_n_runs, minimize_memory):\n        \"\"\"Measure peak memory for FirstLevelModel on large data.\"\"\"\n        self._fit(n_timepoints_n_runs, minimize_memory)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
+        "name": "glm.glm.BenchMarkFirstLevelModel.peakmem_glm_fit",
+        "param_names": [
+            "length_n_runs",
+            "minimize_memory"
+        ],
+        "params": [
+            [
+                "(250, 2)",
+                "(500, 1)"
+            ],
+            [
+                "True",
+                "False"
+            ]
+        ],
+        "timeout": 2400,
+        "type": "peakmemory",
+        "unit": "bytes",
+        "version": "c817fba110514534c0fd6aa200b3a076b052da6791ff1a894734d51f0739c5be"
+    },
+    "glm.glm.BenchMarkFirstLevelModel.time_glm_fit": {
+        "code": "class BenchMarkFirstLevelModel:\n    def time_glm_fit(self, n_timepoints_n_runs, minimize_memory):\n        \"\"\"Time FirstLevelModel on large data.\"\"\"\n        self._fit(n_timepoints_n_runs, minimize_memory)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
+        "min_run_count": 2,
+        "name": "glm.glm.BenchMarkFirstLevelModel.time_glm_fit",
+        "number": 0,
+        "param_names": [
+            "length_n_runs",
+            "minimize_memory"
+        ],
+        "params": [
+            [
+                "(250, 2)",
+                "(500, 1)"
+            ],
+            [
+                "True",
+                "False"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 2400,
+        "type": "time",
+        "unit": "seconds",
+        "version": "f1953199e01ad657e813534e1f87468f52bf41a36845f30d3b46ddb560da5041",
+        "warmup_time": -1
+    },
+    "glm.glm.BenchMarkFirstLevelModelReport.peakmem_glm_report": {
+        "code": "class BenchMarkFirstLevelModelReport:\n    def peakmem_glm_report(self, memory):\n        \"\"\"Measure peak memory for FirstLevelModel on large data.\"\"\"\n        self._fit(memory)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
+        "name": "glm.glm.BenchMarkFirstLevelModelReport.peakmem_glm_report",
+        "param_names": [
+            "m"
+        ],
+        "params": [
+            [
+                "None",
+                "'nilearn_cache'"
+            ]
+        ],
+        "timeout": 2400,
+        "type": "peakmemory",
+        "unit": "bytes",
+        "version": "27a993b124779d2698c04038c63d5b3f3f6fa40a561bd547843d27c019ba37f2"
+    },
+    "glm.glm.BenchMarkFirstLevelModelReport.time_glm_report": {
+        "code": "class BenchMarkFirstLevelModelReport:\n    def time_glm_report(self, memory):\n        \"\"\"Time FirstLevelModel on large data.\"\"\"\n        self._fit(memory)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
+        "min_run_count": 2,
+        "name": "glm.glm.BenchMarkFirstLevelModelReport.time_glm_report",
+        "number": 0,
+        "param_names": [
+            "m"
+        ],
+        "params": [
+            [
+                "None",
+                "'nilearn_cache'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 2400,
+        "type": "time",
+        "unit": "seconds",
+        "version": "fbd33a7d47945445914202cab8e30109283320e8ed2195efdb853b4934b0fb11",
+        "warmup_time": -1
+    },
+    "glm.glm.BenchMarkFirstLevelModelSave.peakmem_glm_save": {
+        "code": "class BenchMarkFirstLevelModelSave:\n    def peakmem_glm_save(self, memory, n_runs):\n        \"\"\"Measure peak memory for FirstLevelModel on large data.\"\"\"\n        self._fit(memory, n_runs)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
+        "name": "glm.glm.BenchMarkFirstLevelModelSave.peakmem_glm_save",
+        "param_names": [
+            "memory",
+            "n_runs"
+        ],
+        "params": [
+            [
+                "None",
+                "'nilearn_cache'"
+            ],
+            [
+                "1",
+                "4"
+            ]
+        ],
+        "timeout": 2400,
+        "type": "peakmemory",
+        "unit": "bytes",
+        "version": "f00b40c188ade55239eab452e469363061975fbe24b54b06f5ea1a1347929af3"
+    },
+    "glm.glm.BenchMarkFirstLevelModelSave.time_glm_save": {
+        "code": "class BenchMarkFirstLevelModelSave:\n    def time_glm_save(self, memory, n_runs):\n        \"\"\"Time FirstLevelModel on large data.\"\"\"\n        self._fit(memory, n_runs)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
+        "min_run_count": 2,
+        "name": "glm.glm.BenchMarkFirstLevelModelSave.time_glm_save",
+        "number": 0,
+        "param_names": [
+            "memory",
+            "n_runs"
+        ],
+        "params": [
+            [
+                "None",
+                "'nilearn_cache'"
+            ],
+            [
+                "1",
+                "4"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "timeout": 2400,
+        "type": "time",
+        "unit": "seconds",
+        "version": "f6981e71588c6fe36b5d8c1d8f30d43b3b7c525c866588830ecf07cee093b357",
+        "warmup_time": -1
+    },
+    "image.image.CompareLoad.peakmem_image_load_compare": {
+        "code": "class CompareLoad:\n    def peakmem_image_load_compare(self, loader):\n        \"\"\"Peak memory of loading images.\"\"\"\n        load(loader)\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "name": "image.image.CompareLoad.peakmem_image_load_compare",
         "param_names": [
             "loader"
         ],
@@ -11,16 +151,16 @@
                 "'nibabel (ref)'"
             ]
         ],
-        "setup_cache_key": "common:16",
+        "setup_cache_key": "utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
-        "version": "8cccd33405e98e86fd02530c287e63e0f5984c2970dbe879daba23610bc8037a"
+        "version": "a15cece9f248a2bcc52b4f93ee5cfc78b17c69d7d7c81a729124ad575504f9e8"
     },
-    "comparisons.image.CompareLoad.time_compare_load": {
-        "code": "class CompareLoad:\n    def time_compare_load(self, loader):\n        \"\"\"Time the loading of images.\"\"\"\n        load(loader)\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+    "image.image.CompareLoad.time_image_load_compare": {
+        "code": "class CompareLoad:\n    def time_image_load_compare(self, loader):\n        \"\"\"Time the loading of images.\"\"\"\n        load(loader)\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
         "min_run_count": 2,
-        "name": "comparisons.image.CompareLoad.time_compare_load",
+        "name": "image.image.CompareLoad.time_image_load_compare",
         "number": 0,
         "param_names": [
             "loader"
@@ -34,16 +174,16 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "common:16",
+        "setup_cache_key": "utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
-        "version": "f7ebd1c19cb7bd7c3f174e6d7aaafbfe118df72a2776d07319edd9741de2f1c8",
+        "version": "0f451dbf3fe6451fa5e10af7a03ec083fba4ad5a78de972a7e26a3ef1b924434",
         "warmup_time": -1
     },
-    "comparisons.image.CompareMean.peakmem_compare_mean": {
-        "code": "class CompareMean:\n    def peakmem_compare_mean(self, loader):\n        \"\"\"Peak memory of loading followed by taking the mean.\"\"\"\n        img = load(loader)[1]\n        mean_img(img)\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
-        "name": "comparisons.image.CompareMean.peakmem_compare_mean",
+    "image.image.CompareMean.peakmem_image_mean_img_compare": {
+        "code": "class CompareMean:\n    def peakmem_image_mean_img_compare(self, loader):\n        \"\"\"Peak memory of loading followed by taking the mean.\"\"\"\n        img = load(loader)[1]\n        mean_img(img)\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "name": "image.image.CompareMean.peakmem_image_mean_img_compare",
         "param_names": [
             "loader"
         ],
@@ -53,16 +193,16 @@
                 "'nibabel (ref)'"
             ]
         ],
-        "setup_cache_key": "common:16",
+        "setup_cache_key": "utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
-        "version": "4829e06b6a81223e0d105cf23f99725db306e945a47e1837e3868df1beb46bf7"
+        "version": "9b28d39c2f78e61e421469991627f4be5be8f04163d5faa133113c8c9c45c5f7"
     },
-    "comparisons.image.CompareMean.time_compare_mean": {
-        "code": "class CompareMean:\n    def time_compare_mean(self, loader):\n        \"\"\"Time the loading followed by taking the mean.\"\"\"\n        img = load(loader)[1]\n        mean_img(img)\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+    "image.image.CompareMean.time_image_mean_img_compare": {
+        "code": "class CompareMean:\n    def time_image_mean_img_compare(self, loader):\n        \"\"\"Time the loading followed by taking the mean.\"\"\"\n        img = load(loader)[1]\n        mean_img(img)\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
         "min_run_count": 2,
-        "name": "comparisons.image.CompareMean.time_compare_mean",
+        "name": "image.image.CompareMean.time_image_mean_img_compare",
         "number": 0,
         "param_names": [
             "loader"
@@ -76,16 +216,16 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "common:16",
+        "setup_cache_key": "utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
-        "version": "6741e954376dfc9d9cc2603e87593eed5525ec868ee1eb4497faf69ba6c2b3b7",
+        "version": "aca2e933747996ad95cdb3b7e24acff577ae7ea593a86fb0b245ecf005d56140",
         "warmup_time": -1
     },
-    "comparisons.image.CompareSlice.peakmem_compare_slice": {
-        "code": "class CompareSlice:\n    def peakmem_compare_slice(self, loader):\n        \"\"\"Peak memory of loading the image followed by extracting a\n        slice of it.\n        \"\"\"\n        img = load(loader)[1]\n        img.dataobj[..., 0]\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
-        "name": "comparisons.image.CompareSlice.peakmem_compare_slice",
+    "image.image.CompareSlice.peakmem_image_slice_compare": {
+        "code": "class CompareSlice:\n    def peakmem_image_slice_compare(self, loader):\n        \"\"\"Peak memory of loading the image followed by extracting a\n        slice of it.\n        \"\"\"\n        img = load(loader)[1]\n        img.dataobj[..., 0]\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "name": "image.image.CompareSlice.peakmem_image_slice_compare",
         "param_names": [
             "loader"
         ],
@@ -95,16 +235,16 @@
                 "'nibabel (ref)'"
             ]
         ],
-        "setup_cache_key": "common:16",
+        "setup_cache_key": "utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
-        "version": "d90c6926493f5cf0a7b7af6e5b261d1cb1cd0651fa7709b4f2479e879a326a8a"
+        "version": "8061e80eadc0fb52a2e7a20975811ae2886f64df6fc97449b2be57f7e773724d"
     },
-    "comparisons.image.CompareSlice.time_compare_slice": {
-        "code": "class CompareSlice:\n    def time_compare_slice(self, loader):\n        \"\"\"Time the loading the image followed by extracting a slice of it.\"\"\"\n        img = load(loader)[1]\n        img.dataobj[..., 0]\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+    "image.image.CompareSlice.time_image_slice_compare": {
+        "code": "class CompareSlice:\n    def time_image_slice_compare(self, loader):\n        \"\"\"Time the loading the image followed by extracting a slice of it.\"\"\"\n        img = load(loader)[1]\n        img.dataobj[..., 0]\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
         "min_run_count": 2,
-        "name": "comparisons.image.CompareSlice.time_compare_slice",
+        "name": "image.image.CompareSlice.time_image_slice_compare",
         "number": 0,
         "param_names": [
             "loader"
@@ -118,16 +258,100 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "common:16",
+        "setup_cache_key": "utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
-        "version": "098b9a321cf43acb756e78a69ef9fbc05e21f746a4735ca1b6ddb98fa17ee635",
+        "version": "1ae77984defbfc8061f1de62b36e36c42dbbe2315c9bcd1f0625d1d1910d365e",
         "warmup_time": -1
     },
-    "comparisons.maskers.CompareMask.peakmem_compare_mask": {
-        "code": "class CompareMask:\n    def peakmem_compare_mask(self, implementation, loader):\n        \"\"\"Peak memory of loading and then masking.\"\"\"\n        mask, img = load(loader)\n        apply_mask(mask, img, implementation)\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
-        "name": "comparisons.maskers.CompareMask.peakmem_compare_mask",
+    "image.image.IndexImgBenchmark.peakmem_image_index_img": {
+        "code": "class IndexImgBenchmark:\n    def peakmem_image_index_img(self):\n        \"\"\"Peak memory of loading the image followed by indexing a voxel.\"\"\"\n        index_img(self.fmri_filename, slice(1, self.length - 10, 2))\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "name": "image.image.IndexImgBenchmark.peakmem_image_index_img",
+        "param_names": [],
+        "params": [],
+        "setup_cache_key": "utils:213",
+        "timeout": 2400,
+        "type": "peakmemory",
+        "unit": "bytes",
+        "version": "5d14845d4afad92959ea6adf4c183cdb2fd4f12ebb9e7ad12084b5c4ed6e88c1"
+    },
+    "image.image.IndexImgBenchmark.time_image_index_img": {
+        "code": "class IndexImgBenchmark:\n    def time_image_index_img(self):\n        \"\"\"Time the loading the image followed by indexing a voxel.\"\"\"\n        index_img(self.fmri_filename, slice(1, self.length - 10, 2))\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "min_run_count": 2,
+        "name": "image.image.IndexImgBenchmark.time_image_index_img",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "setup_cache_key": "utils:213",
+        "timeout": 2400,
+        "type": "time",
+        "unit": "seconds",
+        "version": "bafafca912ddbee0934a566f93a51c4faf09a9307bee7f4c18beb026ff4f03cd",
+        "warmup_time": -1
+    },
+    "image.image.LoadImgBenchmark.peakmem_image_load_img": {
+        "code": "class LoadImgBenchmark:\n    def peakmem_image_load_img(self):\n        \"\"\"Peak memory of loading images.\"\"\"\n        load(\"nilearn\")\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "name": "image.image.LoadImgBenchmark.peakmem_image_load_img",
+        "param_names": [],
+        "params": [],
+        "setup_cache_key": "utils:213",
+        "timeout": 2400,
+        "type": "peakmemory",
+        "unit": "bytes",
+        "version": "441d1c09f86bd3a6d299b32703068cb2562362654c1b8c86ad0b1874526e7764"
+    },
+    "image.image.LoadImgBenchmark.time_image_load_img": {
+        "code": "class LoadImgBenchmark:\n    def time_image_load_img(self):\n        \"\"\"Time the loading of images.\"\"\"\n        load(\"nilearn\")\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "min_run_count": 2,
+        "name": "image.image.LoadImgBenchmark.time_image_load_img",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "setup_cache_key": "utils:213",
+        "timeout": 2400,
+        "type": "time",
+        "unit": "seconds",
+        "version": "e2dc13ca63a6e3eec2b399ad18cd144bbda56264d50e657c0bac8f05e41a4419",
+        "warmup_time": -1
+    },
+    "image.image.MeanImgBenchmark.peakmem_image_mean_img": {
+        "code": "class MeanImgBenchmark:\n    def peakmem_image_mean_img(self):\n        \"\"\"Peak memory of loading followed by taking the mean.\"\"\"\n        img = load(\"nilearn\")[1]\n        mean_img(img)\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "name": "image.image.MeanImgBenchmark.peakmem_image_mean_img",
+        "param_names": [],
+        "params": [],
+        "setup_cache_key": "utils:213",
+        "timeout": 2400,
+        "type": "peakmemory",
+        "unit": "bytes",
+        "version": "0112f3f38b6d55082ba1ff33dccc5da94f1d5e0ec96344eef2fd82c20e4df21c"
+    },
+    "image.image.MeanImgBenchmark.time_image_mean_img": {
+        "code": "class MeanImgBenchmark:\n    def time_image_mean_img(self):\n        \"\"\"Time the loading followed by taking the mean.\"\"\"\n        img = load(\"nilearn\")[1]\n        mean_img(img)\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "min_run_count": 2,
+        "name": "image.image.MeanImgBenchmark.time_image_mean_img",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "setup_cache_key": "utils:213",
+        "timeout": 2400,
+        "type": "time",
+        "unit": "seconds",
+        "version": "409b786078094454b74ec3df6d1275977288807ffae90efb33c9d2fbfbf54da6",
+        "warmup_time": -1
+    },
+    "maskers.nifti_masker.CompareMask.peakmem_nifti_masker_fit_transform_compare": {
+        "code": "class CompareMask:\n    def peakmem_nifti_masker_fit_transform_compare(\n        self, implementation, loader\n    ):\n        \"\"\"Peak memory of loading and then masking.\"\"\"\n        mask, img = load(loader)\n        apply_mask(mask, img, implementation)\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "name": "maskers.nifti_masker.CompareMask.peakmem_nifti_masker_fit_transform_compare",
         "param_names": [
             "implementation",
             "loader"
@@ -142,16 +366,16 @@
                 "'nibabel (ref)'"
             ]
         ],
-        "setup_cache_key": "common:16",
+        "setup_cache_key": "utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
-        "version": "e43932744b77671df15c12bf2827acc772bfc9c7767bbb313e69eb2420600cdc"
+        "version": "6445011d3305fb70b19a6bb82cb9b15e7de34633bdf83cf8f614df742dcd05a3"
     },
-    "comparisons.maskers.CompareMask.time_compare_mask": {
-        "code": "class CompareMask:\n    def time_compare_mask(self, implementation, loader):\n        \"\"\"Time the loading and then masking.\"\"\"\n        mask, img = load(loader)\n        apply_mask(mask, img, implementation)\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+    "maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare": {
+        "code": "class CompareMask:\n    def time_nifti_masker_fit_transform_compare(self, implementation, loader):\n        \"\"\"Time the loading and then masking.\"\"\"\n        mask, img = load(loader)\n        apply_mask(mask, img, implementation)\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
         "min_run_count": 2,
-        "name": "comparisons.maskers.CompareMask.time_compare_mask",
+        "name": "maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare",
         "number": 0,
         "param_names": [
             "implementation",
@@ -170,100 +394,16 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "common:16",
+        "setup_cache_key": "utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
-        "version": "0e21f2a9e83d0f3da12cf2ef5cf15a2571204cc9dafe91c9e2daf783dc6c5e11",
+        "version": "924c81e0dfd03155b793a294eab6a325941f01558b12e292e7e1c73d4422b8a0",
         "warmup_time": -1
     },
-    "tracking.image.IndexImgBenchmark.peakmem_index_img": {
-        "code": "class IndexImgBenchmark:\n    def peakmem_index_img(self):\n        \"\"\"Peak memory of loading the image followed by indexing a voxel.\"\"\"\n        index_img(\"fmri_100.nii.gz\", slice(1, 90, 2))\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
-        "name": "tracking.image.IndexImgBenchmark.peakmem_index_img",
-        "param_names": [],
-        "params": [],
-        "setup_cache_key": "common:16",
-        "timeout": 2400,
-        "type": "peakmemory",
-        "unit": "bytes",
-        "version": "e52f02584aa25628227eaaed2127d9709b756990c494dec8861433a05c54eea1"
-    },
-    "tracking.image.IndexImgBenchmark.time_index_img": {
-        "code": "class IndexImgBenchmark:\n    def time_index_img(self):\n        \"\"\"Time the loading the image followed by indexing a voxel.\"\"\"\n        index_img(\"fmri_100.nii.gz\", slice(1, 90, 2))\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
-        "min_run_count": 2,
-        "name": "tracking.image.IndexImgBenchmark.time_index_img",
-        "number": 0,
-        "param_names": [],
-        "params": [],
-        "repeat": 0,
-        "rounds": 2,
-        "sample_time": 0.01,
-        "setup_cache_key": "common:16",
-        "timeout": 2400,
-        "type": "time",
-        "unit": "seconds",
-        "version": "8d512ba85986b57bd49a34cbf3b25a269911e52421ab78623d9f1f742ff6bc91",
-        "warmup_time": -1
-    },
-    "tracking.image.LoadImgBenchmark.peakmem_load_img": {
-        "code": "class LoadImgBenchmark:\n    def peakmem_load_img(self):\n        \"\"\"Peak memory of loading images.\"\"\"\n        load(\"nilearn\")\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
-        "name": "tracking.image.LoadImgBenchmark.peakmem_load_img",
-        "param_names": [],
-        "params": [],
-        "setup_cache_key": "common:16",
-        "timeout": 2400,
-        "type": "peakmemory",
-        "unit": "bytes",
-        "version": "89c75c7c51b9633073ab84cd177d8beb3c10fefdd097774e99448fce48d0d8e5"
-    },
-    "tracking.image.LoadImgBenchmark.time_load_img": {
-        "code": "class LoadImgBenchmark:\n    def time_load_img(self):\n        \"\"\"Time the loading of images.\"\"\"\n        load(\"nilearn\")\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
-        "min_run_count": 2,
-        "name": "tracking.image.LoadImgBenchmark.time_load_img",
-        "number": 0,
-        "param_names": [],
-        "params": [],
-        "repeat": 0,
-        "rounds": 2,
-        "sample_time": 0.01,
-        "setup_cache_key": "common:16",
-        "timeout": 2400,
-        "type": "time",
-        "unit": "seconds",
-        "version": "7df5e0f711017c90532729605f7067e0bd1e45d20d131739924af5daa4bd05b3",
-        "warmup_time": -1
-    },
-    "tracking.image.MeanImgBenchmark.peakmem_mean_img": {
-        "code": "class MeanImgBenchmark:\n    def peakmem_mean_img(self):\n        \"\"\"Peak memory of loading followed by taking the mean.\"\"\"\n        img = load(\"nilearn\")[1]\n        mean_img(img)\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
-        "name": "tracking.image.MeanImgBenchmark.peakmem_mean_img",
-        "param_names": [],
-        "params": [],
-        "setup_cache_key": "common:16",
-        "timeout": 2400,
-        "type": "peakmemory",
-        "unit": "bytes",
-        "version": "c7bcd8563e4498c7daea898a08aff3ed14d673bae3644c14c7f09993d6734b0e"
-    },
-    "tracking.image.MeanImgBenchmark.time_mean_img": {
-        "code": "class MeanImgBenchmark:\n    def time_mean_img(self):\n        \"\"\"Time the loading followed by taking the mean.\"\"\"\n        img = load(\"nilearn\")[1]\n        mean_img(img)\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
-        "min_run_count": 2,
-        "name": "tracking.image.MeanImgBenchmark.time_mean_img",
-        "number": 0,
-        "param_names": [],
-        "params": [],
-        "repeat": 0,
-        "rounds": 2,
-        "sample_time": 0.01,
-        "setup_cache_key": "common:16",
-        "timeout": 2400,
-        "type": "time",
-        "unit": "seconds",
-        "version": "c2c9994af646d4b579d2365b1d1f973143fb48cdd636e248b3a8f2e880e07aba",
-        "warmup_time": -1
-    },
-    "tracking.maskers.NiftiMaskerBenchmark.peakmem_nifti_masker": {
-        "code": "class NiftiMaskerBenchmark:\n    def peakmem_nifti_masker(self, smoothing_fwhm, detrend):\n        \"\"\"Peak memory for the loading (only with nilearn here) and then\n        masking with different parameters.\n        \"\"\"\n        mask, img = load(\"nilearn\")\n        apply_mask(\n            mask,\n            img,\n            \"nilearn\",\n            nifti_masker_params={\n                \"smoothing_fwhm\": smoothing_fwhm,\n                \"detrend\": detrend,\n            },\n        )\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
-        "name": "tracking.maskers.NiftiMaskerBenchmark.peakmem_nifti_masker",
+    "maskers.nifti_masker.NiftiMaskerBenchmark.peakmem_nifti_masker_fit_transform": {
+        "code": "class NiftiMaskerBenchmark:\n    def peakmem_nifti_masker_fit_transform(self, smoothing_fwhm, detrend):\n        \"\"\"Peak memory for the loading (only with nilearn here) and then\n        masking with different parameters.\n        \"\"\"\n        mask, img = load(\"nilearn\")\n        apply_mask(\n            mask,\n            img,\n            \"nilearn\",\n            nifti_masker_params={\n                \"smoothing_fwhm\": smoothing_fwhm,\n                \"detrend\": detrend,\n            },\n        )\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "name": "maskers.nifti_masker.NiftiMaskerBenchmark.peakmem_nifti_masker_fit_transform",
         "param_names": [
             "smoothing_fwhm",
             "detrend"
@@ -278,16 +418,16 @@
                 "True"
             ]
         ],
-        "setup_cache_key": "common:16",
+        "setup_cache_key": "utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
-        "version": "a1d081b0f3af02abe8e7d42fd9bb9422e633245f89ad12ec8e3cb2527a7f0b0a"
+        "version": "611ec6bde41cf8029e66ccc21ef27266a91845ab1d66e73184209d7efa3f710c"
     },
-    "tracking.maskers.NiftiMaskerBenchmark.time_nifti_masker": {
-        "code": "class NiftiMaskerBenchmark:\n    def time_nifti_masker(self, smoothing_fwhm, detrend):\n        \"\"\"Time the loading (only with nilearn here) and then masking with\n        different parameters.\n        \"\"\"\n        mask, img = load(\"nilearn\")\n        apply_mask(\n            mask,\n            img,\n            \"nilearn\",\n            nifti_masker_params={\n                \"smoothing_fwhm\": smoothing_fwhm,\n                \"detrend\": detrend,\n            },\n        )\n\nclass Benchmark:\n    def setup_cache(self, n_subjects=10, n_masks=1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_subjects : int, default=10\n            The number of subject images concatenated together to create the\n            fMRI image.\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        # get an image\n        fmri_data = fetch_abide_pcp(n_subjects=n_subjects)\n        concat = concat_imgs(fmri_data.func_preproc)\n        concat.to_filename(f\"fmri_{n_subjects}.nii.gz\")\n    \n        # get a mask\n        atlas_path = fetch_atlas_schaefer_2018(n_rois=100).maps\n        resampled_atlas = resample_to_img(\n            atlas_path,\n            concat,\n            interpolation=\"nearest\",\n        )\n        for idx in range(1, n_masks + 1):\n            mask = resampled_atlas.get_fdata() == idx\n            mask_img = new_img_like(\n                resampled_atlas,\n                mask,\n                affine=resampled_atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+    "maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform": {
+        "code": "class NiftiMaskerBenchmark:\n    def time_nifti_masker_fit_transform(self, smoothing_fwhm, detrend):\n        \"\"\"Time the loading (only with nilearn here) and then masking with\n        different parameters.\n        \"\"\"\n        mask, img = load(\"nilearn\")\n        apply_mask(\n            mask,\n            img,\n            \"nilearn\",\n            nifti_masker_params={\n                \"smoothing_fwhm\": smoothing_fwhm,\n                \"detrend\": detrend,\n            },\n        )\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
         "min_run_count": 2,
-        "name": "tracking.maskers.NiftiMaskerBenchmark.time_nifti_masker",
+        "name": "maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform",
         "number": 0,
         "param_names": [
             "smoothing_fwhm",
@@ -306,11 +446,101 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "common:16",
+        "setup_cache_key": "utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
-        "version": "dc02acc52073eeaec42aac9149ca9a24743035f289c5f9d143604d559613a5c3",
+        "version": "ce3d5f955ac4826d2bed82134b75c6ed4e9abfb09f1c7118aa02a1f590b3d2b0",
+        "warmup_time": -1
+    },
+    "plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d": {
+        "code": "class BenchMarkPlotting3D:\n    def peakmem_plotting_3d(self, plot_func):\n        \"\"\"Check peak memory.\"\"\"\n        plot_func(self.img)\n\n    def setup(self, plot_func):\n        \"\"\"Set up for all benchmarks.\n    \n        Use affine and shape adapted from load_mni152_template()\n        \"\"\"\n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, _ = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n    \n        self.img = img",
+        "name": "plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d",
+        "param_names": [
+            "p"
+        ],
+        "params": [
+            [
+                "<function plot_img>",
+                "<function plot_anat>",
+                "<function plot_stat_map>",
+                "<function plot_epi>",
+                "<function plot_glass_brain>"
+            ]
+        ],
+        "type": "peakmemory",
+        "unit": "bytes",
+        "version": "de93ebf43f6a1f9aaccb7f01f6d6445f2bf4c4878ba6fc1b255c76f7d7f20af1"
+    },
+    "plotting.plotting.BenchMarkPlotting3D.time_plotting_3d": {
+        "code": "class BenchMarkPlotting3D:\n    def time_plotting_3d(self, plot_func):\n        \"\"\"Check time.\"\"\"\n        plot_func(self.img)\n\n    def setup(self, plot_func):\n        \"\"\"Set up for all benchmarks.\n    \n        Use affine and shape adapted from load_mni152_template()\n        \"\"\"\n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, _ = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n    \n        self.img = img",
+        "min_run_count": 2,
+        "name": "plotting.plotting.BenchMarkPlotting3D.time_plotting_3d",
+        "number": 0,
+        "param_names": [
+            "p"
+        ],
+        "params": [
+            [
+                "<function plot_img>",
+                "<function plot_anat>",
+                "<function plot_stat_map>",
+                "<function plot_epi>",
+                "<function plot_glass_brain>"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "type": "time",
+        "unit": "seconds",
+        "version": "ddedeead505b0daa46240d7af45437c77a5315a4999bb9570dc2028d5d14c847",
+        "warmup_time": -1
+    },
+    "plotting.plotting.BenchMarkPlottingSurface.peakmem_plotting_surface": {
+        "code": "class BenchMarkPlottingSurface:\n    def peakmem_plotting_surface(self, plot_func, engine):\n        \"\"\"Check peak memory.\"\"\"\n        plot_func(\n            self.surf_mesh,\n            self.surf_stat_map,\n            engine=engine,\n        )\n\n    def setup(self, plot_func, engine):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        self.surf_mesh = fetch_surf_fsaverage()[\"infl_left\"]\n        self.surf_stat_map = fetch_surf_fsaverage()[\"curv_left\"]\n        self.engine = engine",
+        "name": "plotting.plotting.BenchMarkPlottingSurface.peakmem_plotting_surface",
+        "param_names": [
+            "plot_func",
+            "engine"
+        ],
+        "params": [
+            [
+                "<function plot_surf>",
+                "<function plot_surf_stat_map>"
+            ],
+            [
+                "'matplotlib'"
+            ]
+        ],
+        "type": "peakmemory",
+        "unit": "bytes",
+        "version": "cf79e21783b9ac5bb9eff8289b68d25c0aac28adf6814b818dbcbd7d23893f4e"
+    },
+    "plotting.plotting.BenchMarkPlottingSurface.time_plotting_surface": {
+        "code": "class BenchMarkPlottingSurface:\n    def time_plotting_surface(self, plot_func, engine):\n        \"\"\"Check time.\"\"\"\n        plot_func(\n            self.surf_mesh,\n            self.surf_stat_map,\n            engine=engine,\n        )\n\n    def setup(self, plot_func, engine):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        self.surf_mesh = fetch_surf_fsaverage()[\"infl_left\"]\n        self.surf_stat_map = fetch_surf_fsaverage()[\"curv_left\"]\n        self.engine = engine",
+        "min_run_count": 2,
+        "name": "plotting.plotting.BenchMarkPlottingSurface.time_plotting_surface",
+        "number": 0,
+        "param_names": [
+            "plot_func",
+            "engine"
+        ],
+        "params": [
+            [
+                "<function plot_surf>",
+                "<function plot_surf_stat_map>"
+            ],
+            [
+                "'matplotlib'"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "type": "time",
+        "unit": "seconds",
+        "version": "119cfa69c106608c68588fe342c66e19f63b3b5e9626aef3dba544aaccba8a13",
         "warmup_time": -1
     },
     "version": 2
