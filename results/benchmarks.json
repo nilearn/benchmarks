@@ -23,9 +23,9 @@
         "version": "5437dbf5e2331ae240a6abf79b0ef9b542618d9a6bc5abefa2b797fd25155071",
         "warmup_time": -1
     },
-    "glm.glm.BenchMarkFirstLevelModel.peakmem_glm_fit": {
+    "glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit": {
         "code": "class BenchMarkFirstLevelModel:\n    def peakmem_glm_fit(self, n_timepoints_n_runs, minimize_memory):\n        \"\"\"Measure peak memory for FirstLevelModel on large data.\"\"\"\n        self._fit(n_timepoints_n_runs, minimize_memory)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
-        "name": "glm.glm.BenchMarkFirstLevelModel.peakmem_glm_fit",
+        "name": "glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit",
         "param_names": [
             "length_n_runs",
             "minimize_memory"
@@ -45,10 +45,10 @@
         "unit": "bytes",
         "version": "c817fba110514534c0fd6aa200b3a076b052da6791ff1a894734d51f0739c5be"
     },
-    "glm.glm.BenchMarkFirstLevelModel.time_glm_fit": {
+    "glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit": {
         "code": "class BenchMarkFirstLevelModel:\n    def time_glm_fit(self, n_timepoints_n_runs, minimize_memory):\n        \"\"\"Time FirstLevelModel on large data.\"\"\"\n        self._fit(n_timepoints_n_runs, minimize_memory)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
         "min_run_count": 2,
-        "name": "glm.glm.BenchMarkFirstLevelModel.time_glm_fit",
+        "name": "glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit",
         "number": 0,
         "param_names": [
             "length_n_runs",
@@ -73,9 +73,9 @@
         "version": "f1953199e01ad657e813534e1f87468f52bf41a36845f30d3b46ddb560da5041",
         "warmup_time": -1
     },
-    "glm.glm.BenchMarkFirstLevelModelReport.peakmem_glm_report": {
+    "glm.first_level.first_level.BenchMarkFirstLevelModelReport.peakmem_glm_report": {
         "code": "class BenchMarkFirstLevelModelReport:\n    def peakmem_glm_report(self, memory):\n        \"\"\"Measure peak memory for FirstLevelModel on large data.\"\"\"\n        self._fit(memory)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
-        "name": "glm.glm.BenchMarkFirstLevelModelReport.peakmem_glm_report",
+        "name": "glm.first_level.first_level.BenchMarkFirstLevelModelReport.peakmem_glm_report",
         "param_names": [
             "m"
         ],
@@ -90,10 +90,10 @@
         "unit": "bytes",
         "version": "27a993b124779d2698c04038c63d5b3f3f6fa40a561bd547843d27c019ba37f2"
     },
-    "glm.glm.BenchMarkFirstLevelModelReport.time_glm_report": {
+    "glm.first_level.first_level.BenchMarkFirstLevelModelReport.time_glm_report": {
         "code": "class BenchMarkFirstLevelModelReport:\n    def time_glm_report(self, memory):\n        \"\"\"Time FirstLevelModel on large data.\"\"\"\n        self._fit(memory)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
         "min_run_count": 2,
-        "name": "glm.glm.BenchMarkFirstLevelModelReport.time_glm_report",
+        "name": "glm.first_level.first_level.BenchMarkFirstLevelModelReport.time_glm_report",
         "number": 0,
         "param_names": [
             "m"
@@ -113,9 +113,9 @@
         "version": "fbd33a7d47945445914202cab8e30109283320e8ed2195efdb853b4934b0fb11",
         "warmup_time": -1
     },
-    "glm.glm.BenchMarkFirstLevelModelSave.peakmem_glm_save": {
-        "code": "class BenchMarkFirstLevelModelSave:\n    def peakmem_glm_save(self, memory, n_runs):\n        \"\"\"Measure peak memory for FirstLevelModel on large data.\"\"\"\n        self._fit(memory, n_runs)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
-        "name": "glm.glm.BenchMarkFirstLevelModelSave.peakmem_glm_save",
+    "glm.io.BenchMarkFirstLevelModelSave.peakmem_glm_save": {
+        "code": "class BenchMarkFirstLevelModelSave:\n    def peakmem_glm_save(self, memory, n_runs):\n        \"\"\"Measure peak memory for FirstLevelModel on large data.\"\"\"\n        self._fit(memory, n_runs)\n\n    def setup(self, memory, n_runs):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        super().setup(memory, n_runs)\n    \n        # save_glm_to_bids is permanently moving to nilearn.glm.io in\n        # nilearn 0.15.0: nilearn.interfaces.bids.save_glm_to_bids (its\n        # current, deprecated, location) will be removed then. Import\n        # locally so that benchmarking versions on either side of that\n        # move only fails this benchmark instead of the whole module.\n        try:\n            from nilearn.interfaces.bids import save_glm_to_bids\n        except ImportError:\n            from nilearn.glm.io import save_glm_to_bids\n    \n        self.save_glm_to_bids = save_glm_to_bids",
+        "name": "glm.io.BenchMarkFirstLevelModelSave.peakmem_glm_save",
         "param_names": [
             "memory",
             "n_runs"
@@ -133,12 +133,12 @@
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
-        "version": "f00b40c188ade55239eab452e469363061975fbe24b54b06f5ea1a1347929af3"
+        "version": "8e40d15c98171a3646f650473b95f4e1b9f68e3a361da5204f19e7747cc534d0"
     },
-    "glm.glm.BenchMarkFirstLevelModelSave.time_glm_save": {
-        "code": "class BenchMarkFirstLevelModelSave:\n    def time_glm_save(self, memory, n_runs):\n        \"\"\"Time FirstLevelModel on large data.\"\"\"\n        self._fit(memory, n_runs)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
+    "glm.io.BenchMarkFirstLevelModelSave.time_glm_save": {
+        "code": "class BenchMarkFirstLevelModelSave:\n    def time_glm_save(self, memory, n_runs):\n        \"\"\"Time FirstLevelModel on large data.\"\"\"\n        self._fit(memory, n_runs)\n\n    def setup(self, memory, n_runs):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        super().setup(memory, n_runs)\n    \n        # save_glm_to_bids is permanently moving to nilearn.glm.io in\n        # nilearn 0.15.0: nilearn.interfaces.bids.save_glm_to_bids (its\n        # current, deprecated, location) will be removed then. Import\n        # locally so that benchmarking versions on either side of that\n        # move only fails this benchmark instead of the whole module.\n        try:\n            from nilearn.interfaces.bids import save_glm_to_bids\n        except ImportError:\n            from nilearn.glm.io import save_glm_to_bids\n    \n        self.save_glm_to_bids = save_glm_to_bids",
         "min_run_count": 2,
-        "name": "glm.glm.BenchMarkFirstLevelModelSave.time_glm_save",
+        "name": "glm.io.BenchMarkFirstLevelModelSave.time_glm_save",
         "number": 0,
         "param_names": [
             "memory",
@@ -160,7 +160,7 @@
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
-        "version": "f6981e71588c6fe36b5d8c1d8f30d43b3b7c525c866588830ecf07cee093b357",
+        "version": "826f0344ec5ab30b1b1c8227366c53608571df428eac5e7eec4dea32aa2e63c8",
         "warmup_time": -1
     },
     "image.image.CompareLoad.peakmem_image_load_compare": {
@@ -290,7 +290,7 @@
         "warmup_time": -1
     },
     "image.image.IndexImgBenchmark.peakmem_image_index_img": {
-        "code": "class IndexImgBenchmark:\n    def peakmem_image_index_img(self):\n        \"\"\"Peak memory of loading the image followed by indexing a voxel.\"\"\"\n        index_img(self.fmri_filename, slice(1, self.length - 10, 2))\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "code": "class IndexImgBenchmark:\n    def peakmem_image_index_img(self):\n        \"\"\"Peak memory of loading the image followed by indexing a voxel.\"\"\"\n        index_img(self.fmri_filename, slice(1, self.length - 1, 2))\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
         "name": "image.image.IndexImgBenchmark.peakmem_image_index_img",
         "param_names": [],
         "params": [],
@@ -298,10 +298,10 @@
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
-        "version": "5d14845d4afad92959ea6adf4c183cdb2fd4f12ebb9e7ad12084b5c4ed6e88c1"
+        "version": "4f7454e63e8b58515859555675bf43d16752fe0ad72c922f41a1d3c8c7004b09"
     },
     "image.image.IndexImgBenchmark.time_image_index_img": {
-        "code": "class IndexImgBenchmark:\n    def time_image_index_img(self):\n        \"\"\"Time the loading the image followed by indexing a voxel.\"\"\"\n        index_img(self.fmri_filename, slice(1, self.length - 10, 2))\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
+        "code": "class IndexImgBenchmark:\n    def time_image_index_img(self):\n        \"\"\"Time the loading the image followed by indexing a voxel.\"\"\"\n        index_img(self.fmri_filename, slice(1, self.length - 1, 2))\n\nclass Benchmark:\n    def setup_cache(self, n_masks: int = 1):\n        \"\"\"Set up the cache directory with the necessary images and masks.\n    \n        The fMRI image is created by concatenating n_subjects subject images\n        from :func:`nilearn.datasets.fetch_abide_pcp`. The masks are created by\n        resampling the atlas from\n        :func:`nilearn.datasets.fetch_atlas_schaefer_2018` to the fMRI\n        image and then creating masks for each region in the atlas.\n    \n        Parameters\n        ----------\n        n_masks : int, default=1\n            The number of masks to create.\n        \"\"\"\n        shape = (60, 65, 70)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, 90.0],\n                [-0.0, 3.0, -0.0, -126.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        img, mask = generate_fake_fmri(\n            shape=shape,\n            length=self.length,\n            affine=affine,\n        )\n        img.to_filename(self.fmri_filename)\n    \n        self.img = img\n        self.mask = mask\n    \n        # create a mask\n        atlas = img_labels(shape=shape, affine=affine, n_regions=100)\n        for idx in range(1, n_masks + 1):\n            mask = atlas.get_fdata() == idx\n            mask_img = Nifti1Image(\n                mask.astype(np.int32),\n                affine=atlas.affine,\n            )\n            mask_img.to_filename(f\"mask_{idx}.nii.gz\")",
         "min_run_count": 2,
         "name": "image.image.IndexImgBenchmark.time_image_index_img",
         "number": 0,
@@ -314,7 +314,7 @@
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
-        "version": "bafafca912ddbee0934a566f93a51c4faf09a9307bee7f4c18beb026ff4f03cd",
+        "version": "86d014a9b7a63b22625ec8869b1874c467b23b2d622ffb31d19c7ffe82e354d9",
         "warmup_time": -1
     },
     "image.image.LoadImgBenchmark.peakmem_image_load_img": {
