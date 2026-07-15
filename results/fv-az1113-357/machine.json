@@ -3,7 +3,7 @@
     "cpu": "AMD EPYC 9V74 80-Core Processor",
     "machine": "fv-az1113-357",
     "num_cpu": "4",
-    "os": "Linux 6.17.0-1020-azure",
+    "os": "Linux 6.17.0-1018-azure",
     "ram": "16766423040",
     "version": 1
 }
