@@ -1,15 +1,15 @@
 {
     "discovery.BenchMarkAllEstimators.peakmem_discovery_all_estimators": {
-        "code": "class BenchMarkAllEstimators:\n    def peakmem_discovery_all_estimators(self):\n        \"\"\"Check peak memory.\"\"\"\n        self.all_estimators()\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (nilearn.utils.discovery module was only added\n        # in 0.13.0) so that benchmarking older nilearn versions only\n        # fails this benchmark instead of making the whole module fail\n        # to import for every benchmark in this file.\n        from nilearn.utils import all_estimators\n    \n        self.all_estimators = all_estimators",
+        "code": "class BenchMarkAllEstimators:\n    def peakmem_discovery_all_estimators(self):\n        \"\"\"Check peak memory.\"\"\"\n        self.all_estimators()\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (nilearn.utils.discovery module was only added\n        # in 0.13.0) so that benchmarking older nilearn versions only\n        # affects this benchmark instead of making the whole module fail\n        # to import for every benchmark in this file.\n        # Raising NotImplementedError (instead of letting ImportError\n        # propagate) makes asv report this as \"skipped\" rather than\n        # \"failed\" for those older versions: see asv_runner's\n        # BenchmarkBase.do_setup, which special-cases NotImplementedError.\n        try:\n            from nilearn.utils import all_estimators\n        except ImportError as e:\n            raise NotImplementedError from e\n    \n        self.all_estimators = all_estimators",
         "name": "discovery.BenchMarkAllEstimators.peakmem_discovery_all_estimators",
         "param_names": [],
         "params": [],
         "type": "peakmemory",
         "unit": "bytes",
-        "version": "7ea03e1057abb8414641c8450fd292f62e77da115d5012860b6b4b036b0fe160"
+        "version": "118c756bebc2dacf35d99bfe0071799ab3f9d76a72575dfc52a4562b71cc70d5"
     },
     "discovery.BenchMarkAllEstimators.time_discovery_all_estimators": {
-        "code": "class BenchMarkAllEstimators:\n    def time_discovery_all_estimators(self):\n        \"\"\"Check time.\"\"\"\n        self.all_estimators()\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (nilearn.utils.discovery module was only added\n        # in 0.13.0) so that benchmarking older nilearn versions only\n        # fails this benchmark instead of making the whole module fail\n        # to import for every benchmark in this file.\n        from nilearn.utils import all_estimators\n    \n        self.all_estimators = all_estimators",
+        "code": "class BenchMarkAllEstimators:\n    def time_discovery_all_estimators(self):\n        \"\"\"Check time.\"\"\"\n        self.all_estimators()\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (nilearn.utils.discovery module was only added\n        # in 0.13.0) so that benchmarking older nilearn versions only\n        # affects this benchmark instead of making the whole module fail\n        # to import for every benchmark in this file.\n        # Raising NotImplementedError (instead of letting ImportError\n        # propagate) makes asv report this as \"skipped\" rather than\n        # \"failed\" for those older versions: see asv_runner's\n        # BenchmarkBase.do_setup, which special-cases NotImplementedError.\n        try:\n            from nilearn.utils import all_estimators\n        except ImportError as e:\n            raise NotImplementedError from e\n    \n        self.all_estimators = all_estimators",
         "min_run_count": 2,
         "name": "discovery.BenchMarkAllEstimators.time_discovery_all_estimators",
         "number": 0,
@@ -20,7 +20,7 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "5437dbf5e2331ae240a6abf79b0ef9b542618d9a6bc5abefa2b797fd25155071",
+        "version": "4ef728a902574c4eade9c57444bca6442f73a89272fb517c637bf6f2a0547496",
         "warmup_time": -1
     },
     "glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit": {
@@ -478,16 +478,16 @@
         "warmup_time": -1
     },
     "plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.peakmem_plot_design_matrix_correlation": {
-        "code": "class BenchMarkPlotDesignMatrixCorrelation:\n    def peakmem_plot_design_matrix_correlation(self):\n        \"\"\"Check peak memory.\"\"\"\n        self.plot_design_matrix_correlation(self.design_matrix)\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (added in 0.11.0) so that benchmarking older\n        # nilearn versions only fails this benchmark instead of making\n        # the whole module fail to import for every benchmark in this file.\n        from nilearn.plotting import plot_design_matrix_correlation\n    \n        self.plot_design_matrix_correlation = plot_design_matrix_correlation\n    \n        rng = _rng()\n        columns = rng.choice(\n            list(string.ascii_lowercase), size=self.rank, replace=False\n        )\n        self.design_matrix = pd.DataFrame(\n            rng.standard_normal((self.length, self.rank)), columns=columns\n        )",
+        "code": "class BenchMarkPlotDesignMatrixCorrelation:\n    def peakmem_plot_design_matrix_correlation(self):\n        \"\"\"Check peak memory.\"\"\"\n        self.plot_design_matrix_correlation(self.design_matrix)\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (added in 0.11.0) so that benchmarking older\n        # nilearn versions only affects this benchmark instead of making\n        # the whole module fail to import for every benchmark in this file.\n        # Raising NotImplementedError (instead of letting ImportError\n        # propagate) makes asv report this as \"skipped\" rather than\n        # \"failed\" for those older versions: see asv_runner's\n        # BenchmarkBase.do_setup, which special-cases NotImplementedError.\n        try:\n            from nilearn.plotting import plot_design_matrix_correlation\n        except ImportError as e:\n            raise NotImplementedError from e\n    \n        self.plot_design_matrix_correlation = plot_design_matrix_correlation\n    \n        rng = _rng()\n        columns = rng.choice(\n            list(string.ascii_lowercase), size=self.rank, replace=False\n        )\n        self.design_matrix = pd.DataFrame(\n            rng.standard_normal((self.length, self.rank)), columns=columns\n        )",
         "name": "plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.peakmem_plot_design_matrix_correlation",
         "param_names": [],
         "params": [],
         "type": "peakmemory",
         "unit": "bytes",
-        "version": "353c63147f9bd7347b4d32494ac9babf4db2dab0196914e9e8cc355c96525d61"
+        "version": "95752a0c330928f8b063acda07ca8dc0590c6d45a4a62752d89e1f8b9e22bad4"
     },
     "plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.time_plot_design_matrix_correlation": {
-        "code": "class BenchMarkPlotDesignMatrixCorrelation:\n    def time_plot_design_matrix_correlation(self):\n        \"\"\"Check time.\"\"\"\n        self.plot_design_matrix_correlation(self.design_matrix)\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (added in 0.11.0) so that benchmarking older\n        # nilearn versions only fails this benchmark instead of making\n        # the whole module fail to import for every benchmark in this file.\n        from nilearn.plotting import plot_design_matrix_correlation\n    \n        self.plot_design_matrix_correlation = plot_design_matrix_correlation\n    \n        rng = _rng()\n        columns = rng.choice(\n            list(string.ascii_lowercase), size=self.rank, replace=False\n        )\n        self.design_matrix = pd.DataFrame(\n            rng.standard_normal((self.length, self.rank)), columns=columns\n        )",
+        "code": "class BenchMarkPlotDesignMatrixCorrelation:\n    def time_plot_design_matrix_correlation(self):\n        \"\"\"Check time.\"\"\"\n        self.plot_design_matrix_correlation(self.design_matrix)\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (added in 0.11.0) so that benchmarking older\n        # nilearn versions only affects this benchmark instead of making\n        # the whole module fail to import for every benchmark in this file.\n        # Raising NotImplementedError (instead of letting ImportError\n        # propagate) makes asv report this as \"skipped\" rather than\n        # \"failed\" for those older versions: see asv_runner's\n        # BenchmarkBase.do_setup, which special-cases NotImplementedError.\n        try:\n            from nilearn.plotting import plot_design_matrix_correlation\n        except ImportError as e:\n            raise NotImplementedError from e\n    \n        self.plot_design_matrix_correlation = plot_design_matrix_correlation\n    \n        rng = _rng()\n        columns = rng.choice(\n            list(string.ascii_lowercase), size=self.rank, replace=False\n        )\n        self.design_matrix = pd.DataFrame(\n            rng.standard_normal((self.length, self.rank)), columns=columns\n        )",
         "min_run_count": 2,
         "name": "plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.time_plot_design_matrix_correlation",
         "number": 0,
@@ -498,7 +498,7 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "5d859d69e651f9e1af6ad57c99106aedb9018e3952d468abab4828e19725af6c",
+        "version": "ecb91fa4a5a0a8cddf0489113b5fa41eb485163792bc6bab30f1b854f417d6a8",
         "warmup_time": -1
     },
     "plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d": {
