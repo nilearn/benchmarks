@@ -1,1 +1,1 @@
-{"regressions": [["image.image.CompareMean.time_image_mean_img_compare('nilearn')", "graphs/arch-x86_64/branch-main/cpu-AMD EPYC 9V74 80-Core Processor/joblib-1.2.0/machine-fv-az1113-357/matplotlib-3.8.0/nibabel-5.2.0/num_cpu-4/numpy-1.22.4/os-Linux 6.17.0-1018-azure/pandas-2.2.0/plotly-5.0.0/python-3.10/ram-16766423040/scikit-learn-1.5.0/scipy-1.9.0/image.image.CompareMean.time_image_mean_img_compare.json", {}, 0, 0.026831761000039478, 0.025524417499980245, [[35948, 36423, 0.025524417499980245, 0.026831761000039478]]]]}
+{"regressions": []}
