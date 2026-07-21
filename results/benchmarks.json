@@ -477,6 +477,64 @@
         "version": "ce3d5f955ac4826d2bed82134b75c6ed4e9abfb09f1c7118aa02a1f590b3d2b0",
         "warmup_time": -1
     },
+    "mass_univariate._utils.BenchMarkTFCE.peakmem_tfce": {
+        "code": "class BenchMarkTFCE:\n    def peakmem_tfce(self, n_samples, shape, sigma):  # noqa: ARG002\n        \"\"\"Measure peak memory for calculate_tfce.\"\"\"\n        self._run()\n\n    def setup(self, n_samples, shape=(100, 115, 85), sigma=2):\n        \"\"\"Set up required by asv.\"\"\"\n        return super().setup(n_samples, shape, sigma)",
+        "name": "mass_univariate._utils.BenchMarkTFCE.peakmem_tfce",
+        "param_names": [
+            "n_samples",
+            "shape",
+            "sigma"
+        ],
+        "params": [
+            [
+                "10",
+                "20"
+            ],
+            [
+                "(20, 20, 20)",
+                "(60, 60, 60)"
+            ],
+            [
+                "1.0",
+                "3.0"
+            ]
+        ],
+        "type": "peakmemory",
+        "unit": "bytes",
+        "version": "ff2a8be69d3bcf616f2cf4e9fd85da7df71a1cbf1c46479c6016902d6e3e8da7"
+    },
+    "mass_univariate._utils.BenchMarkTFCE.time_tfce": {
+        "code": "class BenchMarkTFCE:\n    def time_tfce(self, n_samples, shape, sigma):  # noqa: ARG002\n        \"\"\"Time calculate_tfce.\"\"\"\n        self._run()\n\n    def setup(self, n_samples, shape=(100, 115, 85), sigma=2):\n        \"\"\"Set up required by asv.\"\"\"\n        return super().setup(n_samples, shape, sigma)",
+        "min_run_count": 2,
+        "name": "mass_univariate._utils.BenchMarkTFCE.time_tfce",
+        "number": 0,
+        "param_names": [
+            "n_samples",
+            "shape",
+            "sigma"
+        ],
+        "params": [
+            [
+                "10",
+                "20"
+            ],
+            [
+                "(20, 20, 20)",
+                "(60, 60, 60)"
+            ],
+            [
+                "1.0",
+                "3.0"
+            ]
+        ],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "type": "time",
+        "unit": "seconds",
+        "version": "61ff9737d30b461dcd83d9922626b45c27f71967fa51124befb1dd3fe089488f",
+        "warmup_time": -1
+    },
     "plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.peakmem_plot_design_matrix_correlation": {
         "code": "class BenchMarkPlotDesignMatrixCorrelation:\n    def peakmem_plot_design_matrix_correlation(self):\n        \"\"\"Check peak memory.\"\"\"\n        self.plot_design_matrix_correlation(self.design_matrix)\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (added in 0.11.0) so that benchmarking older\n        # nilearn versions only affects this benchmark instead of making\n        # the whole module fail to import for every benchmark in this file.\n        # Raising NotImplementedError (instead of letting ImportError\n        # propagate) makes asv report this as \"skipped\" rather than\n        # \"failed\" for those older versions: see asv_runner's\n        # BenchmarkBase.do_setup, which special-cases NotImplementedError.\n        try:\n            from nilearn.plotting import plot_design_matrix_correlation\n        except ImportError as e:\n            raise NotImplementedError from e\n    \n        self.plot_design_matrix_correlation = plot_design_matrix_correlation\n    \n        rng = _rng()\n        columns = rng.choice(\n            list(string.ascii_lowercase), size=self.rank, replace=False\n        )\n        self.design_matrix = pd.DataFrame(\n            rng.standard_normal((self.length, self.rank)), columns=columns\n        )",
         "name": "plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.peakmem_plot_design_matrix_correlation",
