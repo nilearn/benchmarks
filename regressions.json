@@ -1,1 +1,1 @@
-{"regressions": []}
+{"regressions": [["discovery.BenchMarkAllEstimators.time_discovery_all_estimators", "graphs/arch-x86_64/branch-main/cpu-AMD EPYC 7763 64-Core Processor/joblib-1.2.0/machine-fv-az1113-357/matplotlib-3.8.0/nibabel-5.2.0/num_cpu-4/numpy-1.22.4/os-Linux 6.17.0-1020-azure/pandas-2.2.0/plotly-5.0.0/python-3.10/ram-16766423040/scikit-learn-1.5.0/scipy-1.9.0/discovery.BenchMarkAllEstimators.time_discovery_all_estimators.json", {}, null, 0.014090345500108015, 0.01341782549999948, [[35947, 36529, 0.01341782549999948, 0.014090345500108015]]]]}
