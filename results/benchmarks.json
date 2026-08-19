@@ -1,28 +1,4 @@
 {
-    "discovery.BenchMarkAllEstimators.peakmem_discovery_all_estimators": {
-        "code": "class BenchMarkAllEstimators:\n    def peakmem_discovery_all_estimators(self):\n        \"\"\"Check peak memory.\"\"\"\n        self.all_estimators()\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (nilearn.utils.discovery module was only added\n        # in 0.13.0) so that benchmarking older nilearn versions only\n        # affects this benchmark instead of making the whole module fail\n        # to import for every benchmark in this file.\n        # Raising NotImplementedError (instead of letting ImportError\n        # propagate) makes asv report this as \"skipped\" rather than\n        # \"failed\" for those older versions: see asv_runner's\n        # BenchmarkBase.do_setup, which special-cases NotImplementedError.\n        try:\n            from nilearn.utils import all_estimators\n        except ImportError as e:\n            raise NotImplementedError from e\n    \n        self.all_estimators = all_estimators",
-        "name": "discovery.BenchMarkAllEstimators.peakmem_discovery_all_estimators",
-        "param_names": [],
-        "params": [],
-        "type": "peakmemory",
-        "unit": "bytes",
-        "version": "118c756bebc2dacf35d99bfe0071799ab3f9d76a72575dfc52a4562b71cc70d5"
-    },
-    "discovery.BenchMarkAllEstimators.time_discovery_all_estimators": {
-        "code": "class BenchMarkAllEstimators:\n    def time_discovery_all_estimators(self):\n        \"\"\"Check time.\"\"\"\n        self.all_estimators()\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (nilearn.utils.discovery module was only added\n        # in 0.13.0) so that benchmarking older nilearn versions only\n        # affects this benchmark instead of making the whole module fail\n        # to import for every benchmark in this file.\n        # Raising NotImplementedError (instead of letting ImportError\n        # propagate) makes asv report this as \"skipped\" rather than\n        # \"failed\" for those older versions: see asv_runner's\n        # BenchmarkBase.do_setup, which special-cases NotImplementedError.\n        try:\n            from nilearn.utils import all_estimators\n        except ImportError as e:\n            raise NotImplementedError from e\n    \n        self.all_estimators = all_estimators",
-        "min_run_count": 2,
-        "name": "discovery.BenchMarkAllEstimators.time_discovery_all_estimators",
-        "number": 0,
-        "param_names": [],
-        "params": [],
-        "repeat": 0,
-        "rounds": 2,
-        "sample_time": 0.01,
-        "type": "time",
-        "unit": "seconds",
-        "version": "4ef728a902574c4eade9c57444bca6442f73a89272fb517c637bf6f2a0547496",
-        "warmup_time": -1
-    },
     "glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit": {
         "code": "class BenchMarkFirstLevelModel:\n    def peakmem_glm_fit(self, n_timepoints_n_runs, minimize_memory):\n        \"\"\"Measure peak memory for FirstLevelModel on large data.\"\"\"\n        self._fit(n_timepoints_n_runs, minimize_memory)\n\nclass BaseBenchMarkFLM:\n    def setup(\n        self,\n        minimize_memory,\n        memory=None,\n        shape=(64, 64, 64),\n        length_n_runs=(100, 1),\n    ):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        (length, n_runs) = length_n_runs\n    \n        shape = (100, 115, 85)\n    \n        affine = np.asarray(\n            [\n                [-3.0, -0.0, 0.0, -98.0],\n                [-0.0, 3.0, -0.0, -134.0],\n                [0.0, 0.0, 3.0, -72.0],\n                [0.0, 0.0, 0.0, 1.0],\n            ]\n        )\n    \n        rank = 3\n    \n        rng = _rng()\n    \n        self.fmri_data = []\n        self.design_matrices = []\n        for _ in range(n_runs):\n            img, mask = generate_fake_fmri(\n                shape=shape,\n                length=length,\n                affine=affine,\n            )\n    \n            self.mask = mask\n            self.fmri_data.append(img)\n    \n            columns = rng.choice(\n                list(string.ascii_lowercase), size=rank, replace=False\n            )\n            self.design_matrices.append(\n                pd.DataFrame(\n                    rng.standard_normal((length, rank)), columns=columns\n                )\n            )",
         "name": "glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit",
@@ -175,7 +151,7 @@
                 "'nibabel (ref)'"
             ]
         ],
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
@@ -198,7 +174,7 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
@@ -217,7 +193,7 @@
                 "'nibabel (ref)'"
             ]
         ],
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
@@ -240,7 +216,7 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
@@ -259,7 +235,7 @@
                 "'nibabel (ref)'"
             ]
         ],
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
@@ -282,7 +258,7 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
@@ -294,7 +270,7 @@
         "name": "image.image.IndexImgBenchmark.peakmem_image_index_img",
         "param_names": [],
         "params": [],
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
@@ -310,7 +286,7 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
@@ -322,7 +298,7 @@
         "name": "image.image.LoadImgBenchmark.peakmem_image_load_img",
         "param_names": [],
         "params": [],
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
@@ -338,7 +314,7 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
@@ -350,7 +326,7 @@
         "name": "image.image.MeanImgBenchmark.peakmem_image_mean_img",
         "param_names": [],
         "params": [],
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
@@ -366,7 +342,7 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
@@ -390,7 +366,7 @@
                 "'nibabel (ref)'"
             ]
         ],
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
@@ -418,7 +394,7 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
@@ -442,7 +418,7 @@
                 "True"
             ]
         ],
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "peakmemory",
         "unit": "bytes",
@@ -470,7 +446,7 @@
         "repeat": 0,
         "rounds": 2,
         "sample_time": 0.01,
-        "setup_cache_key": "utils:213",
+        "setup_cache_key": "_utils:213",
         "timeout": 2400,
         "type": "time",
         "unit": "seconds",
@@ -647,6 +623,30 @@
         "type": "time",
         "unit": "seconds",
         "version": "119cfa69c106608c68588fe342c66e19f63b3b5e9626aef3dba544aaccba8a13",
+        "warmup_time": -1
+    },
+    "utils.discovery.BenchMarkAllEstimators.peakmem_discovery_all_estimators": {
+        "code": "class BenchMarkAllEstimators:\n    def peakmem_discovery_all_estimators(self):\n        \"\"\"Check peak memory.\"\"\"\n        self.all_estimators()\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (nilearn.utils.discovery module was only added\n        # in 0.13.0) so that benchmarking older nilearn versions only\n        # affects this benchmark instead of making the whole module fail\n        # to import for every benchmark in this file.\n        # Raising NotImplementedError (instead of letting ImportError\n        # propagate) makes asv report this as \"skipped\" rather than\n        # \"failed\" for those older versions: see asv_runner's\n        # BenchmarkBase.do_setup, which special-cases NotImplementedError.\n        try:\n            from nilearn.utils import all_estimators\n        except ImportError as e:\n            raise NotImplementedError from e\n    \n        self.all_estimators = all_estimators",
+        "name": "utils.discovery.BenchMarkAllEstimators.peakmem_discovery_all_estimators",
+        "param_names": [],
+        "params": [],
+        "type": "peakmemory",
+        "unit": "bytes",
+        "version": "118c756bebc2dacf35d99bfe0071799ab3f9d76a72575dfc52a4562b71cc70d5"
+    },
+    "utils.discovery.BenchMarkAllEstimators.time_discovery_all_estimators": {
+        "code": "class BenchMarkAllEstimators:\n    def time_discovery_all_estimators(self):\n        \"\"\"Check time.\"\"\"\n        self.all_estimators()\n\n    def setup(self):\n        \"\"\"Set up for all benchmarks.\"\"\"\n        # Imported locally (nilearn.utils.discovery module was only added\n        # in 0.13.0) so that benchmarking older nilearn versions only\n        # affects this benchmark instead of making the whole module fail\n        # to import for every benchmark in this file.\n        # Raising NotImplementedError (instead of letting ImportError\n        # propagate) makes asv report this as \"skipped\" rather than\n        # \"failed\" for those older versions: see asv_runner's\n        # BenchmarkBase.do_setup, which special-cases NotImplementedError.\n        try:\n            from nilearn.utils import all_estimators\n        except ImportError as e:\n            raise NotImplementedError from e\n    \n        self.all_estimators = all_estimators",
+        "min_run_count": 2,
+        "name": "utils.discovery.BenchMarkAllEstimators.time_discovery_all_estimators",
+        "number": 0,
+        "param_names": [],
+        "params": [],
+        "repeat": 0,
+        "rounds": 2,
+        "sample_time": 0.01,
+        "type": "time",
+        "unit": "seconds",
+        "version": "4ef728a902574c4eade9c57444bca6442f73a89272fb517c637bf6f2a0547496",
         "warmup_time": -1
     },
     "version": 2
