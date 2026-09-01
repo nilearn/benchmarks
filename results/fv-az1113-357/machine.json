@@ -1,6 +1,6 @@
 {
     "arch": "x86_64",
-    "cpu": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
     "machine": "fv-az1113-357",
     "num_cpu": "4",
     "os": "Linux 6.17.0-1022-azure",
