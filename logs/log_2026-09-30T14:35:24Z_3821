@@ -1,0 +1,1238 @@
+· Running '/usr/bin/git config init.defaultBranch'
+· Running '/usr/bin/git config --global init.defaultBranch'
+· Running '/usr/bin/git config --system init.defaultBranch'
+· Cloning project
+· Running '/usr/bin/git clone --mirror https://github.com/nilearn/nilearn.git /home/runner/work/nilearn/nilearn/asv_benchmarks/nilearn'
+  OUTPUT -------->
+  Cloning into bare repository '/home/runner/work/nilearn/nilearn/asv_benchmarks/nilearn'...
+· Fetching recent changes
+· Running '/usr/bin/git fetch origin'
+· Running '/usr/bin/git rev-parse main^{commit}'
+  OUTPUT -------->
+  f6a928b1a94942a8c90d1b7acf71116f803603f1
+· Creating environments
+·· Creating virtualenv for virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+·· Running '/opt/hostedtoolcache/Python/3.11.0/x64/bin/python -m virtualenv --setuptools=bundle -p /opt/hostedtoolcache/Python/3.11.0/x64/bin/python3.11 /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525'
+   OUTPUT -------->
+   created virtual environment CPython3.11.0.final.0-64-x86_64 in 508ms
+     creator CPython3Posix(dest=/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525, clear=False, no_vcs_ignore=False, venv_redirect=None, global=False)
+   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, via=copy, app_data_dir=/home/runner/.cache/virtualenv)
+     added seed packages: pip==26.2.1, setuptools==84.0.0
+   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator,XonshActivator
+
+·· Installing requirements for virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install -v wheel pip>=8'
+   OUTPUT -------->
+   Using pip 26.2.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages/pip (python 3.11)
+   Collecting wheel
+     Obtaining dependency information for wheel from https://files.pythonhosted.org/packages/2e/29/69cfbb602cd91690c55d38ba9fe53e6a7e76a6fa647bf38f19c138d25449/wheel-0.48.0-py3-none-any.whl.metadata
+     Downloading wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+   Requirement already satisfied: pip>=8 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (26.2.1)
+   Collecting packaging>=24.0 (from wheel)
+     Obtaining dependency information for packaging>=24.0 from https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl.metadata
+     Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+   Downloading wheel-0.48.0-py3-none-any.whl (33 kB)
+   Using cached packaging-26.3-py3-none-any.whl (129 kB)
+   Installing collected packages: packaging, wheel
+   [?25l  changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/wheel to 755
+   [?25h
+   Successfully installed packaging-26.3 wheel-0.48.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install -v --upgrade numpy==1.26.0'
+   OUTPUT -------->
+   Using pip 26.2.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages/pip (python 3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/3a/be/650f9c091ef71cb01d735775d554e068752d3ff63d7943b26316dc401749/numpy-1.21.2.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/5f/d6/ad58ded26556eaeaa8c971e08b6466f17c4ac4d786cd3d800e26ce59cc01/numpy-1.21.3.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/fb/48/b0708ebd7718a8933f0d3937513ef8ef2f4f04529f1f66ca86d873043921/numpy-1.21.4.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/c2/a8/a924a09492bdfee8c2ec3094d0a13f2799800b4fdc9c890738aeeb12c72e/numpy-1.21.5.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/45/b7/de7b8e67f2232c26af57c205aaad29fe17754f793404f59c8a730c7a191a/numpy-1.21.6.zip (from https://pypi.org/simple/numpy/) (requires-python:>=3.7,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.12'): https://files.pythonhosted.org/packages/d3/e1/f2fe8f6113a657a1da83b358b16755e528a602c6976a43724a88f42b482a/numpy-2.5.0rc1.tar.gz (from https://pypi.org/simple/numpy/) (requires-python:>=3.12)
+     Link requires a different Python (3.11.0 not in: '>=3.12'): https://files.pythonhosted.org/packages/e7/05/3d27272d30698dc0ecb7fdfaa41ad70303b444f81722bb99bce1d818638a/numpy-2.5.0.tar.gz (from https://pypi.org/simple/numpy/) (requires-python:>=3.12)
+     Link requires a different Python (3.11.0 not in: '>=3.12'): https://files.pythonhosted.org/packages/22/fd/89965aa4ac08c74998539fcbf24fa3540f3e15237fbeb6bcf9c908f4aade/numpy-2.5.1.tar.gz (from https://pypi.org/simple/numpy/) (requires-python:>=3.12)
+     Link requires a different Python (3.11.0 not in: '>=3.12'): https://files.pythonhosted.org/packages/9a/80/db0b4559e57ec36362bedbb05530a87fafbcb6067708c946967a41d449e7/numpy-2.5.2.tar.gz (from https://pypi.org/simple/numpy/) (requires-python:>=3.12)
+     Link requires a different Python (3.11.0 not in: '>=3.12'): https://files.pythonhosted.org/packages/13/01/11703282db468b85f6f7b8c7f22d058de5970d5c7e60a3a8aaa313c3de36/numpy-2.5.3.tar.gz (from https://pypi.org/simple/numpy/) (requires-python:>=3.12)
+   Collecting numpy==1.26.0
+     Obtaining dependency information for numpy==1.26.0 from https://files.pythonhosted.org/packages/c4/36/161e2f8110f8c49e59f6107bd6da4257d30aff9f06373d0471811f73dcc5/numpy-1.26.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+     Downloading numpy-1.26.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (58 kB)
+   Downloading numpy-1.26.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+   [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/18.2 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.0/18.2 MB[0m [31m32.9 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m18.2/18.2 MB[0m [31m58.2 MB/s[0m  [33m0:00:00[0m
+   [?25hInstalling collected packages: numpy
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/f2py to 755
+   Successfully installed numpy-1.26.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install -v --upgrade scipy==1.11.1'
+   OUTPUT -------->
+   Using pip 26.2.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages/pip (python 3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.7,<3.10'): https://files.pythonhosted.org/packages/99/f1/c00d6be56e1a718a3068079e3ec8ce044d7179345280f6a3f5066068af0d/scipy-1.6.2.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.7,<3.10)
+     Link requires a different Python (3.11.0 not in: '>=3.7,<3.10'): https://files.pythonhosted.org/packages/fe/fd/8704c7b7b34cdac850485e638346025ca57c5a859934b9aa1be5399b33b7/scipy-1.6.3.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.7,<3.10)
+     Link requires a different Python (3.11.0 not in: '>=3.7,<3.10'): https://files.pythonhosted.org/packages/bb/bb/944f559d554df6c9adf037aa9fc982a9706ee0e96c0d5beac701cb158900/scipy-1.7.0.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.7,<3.10)
+     Link requires a different Python (3.11.0 not in: '>=3.7,<3.10'): https://files.pythonhosted.org/packages/47/33/a24aec22b7be7fdb10ec117a95e1e4099890d8bbc6646902f443fc7719d1/scipy-1.7.1.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.7,<3.10)
+     Link requires a different Python (3.11.0 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/0e/23/58c4f995475a2a97cb5f4a032aedaf881ad87cd976a7180c55118d105a1d/scipy-1.7.2.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.7,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.7,<3.11'): https://files.pythonhosted.org/packages/61/67/1a654b96309c991762ee9bc39c363fc618076b155fe52d295211cf2536c7/scipy-1.7.3.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.7,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.8,<3.11'): https://files.pythonhosted.org/packages/c0/ad/e3c052ed4e0027a8abef0a5e8441a044427d252d17d9aee06d56e62fc698/scipy-1.8.0rc1.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.8,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.8,<3.11'): https://files.pythonhosted.org/packages/29/d2/151a54944b333e465f98804dced31dab1284f3c37b752b9cefa710b64681/scipy-1.8.0rc2.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.8,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.8,<3.11'): https://files.pythonhosted.org/packages/e4/26/83dd1c6378513a6241d984bda9f08c512b6e35fff13fba3acc1b3c195f02/scipy-1.8.0rc3.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.8,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.8,<3.11'): https://files.pythonhosted.org/packages/22/78/056cc43e7737811b6f50886788a940f852773dd9804f5365952805db9648/scipy-1.8.0rc4.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.8,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.8,<3.11'): https://files.pythonhosted.org/packages/b4/a2/4faa34bf0cdbefd5c706625f1234987795f368eb4e97bde9d6f46860843e/scipy-1.8.0.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.8,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.8,<3.11'): https://files.pythonhosted.org/packages/26/b5/9330f004b9a3b2b6a31f59f46f1617ce9ca15c0e7fe64288c20385a05c9d/scipy-1.8.1.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.8,<3.11)
+     Link requires a different Python (3.11.0 not in: '>=3.12'): https://files.pythonhosted.org/packages/1c/b9/101efd4a4302db579178ebb664ca6922d547646352f831bd39cbb7d0294b/scipy-1.18.0rc1.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.12)
+     Link requires a different Python (3.11.0 not in: '>=3.12'): https://files.pythonhosted.org/packages/5f/b2/c9caa00aef1369da8e7aeae2d372fd72b5702cf0a0ce04dd67beb318b967/scipy-1.18.0rc2.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.12)
+     Link requires a different Python (3.11.0 not in: '>=3.12'): https://files.pythonhosted.org/packages/a7/25/c2700dfaf6442b4effaa91af24ebce5dc9d31bb4a69706313aae70d72cd0/scipy-1.18.0.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.12)
+     Link requires a different Python (3.11.0 not in: '>=3.12'): https://files.pythonhosted.org/packages/7e/74/66de6258867beb2ef08f35f9f2ac017a52cacd5081714d239ff1a442d458/scipy-1.18.1.tar.gz (from https://pypi.org/simple/scipy/) (requires-python:>=3.12)
+   Collecting scipy==1.11.1
+     Obtaining dependency information for scipy==1.11.1 from https://files.pythonhosted.org/packages/b8/46/1d255bb55e63de02f7b2f3a2f71b59b840db21d61ff7cd41edbfc2da448a/scipy-1.11.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+     Downloading scipy-1.11.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (59 kB)
+   Requirement already satisfied: numpy<1.28.0,>=1.21.6 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from scipy==1.11.1) (1.26.0)
+   Downloading scipy-1.11.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (36.2 MB)
+   [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/36.2 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.3/36.2 MB[0m [31m34.0 MB/s[0m eta [36m0:00:01[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m [32m35.7/36.2 MB[0m [31m93.0 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m36.2/36.2 MB[0m [31m85.0 MB/s[0m  [33m0:00:00[0m
+   [?25hInstalling collected packages: scipy
+   Successfully installed scipy-1.11.1
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install -v --upgrade joblib==1.5.0'
+   OUTPUT -------->
+   Using pip 26.2.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages/pip (python 3.11)
+   Collecting joblib==1.5.0
+     Obtaining dependency information for joblib==1.5.0 from https://files.pythonhosted.org/packages/da/d3/13ee227a148af1c693654932b8b0b02ed64af5e1f7406d56b088b57574cd/joblib-1.5.0-py3-none-any.whl.metadata
+     Downloading joblib-1.5.0-py3-none-any.whl.metadata (5.6 kB)
+   Downloading joblib-1.5.0-py3-none-any.whl (307 kB)
+   Installing collected packages: joblib
+   Successfully installed joblib-1.5.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install -v --upgrade pandas==2.3.0'
+   OUTPUT -------->
+   Using pip 26.2.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages/pip (python 3.11)
+   Collecting pandas==2.3.0
+     Obtaining dependency information for pandas==2.3.0 from https://files.pythonhosted.org/packages/14/22/b493ec614582307faf3f94989be0f7f0a71932ed6f56c9a80c0bb4a3b51e/pandas-2.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+     Downloading pandas-2.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+   Requirement already satisfied: numpy>=1.23.2 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from pandas==2.3.0) (1.26.0)
+   Collecting python-dateutil>=2.8.2 (from pandas==2.3.0)
+     Obtaining dependency information for python-dateutil>=2.8.2 from https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata
+     Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+   Collecting pytz>=2020.1 (from pandas==2.3.0)
+     Obtaining dependency information for pytz>=2020.1 from https://files.pythonhosted.org/packages/d5/11/e3df59614bebe0ca50c905442603eda64ae7ac19811d4e4f74aa2d51ca85/pytz-2026.4-py2.py3-none-any.whl.metadata
+     Downloading pytz-2026.4-py2.py3-none-any.whl.metadata (22 kB)
+   Collecting tzdata>=2022.7 (from pandas==2.3.0)
+     Obtaining dependency information for tzdata>=2022.7 from https://files.pythonhosted.org/packages/f9/bc/8737e8d54cf51106118039b83f485a4783112fab49ea9d044b234978a46e/tzdata-2026.4-py2.py3-none-any.whl.metadata
+     Downloading tzdata-2026.4-py2.py3-none-any.whl.metadata (1.4 kB)
+   Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas==2.3.0)
+     Obtaining dependency information for six>=1.5 from https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl.metadata
+     Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+   Downloading pandas-2.3.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+   [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/12.4 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━[0m [32m6.3/12.4 MB[0m [31m33.9 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12.4/12.4 MB[0m [31m46.9 MB/s[0m  [33m0:00:00[0m
+   [?25hUsing cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   Downloading pytz-2026.4-py2.py3-none-any.whl (506 kB)
+   Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+   Downloading tzdata-2026.4-py2.py3-none-any.whl (347 kB)
+   Installing collected packages: pytz, tzdata, six, python-dateutil, pandas
+   [?25l
+   [?25h
+   Successfully installed pandas-2.3.0 python-dateutil-2.9.0.post0 pytz-2026.4 six-1.17.0 tzdata-2026.4
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install -v --upgrade scikit-learn==1.6.0'
+   OUTPUT -------->
+   Using pip 26.2.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages/pip (python 3.11)
+   Collecting scikit-learn==1.6.0
+     Obtaining dependency information for scikit-learn==1.6.0 from https://files.pythonhosted.org/packages/0e/ec/1b15b59c6cc7a993320a52234369e787f50345a4753e50d5a015a91e1a20/scikit_learn-1.6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+     Downloading scikit_learn-1.6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+   Requirement already satisfied: numpy>=1.19.5 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from scikit-learn==1.6.0) (1.26.0)
+   Requirement already satisfied: scipy>=1.6.0 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from scikit-learn==1.6.0) (1.11.1)
+   Requirement already satisfied: joblib>=1.2.0 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from scikit-learn==1.6.0) (1.5.0)
+   Collecting threadpoolctl>=3.1.0 (from scikit-learn==1.6.0)
+     Obtaining dependency information for threadpoolctl>=3.1.0 from https://files.pythonhosted.org/packages/43/3f/f88a53f60a472b46f4023f56d204dd7de33d34c5d2acbfa0d70a674e639e/threadpoolctl-3.7.0-py3-none-any.whl.metadata
+     Using cached threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+   Downloading scikit_learn-1.6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.5 MB)
+   [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/13.5 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━[0m [32m11.5/13.5 MB[0m [31m63.2 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m13.5/13.5 MB[0m [31m63.3 MB/s[0m  [33m0:00:00[0m
+   [?25hUsing cached threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+   Installing collected packages: threadpoolctl, scikit-learn
+   [?25l
+   [?25h
+   Successfully installed scikit-learn-1.6.0 threadpoolctl-3.7.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install -v --upgrade nibabel==5.2.0'
+   OUTPUT -------->
+   Using pip 26.2.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages/pip (python 3.11)
+     Link requires a different Python (3.11.0 not in: '!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.9dev,>=2.7'): https://files.pythonhosted.org/packages/7a/4e/6ba3b19108bb4a67848e922975583fd96dc4f67766d18ab630d03ed105e2/nibabel-2.5.2-py3-none-any.whl (from https://pypi.org/simple/nibabel/) (requires-python:!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.9dev,>=2.7)
+     Link requires a different Python (3.11.0 not in: '!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.9dev,>=2.7'): https://files.pythonhosted.org/packages/16/53/258afe4a2415e35a78ea0800e98498922b17de9d03c394f5d60f28ba3eaf/nibabel-2.5.2.tar.gz (from https://pypi.org/simple/nibabel/) (requires-python:!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,<3.9dev,>=2.7)
+   Collecting nibabel==5.2.0
+     Obtaining dependency information for nibabel==5.2.0 from https://files.pythonhosted.org/packages/c9/23/8a8cfdc318231f369a13b7d3b5ebc9d67fc9314d62056efdafb371953020/nibabel-5.2.0-py3-none-any.whl.metadata
+     Downloading nibabel-5.2.0-py3-none-any.whl.metadata (8.8 kB)
+   Requirement already satisfied: numpy>=1.20 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from nibabel==5.2.0) (1.26.0)
+   Requirement already satisfied: packaging>=17 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from nibabel==5.2.0) (26.3)
+   Downloading nibabel-5.2.0-py3-none-any.whl (3.3 MB)
+   [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/3.3 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m3.3/3.3 MB[0m [31m27.6 MB/s[0m  [33m0:00:00[0m
+   [?25hInstalling collected packages: nibabel
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/nib-conform to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/nib-convert to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/nib-dicomfs to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/nib-diff to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/nib-ls to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/nib-nifti-dx to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/nib-roi to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/nib-stats to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/nib-tck2trk to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/nib-trk2tck to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/parrec2nii to 755
+   Successfully installed nibabel-5.2.0
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install -v --upgrade matplotlib==3.8.0'
+   OUTPUT -------->
+   Using pip 26.2.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages/pip (python 3.11)
+   Collecting matplotlib==3.8.0
+     Obtaining dependency information for matplotlib==3.8.0 from https://files.pythonhosted.org/packages/65/5b/3b8fd7d66043f0638a35fa650570cbe69efd42fe169e5024f9307598b47e/matplotlib-3.8.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+     Downloading matplotlib-3.8.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
+     Link requires a different Python (3.11.0 not in: '>=3.12'): https://files.pythonhosted.org/packages/83/5a/a55177dd22553a277388e8a1b3220e92de91bacb28356cdc73caa240121d/contourpy-1.4.0.tar.gz (from https://pypi.org/simple/contourpy/) (requires-python:>=3.12)
+   Collecting contourpy>=1.0.1 (from matplotlib==3.8.0)
+     Obtaining dependency information for contourpy>=1.0.1 from https://files.pythonhosted.org/packages/5f/4b/6157f24ca425b89fe2eb7e7be642375711ab671135be21e6faa100f7448c/contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata
+     Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+   Collecting cycler>=0.10 (from matplotlib==3.8.0)
+     Obtaining dependency information for cycler>=0.10 from https://files.pythonhosted.org/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl.metadata
+     Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+   Collecting fonttools>=4.22.0 (from matplotlib==3.8.0)
+     Obtaining dependency information for fonttools>=4.22.0 from https://files.pythonhosted.org/packages/c3/e0/ed45f50fe7a7320656ac7dde60f26afa3a92a21e14749135b4c03f3385b7/fonttools-4.66.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata
+     Downloading fonttools-4.66.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (130 kB)
+   Collecting kiwisolver>=1.0.1 (from matplotlib==3.8.0)
+     Obtaining dependency information for kiwisolver>=1.0.1 from https://files.pythonhosted.org/packages/89/00/05c2d0369ac322d22d5c05f84b5c4a6856fa6207fbae42869108a28f0383/kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata
+     Downloading kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.2 kB)
+   Requirement already satisfied: numpy<2,>=1.21 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from matplotlib==3.8.0) (1.26.0)
+   Requirement already satisfied: packaging>=20.0 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from matplotlib==3.8.0) (26.3)
+   Collecting pillow>=6.2.0 (from matplotlib==3.8.0)
+     Obtaining dependency information for pillow>=6.2.0 from https://files.pythonhosted.org/packages/3b/2d/ede717bc1144f63886c21fd349bb95860b0d1a21149ff16f2bb362b612b6/pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata
+     Downloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+   Collecting pyparsing>=2.3.1 (from matplotlib==3.8.0)
+     Obtaining dependency information for pyparsing>=2.3.1 from https://files.pythonhosted.org/packages/38/bb/d215ee7c73b61497b28a5503f9f53523f294fcc936762b7caf90e0c1c2b5/pyparsing-3.3.3-py3-none-any.whl.metadata
+     Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+   Requirement already satisfied: python-dateutil>=2.7 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from matplotlib==3.8.0) (2.9.0.post0)
+   Requirement already satisfied: six>=1.5 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib==3.8.0) (1.17.0)
+   Downloading matplotlib-3.8.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
+   [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/11.6 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m[91m╸[0m[90m━━━━━━━━━━━━[0m [32m8.1/11.6 MB[0m [31m43.3 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m11.6/11.6 MB[0m [31m48.5 MB/s[0m  [33m0:00:00[0m
+   [?25hDownloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+   Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+   Downloading fonttools-4.66.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+   [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/5.4 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.4/5.4 MB[0m [31m123.3 MB/s[0m  [33m0:00:00[0m
+   [?25hDownloading kiwisolver-1.5.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+   [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/1.4 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.4/1.4 MB[0m [31m125.7 MB/s[0m  [33m0:00:00[0m
+   [?25hDownloading pillow-12.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+   [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/6.9 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m6.9/6.9 MB[0m [31m172.7 MB/s[0m  [33m0:00:00[0m
+   [?25hDownloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+   Installing collected packages: pyparsing, pillow, kiwisolver, fonttools, cycler, contourpy, matplotlib
+   [?25l  changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/fonttools to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/pyftmerge to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/pyftsubset to 755
+     changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/ttx to 755
+   [?25h
+   Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.66.1 kiwisolver-1.5.1 matplotlib-3.8.0 pillow-12.3.0 pyparsing-3.3.3
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install -v --upgrade plotly==6.1.1'
+   OUTPUT -------->
+   Using pip 26.2.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages/pip (python 3.11)
+   Collecting plotly==6.1.1
+     Obtaining dependency information for plotly==6.1.1 from https://files.pythonhosted.org/packages/75/f3/f8cb7066f761e2530e1280889e3413769891e349fca35ee7290e4ace35f5/plotly-6.1.1-py3-none-any.whl.metadata
+     Downloading plotly-6.1.1-py3-none-any.whl.metadata (6.9 kB)
+   Collecting narwhals>=1.15.1 (from plotly==6.1.1)
+     Obtaining dependency information for narwhals>=1.15.1 from https://files.pythonhosted.org/packages/40/b5/1b84b2c784db76d69442334bc8b8748c840f13ca53be086f4f250ad4a0bc/narwhals-2.26.0-py3-none-any.whl.metadata
+     Using cached narwhals-2.26.0-py3-none-any.whl.metadata (15 kB)
+   Requirement already satisfied: packaging in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from plotly==6.1.1) (26.3)
+   Downloading plotly-6.1.1-py3-none-any.whl (16.1 MB)
+   [?25l   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m0.0/16.1 MB[0m [31m?[0m eta [36m-:--:--[0m[2K   [91m━━━━━━━━━━━━━━[0m[90m╺[0m[90m━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m5.8/16.1 MB[0m [31m31.5 MB/s[0m eta [36m0:00:01[0m[2K   [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m16.1/16.1 MB[0m [31m50.8 MB/s[0m  [33m0:00:00[0m
+   [?25hUsing cached narwhals-2.26.0-py3-none-any.whl (474 kB)
+   Installing collected packages: narwhals, plotly
+   [?25l  changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/plotly_get_chrome to 755
+   [?25h
+   Successfully installed narwhals-2.26.0 plotly-6.1.1
+
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install -v --upgrade build'
+   OUTPUT -------->
+   Using pip 26.2.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages/pip (python 3.11)
+   Collecting build
+     Obtaining dependency information for build from https://files.pythonhosted.org/packages/ad/9b/9fb3585dabcd73a1b2a6267f63f62649347c9e6d072c9fde365b105abb2c/build-1.6.1-py3-none-any.whl.metadata
+     Using cached build-1.6.1-py3-none-any.whl.metadata (5.6 kB)
+   Requirement already satisfied: packaging>=24.0 in ./env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from build) (26.3)
+   Collecting pyproject_hooks (from build)
+     Obtaining dependency information for pyproject_hooks from https://files.pythonhosted.org/packages/85/11/044d1ae1b4ec0d7af88ee5bc91e081be1022533032b906a7bdabdbb60977/pyproject_hooks-1.3.3-py3-none-any.whl.metadata
+     Using cached pyproject_hooks-1.3.3-py3-none-any.whl.metadata (1.3 kB)
+   Using cached build-1.6.1-py3-none-any.whl (31 kB)
+   Using cached pyproject_hooks-1.3.3-py3-none-any.whl (10 kB)
+   Installing collected packages: pyproject_hooks, build
+   [?25l  changing mode of /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/pyproject-build to 755
+   [?25h
+   Successfully installed build-1.6.1 pyproject_hooks-1.3.3
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install -v --upgrade asv_runner'
+   OUTPUT -------->
+   Using pip 26.2.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages/pip (python 3.11)
+   Collecting asv_runner
+     Obtaining dependency information for asv_runner from https://files.pythonhosted.org/packages/48/ae/e297569c2f219a424f7a2389346dd4544c70102738b6d3621fac0f60ab44/asv_runner-0.3.1-py3-none-any.whl.metadata
+     Using cached asv_runner-0.3.1-py3-none-any.whl.metadata (2.7 kB)
+   Using cached asv_runner-0.3.1-py3-none-any.whl (51 kB)
+   Installing collected packages: asv_runner
+   Successfully installed asv_runner-0.3.1
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install -v --upgrade pympler'
+   OUTPUT -------->
+   Using pip 26.2.1 from /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages/pip (python 3.11)
+   Collecting pympler
+     Obtaining dependency information for pympler from https://files.pythonhosted.org/packages/79/4f/a6a2e2b202d7fd97eadfe90979845b8706676b41cbd3b42ba75adf329d1f/Pympler-1.1-py3-none-any.whl.metadata
+     Using cached Pympler-1.1-py3-none-any.whl.metadata (3.6 kB)
+   Using cached Pympler-1.1-py3-none-any.whl (165 kB)
+   Installing collected packages: pympler
+   Successfully installed pympler-1.1
+· Discovering benchmarks
+·· Running '/usr/bin/git rev-parse main^{commit}'
+   OUTPUT -------->
+   f6a928b1a94942a8c90d1b7acf71116f803603f1
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -c pass'
+·· Running '/usr/bin/git clone --shared --recursive /home/runner/work/nilearn/nilearn/asv_benchmarks/nilearn /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/project'
+   OUTPUT -------->
+   Cloning into '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/project'...
+   done.
+·· Running '/usr/bin/git -c protocol.file.allow=always submodule deinit -f .'
+·· Running '/usr/bin/git checkout -f f6a928b1a94942a8c90d1b7acf71116f803603f1'
+   OUTPUT -------->
+   Note: switching to 'f6a928b1a94942a8c90d1b7acf71116f803603f1'.
+   
+   You are in 'detached HEAD' state. You can look around, make experimental
+   changes and commit them, and you can discard any commits you make in this
+   state without impacting any branches by switching back to a branch.
+   
+   If you want to create a new branch to retain commits you create, you may
+   do so (now or later) by using -c with the switch command. Example:
+   
+     git switch -c <new-branch-name>
+   
+   Or undo this operation with:
+   
+     git switch -
+   
+   Turn off this advice by setting config variable advice.detachedHead to false
+   
+   HEAD is now at f6a928b1a [FIX] avoid overlapping colorbar ticks when 0 is close to vmin or vmax (#6609)
+
+·· Running '/usr/bin/git clean -fdx'
+·· Running '/usr/bin/git -c protocol.file.allow=always submodule update --init --recursive'
+·· Uninstalling from virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip uninstall -y nilearn'
+   OUTPUT -------->
+   [33mWARNING: Skipping nilearn as it is not installed.[0m[33m
+   [0m
+·· Running '/usr/bin/git name-rev --name-only --exclude=remotes/* --no-undefined f6a928b1a94942a8c90d1b7acf71116f803603f1'
+   OUTPUT -------->
+   main
+·· Building f6a928b1 <main> for virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m build -o /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/asv-build-cache/f6a928b1a94942a8c90d1b7acf71116f803603f1 /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/project'
+   OUTPUT -------->
+   [1m* Creating isolated environment: venv+pip...[0m
+   [1m* Installing packages in isolated environment:[0m
+     - hatch-vcs
+   - hatchling
+
+     - setuptools-scm!=9.0.0
+   [1m* Getting build dependencies for sdist...[0m
+
+   [1m* Installed build dependency versions:[0m
+     - hatch-vcs==0.5.0
+   - hatchling==1.32.4
+
+     - setuptools-scm==10.3.4
+   [1m* Building sdist...[0m
+   [1m* Building wheel from sdist[0m
+
+   [1m* Creating isolated environment: venv+pip...[0m
+   [1m* Installing packages in isolated environment:[0m
+     - hatch-vcs
+     - hatchling
+     - setuptools-scm!=9.0.0
+   [1m* Getting build dependencies for wheel...[0m
+
+   [1m* Installed build dependency versions:[0m
+     - hatch-vcs==0.5.0
+   - hatchling==1.32.4
+   - setuptools-scm==10.3.4
+
+   [1m* Building wheel...[0m
+   [1m[92mSuccessfully built [4mnilearn-0.14.2.dev53+gf6a928b1a.tar.gz[0m[1m[92m and [4mnilearn-0.14.2.dev53+gf6a928b1a-py3-none-any.whl[0m[1m[92m[0m
+
+·· Running '/usr/bin/git name-rev --name-only --exclude=remotes/* --no-undefined f6a928b1a94942a8c90d1b7acf71116f803603f1'
+   OUTPUT -------->
+   main
+·· Installing f6a928b1 <main> into virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python -m pip install /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/asv-build-cache/f6a928b1a94942a8c90d1b7acf71116f803603f1/nilearn-0.14.2.dev53+gf6a928b1a-py3-none-any.whl'
+   OUTPUT -------->
+   Processing /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/asv-build-cache/f6a928b1a94942a8c90d1b7acf71116f803603f1/nilearn-0.14.2.dev53+gf6a928b1a-py3-none-any.whl
+   Collecting jinja2>=3.1.6 (from nilearn==0.14.2.dev53+gf6a928b1a)
+     Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+   Requirement already satisfied: joblib>=1.5.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from nilearn==0.14.2.dev53+gf6a928b1a) (1.5.0)
+   Requirement already satisfied: nibabel>=5.2.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from nilearn==0.14.2.dev53+gf6a928b1a) (5.2.0)
+   Requirement already satisfied: numpy>=1.26.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from nilearn==0.14.2.dev53+gf6a928b1a) (1.26.0)
+   Requirement already satisfied: packaging>=26.0.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from nilearn==0.14.2.dev53+gf6a928b1a) (26.3)
+   Requirement already satisfied: pandas>=2.3.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from nilearn==0.14.2.dev53+gf6a928b1a) (2.3.0)
+   Collecting requests>=2.33.0 (from nilearn==0.14.2.dev53+gf6a928b1a)
+     Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+   Requirement already satisfied: scikit-learn!=1.7.0,!=1.9.0,>=1.6.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from nilearn==0.14.2.dev53+gf6a928b1a) (1.6.0)
+   Requirement already satisfied: scipy>=1.11.1 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from nilearn==0.14.2.dev53+gf6a928b1a) (1.11.1)
+   Collecting MarkupSafe>=2.0 (from jinja2>=3.1.6->nilearn==0.14.2.dev53+gf6a928b1a)
+     Using cached markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+   Requirement already satisfied: python-dateutil>=2.8.2 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from pandas>=2.3.0->nilearn==0.14.2.dev53+gf6a928b1a) (2.9.0.post0)
+   Requirement already satisfied: pytz>=2020.1 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from pandas>=2.3.0->nilearn==0.14.2.dev53+gf6a928b1a) (2026.4)
+   Requirement already satisfied: tzdata>=2022.7 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from pandas>=2.3.0->nilearn==0.14.2.dev53+gf6a928b1a) (2026.4)
+   Requirement already satisfied: six>=1.5 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from python-dateutil>=2.8.2->pandas>=2.3.0->nilearn==0.14.2.dev53+gf6a928b1a) (1.17.0)
+   Collecting charset_normalizer<4,>=2 (from requests>=2.33.0->nilearn==0.14.2.dev53+gf6a928b1a)
+     Using cached charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+   Collecting idna<4,>=2.5 (from requests>=2.33.0->nilearn==0.14.2.dev53+gf6a928b1a)
+     Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+   Collecting urllib3<3,>=1.26 (from requests>=2.33.0->nilearn==0.14.2.dev53+gf6a928b1a)
+     Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+   Collecting certifi>=2023.5.7 (from requests>=2.33.0->nilearn==0.14.2.dev53+gf6a928b1a)
+     Using cached certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+   Requirement already satisfied: threadpoolctl>=3.1.0 in /home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/lib/python3.11/site-packages (from scikit-learn!=1.7.0,!=1.9.0,>=1.6.0->nilearn==0.14.2.dev53+gf6a928b1a) (3.7.0)
+   Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+   Using cached markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+   Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+   Using cached charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (269 kB)
+   Using cached idna-3.20-py3-none-any.whl (69 kB)
+   Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+   Using cached certifi-2026.7.22-py3-none-any.whl (136 kB)
+   Installing collected packages: urllib3, MarkupSafe, idna, charset_normalizer, certifi, requests, jinja2, nilearn
+   [?25l
+   [?25h
+   Successfully installed MarkupSafe-3.0.3 certifi-2026.7.22 charset_normalizer-3.5.2 idna-3.20 jinja2-3.1.6 nilearn-0.14.2.dev53+gf6a928b1a requests-2.34.2 urllib3-2.8.0
+·· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py discover /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks /tmp/tmp8gp18ruk/result.json' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+·· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py discover /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks /tmp/tmp8gp18ruk/result.json'
+· Running 32 total benchmarks (1 commits * 1 environments * 32 benchmarks)
+[ 0.00%] · Running '/usr/bin/git name-rev --name-only --exclude=remotes/* --no-undefined f6a928b1a94942a8c90d1b7acf71116f803603f1'
+           OUTPUT -------->
+           main
+[ 0.00%] · For nilearn commit f6a928b1 <main>:
+[ 0.00%] ·· Running '/usr/bin/git rev-list -n 1 --format=%at f6a928b1a94942a8c90d1b7acf71116f803603f1'
+            OUTPUT -------->
+            commit f6a928b1a94942a8c90d1b7acf71116f803603f1
+            1790778918
+[ 0.00%] ·· Benchmarking virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[ 3.12%] ··· Running (glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit--)
+[ 3.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-0 {"number": 1} None /tmp/tmp7bccs9d9' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[ 3.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-0 {"number": 1} None /tmp/tmp7bccs9d9'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[ 3.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-1 {"number": 1} None /tmp/tmpy_6ko_ov' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[ 3.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-1 {"number": 1} None /tmp/tmpy_6ko_ov'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[ 3.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-2 {"number": 1} None /tmp/tmpffsc4avp' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[ 3.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-2 {"number": 1} None /tmp/tmpffsc4avp'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[ 3.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-3 {"number": 1} None /tmp/tmp4fy8emkr' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[ 3.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-3 {"number": 1} None /tmp/tmp4fy8emkr'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices).
+[ 6.25%] ··· Running (glm.first_level.first_level.BenchMarkFirstLevelModelReport.time_glm_report--)
+[ 6.25%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModelReport.time_glm_report-0 {"number": 1} None /tmp/tmpfyht_9x5' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[ 6.25%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModelReport.time_glm_report-0 {"number": 1} None /tmp/tmpfyht_9x5'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[ 6.25%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModelReport.time_glm_report-1 {"number": 1} None /tmp/tmp43b9g4i4' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[ 6.25%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModelReport.time_glm_report-1 {"number": 1} None /tmp/tmp43b9g4i4'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices).
+[ 9.38%] ··· Running (glm.io.BenchMarkFirstLevelModelSave.time_glm_save--)
+[ 9.38%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-0 {"number": 1} None /tmp/tmpme82xl8c' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[ 9.38%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-0 {"number": 1} None /tmp/tmpme82xl8c'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[ 9.38%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-1 {"number": 1} None /tmp/tmpuo6lp1a8' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[ 9.38%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-1 {"number": 1} None /tmp/tmpuo6lp1a8'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[ 9.38%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-2 {"number": 1} None /tmp/tmpbe_7sdxk' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[ 9.38%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-2 {"number": 1} None /tmp/tmpbe_7sdxk'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[ 9.38%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-3 {"number": 1} None /tmp/tmpimt5_j70' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[ 9.38%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-3 {"number": 1} None /tmp/tmpimt5_j70'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices).
+[12.50%] ··· Running (mass_univariate._utils.BenchMarkTFCE.time_tfce--)
+[12.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-0 {"number": 1} None /tmp/tmpygdx89cr' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[12.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-0 {"number": 1} None /tmp/tmpygdx89cr'
+[12.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-1 {"number": 1} None /tmp/tmpeokboowk' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[12.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-1 {"number": 1} None /tmp/tmpeokboowk'
+[12.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-2 {"number": 1} None /tmp/tmp661jjrux' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[12.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-2 {"number": 1} None /tmp/tmp661jjrux'
+[12.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-3 {"number": 1} None /tmp/tmptbqv8yh8' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[12.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-3 {"number": 1} None /tmp/tmptbqv8yh8'
+[12.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-4 {"number": 1} None /tmp/tmp_of3wxi1' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[12.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-4 {"number": 1} None /tmp/tmp_of3wxi1'
+[12.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-5 {"number": 1} None /tmp/tmpxlg2vmsm' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[12.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-5 {"number": 1} None /tmp/tmpxlg2vmsm'
+[12.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-6 {"number": 1} None /tmp/tmpzwqo9dw0' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[12.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-6 {"number": 1} None /tmp/tmpzwqo9dw0'
+[12.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-7 {"number": 1} None /tmp/tmpevqf2bvq' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[12.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-7 {"number": 1} None /tmp/tmpevqf2bvq'.
+[15.62%] ··· Running (plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.time_plot_design_matrix_correlation--)
+[15.62%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.time_plot_design_matrix_correlation {"number": 1} None /tmp/tmpoyg4dxgy' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[15.62%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.time_plot_design_matrix_correlation {"number": 1} None /tmp/tmpoyg4dxgy'.
+[18.75%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-0 {"number": 1} None /tmp/tmp6zvip58z' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[18.75%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-0 {"number": 1} None /tmp/tmp6zvip58z'
+[18.75%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-1 {"number": 1} None /tmp/tmphckzujnn' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[18.75%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-1 {"number": 1} None /tmp/tmphckzujnn'
+[18.75%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-2 {"number": 1} None /tmp/tmpf53racyw' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[18.75%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-2 {"number": 1} None /tmp/tmpf53racyw'
+[18.75%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-3 {"number": 1} None /tmp/tmpais254tb' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[18.75%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-3 {"number": 1} None /tmp/tmpais254tb'
+[18.75%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-4 {"number": 1} None /tmp/tmp_v1h4jxe' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[18.75%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-4 {"number": 1} None /tmp/tmp_v1h4jxe'.
+[21.88%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlottingSurface.time_plotting_surface-0 {"number": 1} None /tmp/tmpfbmpef3o' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[21.88%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlottingSurface.time_plotting_surface-0 {"number": 1} None /tmp/tmpfbmpef3o'
+[21.88%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlottingSurface.time_plotting_surface-1 {"number": 1} None /tmp/tmpucu50anm' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[21.88%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlottingSurface.time_plotting_surface-1 {"number": 1} None /tmp/tmpucu50anm'.
+[25.00%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks utils.discovery.BenchMarkAllEstimators.time_discovery_all_estimators {"number": 1} None /tmp/tmpiuk4a3e3' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[25.00%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks utils.discovery.BenchMarkAllEstimators.time_discovery_all_estimators {"number": 1} None /tmp/tmpiuk4a3e3'.
+[28.12%] ··· Setting up _utils:213
+[28.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py setup_cache /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.time_image_load_compare {"cpu_affinity": null}' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[28.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py setup_cache /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.time_image_load_compare {"cpu_affinity": null}'                                           ok
+[28.12%] ··· Running (image.image.CompareLoad.time_image_load_compare--)
+[28.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.time_image_load_compare-0 {"number": 22} None /tmp/tmpbxnmu_n9' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[28.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.time_image_load_compare-0 {"number": 22} None /tmp/tmpbxnmu_n9'
+[28.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.time_image_load_compare-1 {"number": 20} None /tmp/tmp8tn8xpjh' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[28.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.time_image_load_compare-1 {"number": 20} None /tmp/tmp8tn8xpjh'.
+[31.25%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareMean.time_image_mean_img_compare-0 {"number": 1} None /tmp/tmp09wgcozn' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[31.25%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareMean.time_image_mean_img_compare-0 {"number": 1} None /tmp/tmp09wgcozn'
+[31.25%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareMean.time_image_mean_img_compare-1 {"number": 1} None /tmp/tmp291ehh6b' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[31.25%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareMean.time_image_mean_img_compare-1 {"number": 1} None /tmp/tmp291ehh6b'.
+[34.38%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareSlice.time_image_slice_compare-0 {"number": 4} None /tmp/tmpd9h7ils_' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[34.38%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareSlice.time_image_slice_compare-0 {"number": 4} None /tmp/tmpd9h7ils_'
+[34.38%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareSlice.time_image_slice_compare-1 {"number": 4} None /tmp/tmpixjf8126' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[34.38%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareSlice.time_image_slice_compare-1 {"number": 4} None /tmp/tmpixjf8126'.
+[37.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.IndexImgBenchmark.time_image_index_img {"number": 1} None /tmp/tmpz9wirgup' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[37.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.IndexImgBenchmark.time_image_index_img {"number": 1} None /tmp/tmpz9wirgup'.
+[40.62%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.LoadImgBenchmark.time_image_load_img {"number": 22} None /tmp/tmprbnc2i_w' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[40.62%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.LoadImgBenchmark.time_image_load_img {"number": 22} None /tmp/tmprbnc2i_w'.
+[43.75%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.MeanImgBenchmark.time_image_mean_img {"number": 1} None /tmp/tmpt0h4g501' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[43.75%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.MeanImgBenchmark.time_image_mean_img {"number": 1} None /tmp/tmpt0h4g501'.
+[46.88%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-0 {"number": 1} None /tmp/tmpr2nd_p4y' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[46.88%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-0 {"number": 1} None /tmp/tmpr2nd_p4y'
+[46.88%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-1 {"number": 1} None /tmp/tmplb3g51e7' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[46.88%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-1 {"number": 1} None /tmp/tmplb3g51e7'
+[46.88%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-2 {"number": 22} None /tmp/tmpt98guy3i' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[46.88%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-2 {"number": 22} None /tmp/tmpt98guy3i'
+[46.88%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-3 {"number": 23} None /tmp/tmp1gmgb13_' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[46.88%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-3 {"number": 23} None /tmp/tmp1gmgb13_'.
+[50.00%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-0 {"number": 1} None /tmp/tmpd36xzip1' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[50.00%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-0 {"number": 1} None /tmp/tmpd36xzip1'
+[50.00%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-1 {"number": 1} None /tmp/tmpck42xxe4' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[50.00%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-1 {"number": 1} None /tmp/tmpck42xxe4'
+[50.00%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-2 {"number": 1} None /tmp/tmp4odm5cjb' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[50.00%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-2 {"number": 1} None /tmp/tmp4odm5cjb'
+[50.00%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-3 {"number": 1} None /tmp/tmp237av0oi' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[50.00%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-3 {"number": 1} None /tmp/tmp237av0oi'.
+[51.56%] ··· ...vel.BenchMarkFirstLevelModel.peakmem_glm_fit
+[51.56%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit-0 {} None /tmp/tmp514t0dlh' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[51.56%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit-0 {} None /tmp/tmp514t0dlh'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[51.56%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit-1 {} None /tmp/tmptg4l7l6o' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[51.56%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit-1 {} None /tmp/tmptg4l7l6o'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[51.56%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit-2 {} None /tmp/tmpzor7_7k7' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[51.56%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit-2 {} None /tmp/tmpzor7_7k7'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[51.56%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit-3 {} None /tmp/tmpqaknehof' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[51.56%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.peakmem_glm_fit-3 {} None /tmp/tmpqaknehof'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)                 ok
+[51.56%] ··· =============== ======= =======
+             --              minimize_memory
+             --------------- ---------------
+              length_n_runs    True   False 
+             =============== ======= =======
+                 (250, 2)     1.37G   1.37G 
+                 (500, 1)     1.37G   1.37G 
+             =============== ======= =======
+
+[51.56%] ···· For parameters: (250, 2), True
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: (250, 2), False
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: (500, 1), True
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: (500, 1), False
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+
+[53.12%] ··· ..._level.BenchMarkFirstLevelModel.time_glm_fit
+[53.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-0 {"number": 1} None /tmp/tmpsjtvkun5' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[53.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-0 {"number": 1} None /tmp/tmpsjtvkun5'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[53.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-1 {"number": 1} None /tmp/tmpgoxwokx0' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[53.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-1 {"number": 1} None /tmp/tmpgoxwokx0'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[53.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-2 {"number": 1} None /tmp/tmp5mknhlzi' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[53.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-2 {"number": 1} None /tmp/tmp5mknhlzi'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[53.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-3 {"number": 1} None /tmp/tmp46bthfw3' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[53.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModel.time_glm_fit-3 {"number": 1} None /tmp/tmp46bthfw3'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)                 ok
+[53.12%] ··· =============== ============ ============
+             --                   minimize_memory     
+             --------------- -------------------------
+              length_n_runs      True        False    
+             =============== ============ ============
+                 (250, 2)     2.00±0.01s   1.98±0.01s 
+                 (500, 1)     2.01±0.01s   2.00±0.01s 
+             =============== ============ ============
+
+[53.12%] ···· For parameters: (250, 2), True
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: (250, 2), False
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: (500, 1), True
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: (500, 1), False
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:25: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+
+[54.69%] ··· ...MarkFirstLevelModelReport.peakmem_glm_report
+[54.69%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModelReport.peakmem_glm_report-0 {} None /tmp/tmpl1wudt9o' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[54.69%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModelReport.peakmem_glm_report-0 {} None /tmp/tmpl1wudt9o'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[54.69%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModelReport.peakmem_glm_report-1 {} None /tmp/tmplnz4ftl1' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[54.69%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModelReport.peakmem_glm_report-1 {} None /tmp/tmplnz4ftl1'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)                 ok
+[54.69%] ··· =============== =======
+                    m               
+             --------------- -------
+                   None       1.37G 
+              nilearn_cache   1.37G 
+             =============== =======
+
+[54.69%] ···· For parameters: None
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: 'nilearn_cache'
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+
+[56.25%] ··· ...nchMarkFirstLevelModelReport.time_glm_report
+[56.25%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModelReport.time_glm_report-0 {"number": 1} None /tmp/tmp8y4aetns' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[56.25%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModelReport.time_glm_report-0 {"number": 1} None /tmp/tmp8y4aetns'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[56.25%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModelReport.time_glm_report-1 {"number": 1} None /tmp/tmp7q2kkx3w' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[56.25%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.first_level.first_level.BenchMarkFirstLevelModelReport.time_glm_report-1 {"number": 1} None /tmp/tmp7q2kkx3w'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)                 ok
+[56.25%] ··· =============== ============
+                    m                    
+             --------------- ------------
+                   None       11.2±0.01s 
+              nilearn_cache   10.1±0.03s 
+             =============== ============
+
+[56.25%] ···· For parameters: None
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: 'nilearn_cache'
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/first_level/first_level.py:46: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+
+[57.81%] ··· ...enchMarkFirstLevelModelSave.peakmem_glm_save
+[57.81%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.peakmem_glm_save-0 {} None /tmp/tmpefsv8krx' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[57.81%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.peakmem_glm_save-0 {} None /tmp/tmpefsv8krx'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[57.81%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.peakmem_glm_save-1 {} None /tmp/tmpvm9hrnze' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[57.81%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.peakmem_glm_save-1 {} None /tmp/tmpvm9hrnze'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[57.81%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.peakmem_glm_save-2 {} None /tmp/tmp_qi5mwjk' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[57.81%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.peakmem_glm_save-2 {} None /tmp/tmp_qi5mwjk'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[57.81%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.peakmem_glm_save-3 {} None /tmp/tmprpp2v42f' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[57.81%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.peakmem_glm_save-3 {} None /tmp/tmprpp2v42f'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)                 ok
+[57.81%] ··· =============== ======= =======
+             --                   n_runs    
+             --------------- ---------------
+                  memory        1       4   
+             =============== ======= =======
+                   None       2.54G   2.54G 
+              nilearn_cache   2.55G   2.56G 
+             =============== ======= =======
+
+[57.81%] ···· For parameters: None, 1
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: None, 4
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: 'nilearn_cache', 1
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: 'nilearn_cache', 4
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+
+[59.38%] ··· ...o.BenchMarkFirstLevelModelSave.time_glm_save
+[59.38%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-0 {"number": 1} None /tmp/tmpxaev9vbv' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[59.38%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-0 {"number": 1} None /tmp/tmpxaev9vbv'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[59.38%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-1 {"number": 1} None /tmp/tmpid9kugx2' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[59.38%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-1 {"number": 1} None /tmp/tmpid9kugx2'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[59.38%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-2 {"number": 1} None /tmp/tmpzp20j4e9' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[59.38%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-2 {"number": 1} None /tmp/tmpzp20j4e9'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+[59.38%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-3 {"number": 1} None /tmp/tmp5kspb5vb' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[59.38%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks glm.io.BenchMarkFirstLevelModelSave.time_glm_save-3 {"number": 1} None /tmp/tmp5kspb5vb'
+             OUTPUT -------->
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)
+             /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+
+               model.fit(self.fmri_data, design_matrices=self.design_matrices)                 ok
+[59.38%] ··· =============== ========= =========
+             --                     n_runs      
+             --------------- -------------------
+                  memory         1         4    
+             =============== ========= =========
+                   None       1.03±0m   1.04±0m 
+              nilearn_cache   1.03±0m   1.03±0m 
+             =============== ========= =========
+
+[59.38%] ···· For parameters: None, 1
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: None, 4
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: 'nilearn_cache', 1
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              
+              For parameters: 'nilearn_cache', 4
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+              /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks/glm/io.py:37: RuntimeWarning: [MultiNiftiMasker.fit] Generation of a mask has been requested (imgs != None) while a mask was given at masker creation. Given mask will be used.
+                model.fit(self.fmri_data, design_matrices=self.design_matrices)
+
+[60.94%] ··· ...univariate._utils.BenchMarkTFCE.peakmem_tfce
+[60.94%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-0 {} None /tmp/tmpxovy2x06' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[60.94%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-0 {} None /tmp/tmpxovy2x06'
+[60.94%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-1 {} None /tmp/tmp8slyzyab' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[60.94%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-1 {} None /tmp/tmp8slyzyab'
+[60.94%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-2 {} None /tmp/tmp109x85uo' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[60.94%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-2 {} None /tmp/tmp109x85uo'
+[60.94%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-3 {} None /tmp/tmp709ek7y0' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[60.94%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-3 {} None /tmp/tmp709ek7y0'
+[60.94%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-4 {} None /tmp/tmpvamngm38' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[60.94%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-4 {} None /tmp/tmpvamngm38'
+[60.94%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-5 {} None /tmp/tmpwj8nosj7' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[60.94%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-5 {} None /tmp/tmpwj8nosj7'
+[60.94%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-6 {} None /tmp/tmpmztfo_tj' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[60.94%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-6 {} None /tmp/tmpmztfo_tj'
+[60.94%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-7 {} None /tmp/tmpdqoniyzk' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[60.94%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.peakmem_tfce-7 {} None /tmp/tmpdqoniyzk'                 ok
+[60.94%] ··· =========== ============== ====== ======
+             --                             sigma    
+             -------------------------- -------------
+              n_samples      shape       1.0    3.0  
+             =========== ============== ====== ======
+                  10      (20, 20, 20)   192M   192M 
+                  10      (60, 60, 60)   313M   310M 
+                  20      (20, 20, 20)   196M   196M 
+                  20      (60, 60, 60)   388M   387M 
+             =========== ============== ====== ======
+
+[62.50%] ··· mass_univariate._utils.BenchMarkTFCE.time_tfce
+[62.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-0 {"number": 1} None /tmp/tmpu3gl1tzd' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[62.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-0 {"number": 1} None /tmp/tmpu3gl1tzd'
+[62.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-1 {"number": 1} None /tmp/tmpkzdg66s_' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[62.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-1 {"number": 1} None /tmp/tmpkzdg66s_'
+[62.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-2 {"number": 1} None /tmp/tmpe_l1idv2' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[62.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-2 {"number": 1} None /tmp/tmpe_l1idv2'
+[62.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-3 {"number": 1} None /tmp/tmp5dy_6am8' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[62.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-3 {"number": 1} None /tmp/tmp5dy_6am8'
+[62.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-4 {"number": 1} None /tmp/tmp3spgt_4v' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[62.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-4 {"number": 1} None /tmp/tmp3spgt_4v'
+[62.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-5 {"number": 1} None /tmp/tmp702d8zel' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[62.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-5 {"number": 1} None /tmp/tmp702d8zel'
+[62.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-6 {"number": 1} None /tmp/tmpfbp5104u' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[62.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-6 {"number": 1} None /tmp/tmpfbp5104u'
+[62.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-7 {"number": 1} None /tmp/tmpeeya4d_y' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[62.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks mass_univariate._utils.BenchMarkTFCE.time_tfce-7 {"number": 1} None /tmp/tmpeeya4d_y'                  ok
+[62.50%] ··· =========== ============== ============ ============
+             --                                   sigma          
+             -------------------------- -------------------------
+              n_samples      shape          1.0          3.0     
+             =========== ============== ============ ============
+                  10      (20, 20, 20)    703±3ms      703±8ms   
+                  10      (60, 60, 60)   6.92±0.02s   6.76±0.02s 
+                  20      (20, 20, 20)    732±5ms      710±4ms   
+                  20      (60, 60, 60)   7.33±0.01s   6.99±0.03s 
+             =========== ============== ============ ============
+
+[64.06%] ··· ...ation.peakmem_plot_design_matrix_correlation
+[64.06%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.peakmem_plot_design_matrix_correlation {} None /tmp/tmpuakc4pi6' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[64.06%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.peakmem_plot_design_matrix_correlation {} None /tmp/tmpuakc4pi6'               215M
+[65.62%] ··· ...relation.time_plot_design_matrix_correlation
+[65.62%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.time_plot_design_matrix_correlation {"number": 1} None /tmp/tmpjx9k944l' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[65.62%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotDesignMatrixCorrelation.time_plot_design_matrix_correlation {"number": 1} None /tmp/tmpjx9k944l'         48.8±0.1ms
+[67.19%] ··· ...ting.BenchMarkPlotting3D.peakmem_plotting_3d
+[67.19%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d-0 {} None /tmp/tmppxvsztz1' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[67.19%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d-0 {} None /tmp/tmppxvsztz1'
+[67.19%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d-1 {} None /tmp/tmpcwr0o4w7' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[67.19%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d-1 {} None /tmp/tmpcwr0o4w7'
+[67.19%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d-2 {} None /tmp/tmpjr84_xxo' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[67.19%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d-2 {} None /tmp/tmpjr84_xxo'
+[67.19%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d-3 {} None /tmp/tmp210vb8a3' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[67.19%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d-3 {} None /tmp/tmp210vb8a3'
+[67.19%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d-4 {} None /tmp/tmpve1g3tvq' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[67.19%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.peakmem_plotting_3d-4 {} None /tmp/tmpve1g3tvq'                 ok
+[67.19%] ··· ============================= ======
+                           p                     
+             ----------------------------- ------
+                  <function plot_img>       233M 
+                  <function plot_anat>      236M 
+                <function plot_stat_map>    350M 
+                  <function plot_epi>       235M 
+              <function plot_glass_brain>   234M 
+             ============================= ======
+
+[68.75%] ··· ...lotting.BenchMarkPlotting3D.time_plotting_3d
+[68.75%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-0 {"number": 1} None /tmp/tmps2803zzr' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[68.75%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-0 {"number": 1} None /tmp/tmps2803zzr'
+[68.75%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-1 {"number": 1} None /tmp/tmp24imbken' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[68.75%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-1 {"number": 1} None /tmp/tmp24imbken'
+[68.75%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-2 {"number": 1} None /tmp/tmp70n9n7mo' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[68.75%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-2 {"number": 1} None /tmp/tmp70n9n7mo'
+[68.75%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-3 {"number": 1} None /tmp/tmpe3sk3wza' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[68.75%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-3 {"number": 1} None /tmp/tmpe3sk3wza'
+[68.75%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-4 {"number": 1} None /tmp/tmpyivl9exs' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[68.75%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlotting3D.time_plotting_3d-4 {"number": 1} None /tmp/tmpyivl9exs'                 ok
+[68.75%] ··· ============================= ============
+                           p                           
+             ----------------------------- ------------
+                  <function plot_img>        92.3±1ms  
+                  <function plot_anat>      96.8±0.6ms 
+                <function plot_stat_map>     298±8ms   
+                  <function plot_epi>       93.5±0.5ms 
+              <function plot_glass_brain>    417±3ms   
+             ============================= ============
+
+[70.31%] ··· ...MarkPlottingSurface.peakmem_plotting_surface
+[70.31%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlottingSurface.peakmem_plotting_surface-0 {} None /tmp/tmp574qby03' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[70.31%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlottingSurface.peakmem_plotting_surface-0 {} None /tmp/tmp574qby03'
+[70.31%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlottingSurface.peakmem_plotting_surface-1 {} None /tmp/tmpoz057g3j' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[70.31%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlottingSurface.peakmem_plotting_surface-1 {} None /tmp/tmpoz057g3j'                 ok
+[70.31%] ··· =============================== ============
+             --                                 engine   
+             ------------------------------- ------------
+                        plot_func             matplotlib 
+             =============================== ============
+                   <function plot_surf>          224M    
+              <function plot_surf_stat_map>      225M    
+             =============================== ============
+
+[71.88%] ··· ...nchMarkPlottingSurface.time_plotting_surface
+[71.88%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlottingSurface.time_plotting_surface-0 {"number": 1} None /tmp/tmp1l0nglrs' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[71.88%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlottingSurface.time_plotting_surface-0 {"number": 1} None /tmp/tmp1l0nglrs'
+[71.88%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlottingSurface.time_plotting_surface-1 {"number": 1} None /tmp/tmph4hcewf7' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[71.88%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks plotting.plotting.BenchMarkPlottingSurface.time_plotting_surface-1 {"number": 1} None /tmp/tmph4hcewf7'                 ok
+[71.88%] ··· =============================== ============
+             --                                 engine   
+             ------------------------------- ------------
+                        plot_func             matplotlib 
+             =============================== ============
+                   <function plot_surf>        76.6±1ms  
+              <function plot_surf_stat_map>   76.3±0.4ms 
+             =============================== ============
+
+[73.44%] ··· ...lEstimators.peakmem_discovery_all_estimators
+[73.44%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks utils.discovery.BenchMarkAllEstimators.peakmem_discovery_all_estimators {} None /tmp/tmp29g2zlga' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[73.44%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks utils.discovery.BenchMarkAllEstimators.peakmem_discovery_all_estimators {} None /tmp/tmp29g2zlga'               205M
+[75.00%] ··· ...kAllEstimators.time_discovery_all_estimators
+[75.00%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks utils.discovery.BenchMarkAllEstimators.time_discovery_all_estimators {"number": 1} None /tmp/tmp_rboxx5o' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[75.00%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks utils.discovery.BenchMarkAllEstimators.time_discovery_all_estimators {"number": 1} None /tmp/tmp_rboxx5o'         10.6±0.2ms
+[76.56%] ··· ...image.CompareLoad.peakmem_image_load_compare
+[76.56%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.peakmem_image_load_compare-0 {} None /tmp/tmp7hqhshx9' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[76.56%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.peakmem_image_load_compare-0 {} None /tmp/tmp7hqhshx9'
+[76.56%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.peakmem_image_load_compare-1 {} None /tmp/tmpiyyvdjol' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[76.56%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.peakmem_image_load_compare-1 {} None /tmp/tmpiyyvdjol'                 ok
+[76.56%] ··· =============== ======
+                  loader           
+             --------------- ------
+                 nilearn      157M 
+              nibabel (ref)   158M 
+             =============== ======
+
+[78.12%] ··· image.image.CompareLoad.time_image_load_compare
+[78.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.time_image_load_compare-0 {"number": 22} None /tmp/tmpuoo_8w90' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[78.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.time_image_load_compare-0 {"number": 22} None /tmp/tmpuoo_8w90'
+[78.12%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.time_image_load_compare-1 {"number": 20} None /tmp/tmpt2vew053' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[78.12%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareLoad.time_image_load_compare-1 {"number": 20} None /tmp/tmpt2vew053'                 ok
+[78.12%] ··· =============== ==========
+                  loader               
+             --------------- ----------
+                 nilearn      1.00±0ms 
+              nibabel (ref)   972±4μs  
+             =============== ==========
+
+[79.69%] ··· ...e.CompareMean.peakmem_image_mean_img_compare
+[79.69%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareMean.peakmem_image_mean_img_compare-0 {} None /tmp/tmpvg7vfcp2' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[79.69%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareMean.peakmem_image_mean_img_compare-0 {} None /tmp/tmpvg7vfcp2'
+[79.69%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareMean.peakmem_image_mean_img_compare-1 {} None /tmp/tmpu6muw91k' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[79.69%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareMean.peakmem_image_mean_img_compare-1 {} None /tmp/tmpu6muw91k'                 ok
+[79.69%] ··· =============== ======
+                  loader           
+             --------------- ------
+                 nilearn      202M 
+              nibabel (ref)   202M 
+             =============== ======
+
+[81.25%] ··· ...mage.CompareMean.time_image_mean_img_compare
+[81.25%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareMean.time_image_mean_img_compare-0 {"number": 1} None /tmp/tmp9z2z7cbl' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[81.25%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareMean.time_image_mean_img_compare-0 {"number": 1} None /tmp/tmp9z2z7cbl'
+[81.25%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareMean.time_image_mean_img_compare-1 {"number": 1} None /tmp/tmplnwg50l2' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[81.25%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareMean.time_image_mean_img_compare-1 {"number": 1} None /tmp/tmplnwg50l2'                 ok
+[81.25%] ··· =============== ============
+                  loader                 
+             --------------- ------------
+                 nilearn      31.4±0.2ms 
+              nibabel (ref)   31.4±0.1ms 
+             =============== ============
+
+[82.81%] ··· ...age.CompareSlice.peakmem_image_slice_compare
+[82.81%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareSlice.peakmem_image_slice_compare-0 {} None /tmp/tmphz46uy64' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[82.81%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareSlice.peakmem_image_slice_compare-0 {} None /tmp/tmphz46uy64'
+[82.81%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareSlice.peakmem_image_slice_compare-1 {} None /tmp/tmpfr2_rly2' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[82.81%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareSlice.peakmem_image_slice_compare-1 {} None /tmp/tmpfr2_rly2'                 ok
+[82.81%] ··· =============== ======
+                  loader           
+             --------------- ------
+                 nilearn      161M 
+              nibabel (ref)   161M 
+             =============== ======
+
+[84.38%] ··· ....image.CompareSlice.time_image_slice_compare
+[84.38%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareSlice.time_image_slice_compare-0 {"number": 4} None /tmp/tmpdnj_4_yl' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[84.38%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareSlice.time_image_slice_compare-0 {"number": 4} None /tmp/tmpdnj_4_yl'
+[84.38%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareSlice.time_image_slice_compare-1 {"number": 4} None /tmp/tmpxv45d8ki' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[84.38%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.CompareSlice.time_image_slice_compare-1 {"number": 4} None /tmp/tmpxv45d8ki'                 ok
+[84.38%] ··· =============== =============
+                  loader                  
+             --------------- -------------
+                 nilearn      4.88±0.01ms 
+              nibabel (ref)   4.84±0.02ms 
+             =============== =============
+
+[85.94%] ··· ...ge.IndexImgBenchmark.peakmem_image_index_img
+[85.94%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.IndexImgBenchmark.peakmem_image_index_img {} None /tmp/tmpacjbvvd3' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[85.94%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.IndexImgBenchmark.peakmem_image_index_img {} None /tmp/tmpacjbvvd3'               177M
+[87.50%] ··· ...image.IndexImgBenchmark.time_image_index_img
+[87.50%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.IndexImgBenchmark.time_image_index_img {"number": 1} None /tmp/tmp_m0lyfwv' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[87.50%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.IndexImgBenchmark.time_image_index_img {"number": 1} None /tmp/tmp_m0lyfwv'         33.6±0.1ms
+[89.06%] ··· ...mage.LoadImgBenchmark.peakmem_image_load_img
+[89.06%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.LoadImgBenchmark.peakmem_image_load_img {} None /tmp/tmp8kpeev0x' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[89.06%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.LoadImgBenchmark.peakmem_image_load_img {} None /tmp/tmp8kpeev0x'               158M
+[90.62%] ··· ...e.image.LoadImgBenchmark.time_image_load_img
+[90.62%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.LoadImgBenchmark.time_image_load_img {"number": 22} None /tmp/tmpsxr8vfg6' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[90.62%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.LoadImgBenchmark.time_image_load_img {"number": 22} None /tmp/tmpsxr8vfg6'        1.01±0.01ms
+[92.19%] ··· ...mage.MeanImgBenchmark.peakmem_image_mean_img
+[92.19%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.MeanImgBenchmark.peakmem_image_mean_img {} None /tmp/tmpr0j39vpi' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[92.19%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.MeanImgBenchmark.peakmem_image_mean_img {} None /tmp/tmpr0j39vpi'               203M
+[93.75%] ··· ...e.image.MeanImgBenchmark.time_image_mean_img
+[93.75%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.MeanImgBenchmark.time_image_mean_img {"number": 1} None /tmp/tmpe02x8hvs' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[93.75%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks image.image.MeanImgBenchmark.time_image_mean_img {"number": 1} None /tmp/tmpe02x8hvs'         32.0±0.3ms
+[95.31%] ··· ...k.peakmem_nifti_masker_fit_transform_compare
+[95.31%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.peakmem_nifti_masker_fit_transform_compare-0 {} None /tmp/tmp_echdtz2' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[95.31%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.peakmem_nifti_masker_fit_transform_compare-0 {} None /tmp/tmp_echdtz2'
+[95.31%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.peakmem_nifti_masker_fit_transform_compare-1 {} None /tmp/tmp0_rorpzy' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[95.31%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.peakmem_nifti_masker_fit_transform_compare-1 {} None /tmp/tmp0_rorpzy'
+[95.31%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.peakmem_nifti_masker_fit_transform_compare-2 {} None /tmp/tmpc63p6zs8' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[95.31%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.peakmem_nifti_masker_fit_transform_compare-2 {} None /tmp/tmpc63p6zs8'
+[95.31%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.peakmem_nifti_masker_fit_transform_compare-3 {} None /tmp/tmpk4vgjvuw' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[95.31%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.peakmem_nifti_masker_fit_transform_compare-3 {} None /tmp/tmpk4vgjvuw'                 ok
+[95.31%] ··· ================ ========= ===============
+             --                         loader         
+             ---------------- -------------------------
+              implementation   nilearn   nibabel (ref) 
+             ================ ========= ===============
+                 nilearn         229M         230M     
+               numpy (ref)       177M         177M     
+             ================ ========= ===============
+
+[96.88%] ··· ...Mask.time_nifti_masker_fit_transform_compare
+[96.88%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-0 {"number": 1} None /tmp/tmpk1sw2wcr' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[96.88%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-0 {"number": 1} None /tmp/tmpk1sw2wcr'
+[96.88%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-1 {"number": 1} None /tmp/tmppr7pkqg1' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[96.88%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-1 {"number": 1} None /tmp/tmppr7pkqg1'
+[96.88%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-2 {"number": 22} None /tmp/tmplsbrb99n' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[96.88%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-2 {"number": 22} None /tmp/tmplsbrb99n'
+[96.88%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-3 {"number": 23} None /tmp/tmphhzbot93' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[96.88%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.CompareMask.time_nifti_masker_fit_transform_compare-3 {"number": 23} None /tmp/tmphhzbot93'                 ok
+[96.88%] ··· ================ ============= ===============
+             --                           loader           
+             ---------------- -----------------------------
+              implementation     nilearn     nibabel (ref) 
+             ================ ============= ===============
+                 nilearn        69.8±0.4ms      69.4±1ms   
+               numpy (ref)     1.01±0.01ms      958±5μs    
+             ================ ============= ===============
+
+[98.44%] ··· ...Benchmark.peakmem_nifti_masker_fit_transform
+[98.44%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.peakmem_nifti_masker_fit_transform-0 {} None /tmp/tmpvtwzef_6' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[98.44%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.peakmem_nifti_masker_fit_transform-0 {} None /tmp/tmpvtwzef_6'
+[98.44%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.peakmem_nifti_masker_fit_transform-1 {} None /tmp/tmpiumo5poa' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[98.44%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.peakmem_nifti_masker_fit_transform-1 {} None /tmp/tmpiumo5poa'
+[98.44%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.peakmem_nifti_masker_fit_transform-2 {} None /tmp/tmp9udl2j2q' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[98.44%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.peakmem_nifti_masker_fit_transform-2 {} None /tmp/tmp9udl2j2q'
+[98.44%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.peakmem_nifti_masker_fit_transform-3 {} None /tmp/tmppkeky87g' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[98.44%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.peakmem_nifti_masker_fit_transform-3 {} None /tmp/tmppkeky87g'                 ok
+[98.44%] ··· ================ ======= ======
+             --                  detrend    
+             ---------------- --------------
+              smoothing_fwhm   False   True 
+             ================ ======= ======
+                   None         230M   230M 
+                    6           252M   252M 
+             ================ ======= ======
+
+[100.00%] ··· ...kerBenchmark.time_nifti_masker_fit_transform
+[100.00%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-0 {"number": 1} None /tmp/tmpzoy66kgk' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[100.00%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-0 {"number": 1} None /tmp/tmpzoy66kgk'
+[100.00%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-1 {"number": 1} None /tmp/tmp7e25fgk3' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[100.00%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-1 {"number": 1} None /tmp/tmp7e25fgk3'
+[100.00%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-2 {"number": 1} None /tmp/tmpp5gsrpuu' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[100.00%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-2 {"number": 1} None /tmp/tmpp5gsrpuu'
+[100.00%] ··· Running '/opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-3 {"number": 1} None /tmp/tmp4badmztd' in virtualenv-py3.11-joblib1.5.0-matplotlib3.8.0-nibabel5.2.0-numpy1.26.0-pandas2.3.0-plotly6.1.1-scikit-learn1.6.0-scipy1.11.1
+[100.00%] ··· Running '/home/runner/work/nilearn/nilearn/asv_benchmarks/env/126ff485bb536aba80f7531ff6cec525/bin/python /opt/hostedtoolcache/Python/3.11.0/x64/lib/python3.11/site-packages/asv/benchmark.py run /home/runner/work/nilearn/nilearn/asv_benchmarks/benchmarks maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform-3 {"number": 1} None /tmp/tmp4badmztd'                 ok
+[100.00%] ··· ================ ============ ============
+              --                        detrend         
+              ---------------- -------------------------
+               smoothing_fwhm     False         True    
+              ================ ============ ============
+                    None        68.7±0.4ms   69.4±0.5ms 
+                     6          106±0.8ms     104±1ms   
+              ================ ============ ============
+
