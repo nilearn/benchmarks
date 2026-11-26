@@ -1,1 +1,1 @@
-{"regressions": [["maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform(6, False)", "graphs/arch-x86_64/branch-main/cpu-Intel(R) Xeon(R) 6975P-C/joblib-1.5.0/machine-fv-az1113-357/matplotlib-3.8.0/nibabel-5.2.0/num_cpu-4/numpy-1.26.0/os-Linux 7.0.0-1014-aws/pandas-2.3.0/plotly-6.1.1/python-3.11/ram-16464306176/scikit-learn-1.6.0/scipy-1.12.0/maskers.nifti_masker.NiftiMaskerBenchmark.time_nifti_masker_fit_transform.json", {}, 2, 0.09215754950014343, 0.087248053000053, [[36969, 38564, 0.087248053000053, 0.09215754950014343]]]]}
+{"regressions": []}
