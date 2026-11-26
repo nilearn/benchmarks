@@ -3,7 +3,7 @@
     "cpu": "Intel(R) Xeon(R) 6975P-C",
     "machine": "fv-az1113-357",
     "num_cpu": "4",
-    "os": "Linux 7.0.0-1014-aws",
-    "ram": "16464306176",
+    "os": "Linux 7.0.0-1018-aws",
+    "ram": "16464277504",
     "version": 1
 }
